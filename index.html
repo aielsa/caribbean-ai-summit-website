@@ -148,6 +148,52 @@
   .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 44px -12px rgba(0,208,198,.95)}
   .btn-coral{background:var(--coral);color:#240a06;box-shadow:0 10px 30px -10px rgba(255,107,90,.7)}
   .btn-coral:hover{transform:translateY(-2px);box-shadow:0 18px 40px -12px rgba(255,107,90,.9)}
+
+  /* ============ HERO CTA BUTTON — premium animated ============ */
+  @property --hcta-angle{syntax:"<angle>";initial-value:0deg;inherits:false}
+  .btn-hero-cta{
+    position:relative;isolation:isolate;overflow:hidden;
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    padding:18px 34px;border-radius:999px;cursor:pointer;
+    font-family:inherit;font-weight:800;font-size:1.04rem;letter-spacing:.01em;
+    color:#2a0805;text-decoration:none;
+    background:linear-gradient(110deg,#FF8674 0%,#FF6B5A 25%,#FF5547 50%,#FF6B5A 75%,#FF8674 100%);
+    background-size:220% 100%;
+    animation:hctaShift 8s linear infinite;
+    border:none;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.30),
+      inset 0 -2px 0 rgba(0,0,0,.10),
+      0 12px 32px -10px rgba(255,107,90,.55),
+      0 0 0 1px rgba(255,255,255,.12);
+    transition:transform .3s var(--ease),box-shadow .35s var(--ease);
+  }
+  @keyframes hctaShift{
+    0%{background-position:0% 50%}
+    100%{background-position:-220% 50%}
+  }
+  .btn-hero-cta .hcta-label,
+  .btn-hero-cta .hcta-arrow{position:relative;z-index:2}
+  .btn-hero-cta .hcta-arrow{
+    width:18px;height:18px;stroke:#2a0805;
+    transition:transform .3s var(--ease);
+  }
+  /* Hover state — bigger, brighter, arrow slides */
+  .btn-hero-cta:hover{
+    transform:translateY(-3px) scale(1.02);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.40),
+      inset 0 -2px 0 rgba(0,0,0,.10),
+      0 18px 40px -12px rgba(255,107,90,.65),
+      0 0 0 1px rgba(255,255,255,.20);
+  }
+  .btn-hero-cta:hover .hcta-arrow{transform:translateX(4px)}
+  .btn-hero-cta:focus-visible{outline:3px solid var(--turquoise);outline-offset:4px}
+  .btn-hero-cta:active{transform:translateY(-1px) scale(.99)}
+  /* Respect reduced motion */
+  @media(prefers-reduced-motion:reduce){
+    .btn-hero-cta{animation:none}
+  }
   .btn-ghost{background:var(--glass);border:1px solid var(--glass-border);color:var(--soft-white);backdrop-filter:blur(8px)}
   .btn-ghost:hover{border-color:var(--turquoise);transform:translateY(-2px)}
   .btn:focus-visible{outline:3px solid var(--turquoise);outline-offset:3px}
@@ -198,24 +244,15 @@
   /* Venue photo as base */
   .hero-bg{position:absolute;inset:0;z-index:0}
   .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 70%;opacity:.85;transform:scale(1.08) translateY(-3%)}
-  /* Soft vignette + bottom fade + coral warm-up — preserves venue visibility, balances temperature */
+  /* Soft vignette + bottom fade — clean dark canvas, no coral splashes */
   .hero-bg::after{
     content:"";position:absolute;inset:0;
     background:
-      radial-gradient(60% 50% at 85% 15%,rgba(255,107,90,.22),transparent 65%),
-      radial-gradient(50% 45% at 12% 75%,rgba(255,107,90,.18),transparent 65%),
       radial-gradient(120% 80% at 50% 30%,transparent 0%,rgba(11,18,32,.40) 60%,rgba(11,18,32,.82) 100%),
       linear-gradient(180deg,rgba(11,18,32,.28) 0%,rgba(11,18,32,.08) 35%,rgba(11,18,32,.55) 75%,var(--deep-navy) 100%)
   }
-  /* Pulsing coral glow accent — counterweights the navy/teal */
-  .hero-coral-glow{
-    position:absolute;top:-100px;right:-150px;width:560px;height:560px;
-    z-index:1;pointer-events:none;
-    background:radial-gradient(closest-side,rgba(255,107,90,.30),transparent 70%);
-    filter:blur(12px);
-    animation:coralPulse 9s ease-in-out infinite;
-  }
-  @keyframes coralPulse{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
+  /* hero-coral-glow kept hidden — button has its own coral; bg stays clean */
+  .hero-coral-glow{display:none}
 
 
   /* Grain noise overlay — premium texture */
@@ -231,10 +268,10 @@
   .hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--coral);box-shadow:0 0 14px var(--coral);animation:pulse 2s infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 
-  /* Centered brand lockup (THE hero — XL, dominante absoluto) */
-  .hero-mark{margin-bottom:24px;position:relative;filter:drop-shadow(0 34px 100px rgba(0,208,198,.45)) drop-shadow(0 18px 64px rgba(255,107,90,.18))}
-  .hero-mark img{width:clamp(540px,86vw,1140px);height:auto;animation:floatMark 7s ease-in-out infinite}
-  @keyframes floatMark{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+  /* Centered brand lockup */
+  .hero-mark{margin-bottom:8px;position:relative;filter:drop-shadow(0 28px 80px rgba(0,208,198,.42)) drop-shadow(0 14px 50px rgba(255,107,90,.15))}
+  .hero-mark img{width:clamp(420px,55vw,720px);height:auto;animation:floatMark 7s ease-in-out infinite}
+  @keyframes floatMark{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 
   /* Date pill before the H1 — priming */
   .hero-datepill{
@@ -246,12 +283,15 @@
   }
   .hero-datepill svg{width:14px;height:14px;stroke:var(--turquoise)}
 
-  /* Hero tagline — 2 líneas, blanca, soporta el logo */
+  /* Hero tagline — 1 línea desktop, 2 líneas mobile, blanca, soporta el logo */
   .hero-tagline{
-    font-size:clamp(1.15rem,2.2vw,1.7rem);font-weight:500;
+    font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:500;
     letter-spacing:-.005em;line-height:1.35;
-    margin:8px auto 26px;color:var(--soft-white);text-wrap:balance;
+    margin:0 auto 24px;color:var(--soft-white);text-wrap:balance;
   }
+  /* Desktop: forzar 1 línea (esconder <br>, añadir espacio entre spans) */
+  .hero-tagline br{display:none}
+  .hero-tagline span + span::before{content:" "}
   .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px;justify-content:center}
 
   /* Save badge on the primary CTA — anchoring */
@@ -1097,6 +1137,9 @@
     .hero-mark{margin-bottom:4px}
     .hero-mark img{width:min(100vw,540px)}
     .hero-tagline{font-size:1.02rem;margin:0 auto 18px;white-space:normal;max-width:30ch;line-height:1.3}
+    /* Mobile: restaurar <br> y quitar el espacio prepended de desktop */
+    .hero-tagline br{display:inline}
+    .hero-tagline span + span::before{content:""}
     .hero-datepill{margin-bottom:16px;font-size:.68rem;padding:7px 14px;letter-spacing:.12em}
     .hero-trust{margin-top:28px;font-size:.62rem;gap:6px 12px}
     .hero-coral-glow{width:340px;height:340px;top:-80px;right:-100px}
@@ -1258,7 +1301,12 @@
     </span>
 
     <div class="hero-cta">
-      <a class="btn btn-primary btn-lg" href="#" data-eb data-i18n="cta.book.early">Quiero ser parte</a>
+      <a class="btn-hero-cta" href="#" data-eb>
+        <span class="hcta-label" data-i18n="cta.book.early">Quiero ser parte</span>
+        <svg class="hcta-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 12h14M13 5l7 7-7 7"/>
+        </svg>
+      </a>
       <a class="btn btn-ghost btn-lg" href="#tracks" data-i18n="cta.tracks">Ver los tracks</a>
     </div>
 
@@ -1881,6 +1929,14 @@
   /* ========================================
      CARIBBEAN AI SUMMIT — Vanilla JS
      ======================================== */
+
+  /* ---- On refresh/load: always start at top (strip hash, disable browser restore) ---- */
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  if (window.location.hash) {
+    history.replaceState(null, "", window.location.pathname + window.location.search);
+  }
+  window.scrollTo(0, 0);
+  window.addEventListener("DOMContentLoaded", function(){ window.scrollTo(0, 0); });
 
   /* ---- Eventbrite link ---- */
   var EB = "https://www.eventbrite.com/e/caribbean-ai-summit-2026-registration-1981768097728?aff=website";
