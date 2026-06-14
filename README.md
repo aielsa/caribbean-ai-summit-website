@@ -2,7 +2,6 @@
 
 Official website for **Caribbean AI Summit 2026** — the largest AI conference of the Caribbean. October 9–10, 2026 · San Juan, Puerto Rico.
 
-🌐 **Live:** [caribbeanaisummit.com](https://caribbeanaisummit.com) *(coming soon)*
 🎟️ **Tickets:** [Eventbrite](https://www.eventbrite.com/e/caribbean-ai-summit-2026-registration-1981768097728?aff=website)
 
 ## Stack
