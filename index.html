@@ -1,0 +1,2308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Caribbean AI Summit 2026 · San Juan, Puerto Rico — Oct 9–10</title>
+<meta name="description" content="La primera conferencia de IA a gran escala del Caribe. Dos días · tres tracks · un hackathon de $10K. San Juan, Puerto Rico · 9–10 de octubre 2026. The Caribbean's first large-scale AI conference." />
+<meta name="theme-color" content="#0B1220" />
+<link rel="icon" type="image/png" href="assets/icon.png" />
+<link rel="canonical" href="https://caribbeanaisummit.ai/" />
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Caribbean AI Summit 2026 — The Future Starts with Better Questions" />
+<meta property="og:description" content="La primera conferencia de IA a gran escala del Caribe. Dos días · tres tracks · un hackathon. San Juan, PR · Oct 9–10, 2026." />
+<meta property="og:image" content="assets/og-banner.png" />
+<meta property="og:url" content="https://caribbeanaisummit.ai/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Caribbean AI Summit 2026" />
+<meta name="twitter:description" content="The Caribbean's first large-scale AI conference. Two days · three tracks · one hackathon. San Juan, PR · Oct 9–10, 2026." />
+<meta name="twitter:image" content="assets/og-banner.png" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<!-- JSON-LD: Event -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Caribbean AI Summit 2026",
+  "description": "The first large-scale AI conference in the Caribbean. Two days, three tracks, one hackathon.",
+  "startDate": "2026-10-09T09:00:00-04:00",
+  "endDate": "2026-10-10T18:00:00-04:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "Puerto Rico Convention Center",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "100 Bulevar Saint John, Isla Grande",
+      "addressLocality": "San Juan",
+      "addressRegion": "PR",
+      "postalCode": "00907",
+      "addressCountry": "PR"
+    }
+  },
+  "image": ["assets/og-banner.png"],
+  "organizer": { "@type": "Organization", "name": "Puerto Rico AI Community (PRAIC)", "url": "https://caribbeanaisummit.ai/" },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Early Bird",
+      "price": "299",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/LimitedAvailability",
+      "url": "https://www.eventbrite.com/e/caribbean-ai-summit-2026-registration-1981768097728?aff=website",
+      "validThrough": "2026-10-09T00:00:00-04:00"
+    },
+    {
+      "@type": "Offer",
+      "name": "VIP",
+      "price": "900",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.eventbrite.com/e/caribbean-ai-summit-2026-registration-1981768097728?aff=website",
+      "validThrough": "2026-10-09T00:00:00-04:00"
+    }
+  ]
+}
+</script>
+
+<style>
+  /* ============ DESIGN TOKENS ============ */
+  :root{
+    --deep-navy:#0B1220;
+    --ocean-blue:#0A2F4F;
+    --caribbean-teal:#00B5B8;
+    --turquoise:#00D0C6;
+    --coral:#FF6B5A;
+    --soft-white:#F2F4F7;
+    --ink:#0B1220;
+    --muted:rgba(242,244,247,.62);
+    --muted-strong:rgba(242,244,247,.82);
+    --line:rgba(0,208,198,.16);
+    --glass:rgba(255,255,255,.04);
+    --glass-border:rgba(255,255,255,.10);
+    --maxw:1200px;
+    --radius:18px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:"Avenir Next","Figtree",-apple-system,"Segoe UI",sans-serif;
+    background:var(--deep-navy);
+    color:var(--soft-white);
+    line-height:1.55;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  section{position:relative}
+  ::selection{background:var(--turquoise);color:#04141a}
+
+  /* Scroll offset for sticky header */
+  section[id]{scroll-margin-top:80px}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--turquoise);
+  }
+  .eyebrow::before{content:"";width:24px;height:2px;background:linear-gradient(90deg,var(--turquoise),transparent);border-radius:2px}
+
+  h1,h2,h3{line-height:1.04;letter-spacing:-.02em;font-weight:800}
+  h2.title{font-size:clamp(2rem,5.4vw,3.4rem);margin:14px 0 18px;font-weight:800;letter-spacing:-.025em}
+  .lead{color:var(--muted-strong);font-size:clamp(1rem,2.2vw,1.18rem);max-width:60ch}
+  .grad-text{
+    background:linear-gradient(100deg,var(--turquoise),var(--caribbean-teal) 35%,var(--coral) 70%,var(--turquoise) 100%);
+    background-size:200% auto;
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:shiny 7s linear infinite;
+  }
+  @keyframes shiny{
+    0%{background-position:0% 50%}
+    100%{background-position:-200% 50%}
+  }
+
+  /* ============ BUTTONS ============ */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    font-weight:700;font-size:.98rem;letter-spacing:.005em;font-family:inherit;
+    padding:15px 26px;border-radius:999px;cursor:pointer;border:1px solid transparent;
+    transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s,border-color .25s;
+    white-space:nowrap;text-align:center;
+  }
+  .btn-primary{
+    background:linear-gradient(100deg,var(--turquoise),var(--caribbean-teal));
+    color:#04141a;box-shadow:0 10px 34px -10px rgba(0,208,198,.7);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 44px -12px rgba(0,208,198,.95)}
+  .btn-coral{background:var(--coral);color:#240a06;box-shadow:0 10px 30px -10px rgba(255,107,90,.7)}
+  .btn-coral:hover{transform:translateY(-2px);box-shadow:0 18px 40px -12px rgba(255,107,90,.9)}
+  .btn-ghost{background:var(--glass);border:1px solid var(--glass-border);color:var(--soft-white);backdrop-filter:blur(8px)}
+  .btn-ghost:hover{border-color:var(--turquoise);transform:translateY(-2px)}
+  .btn:focus-visible{outline:3px solid var(--turquoise);outline-offset:3px}
+  .btn-lg{padding:18px 34px;font-size:1.05rem}
+
+  /* ============ HEADER — floating glass pill ============ */
+  header{
+    position:fixed;top:14px;left:14px;right:14px;z-index:90;
+    display:flex;justify-content:center;pointer-events:none;
+    transition:top .3s var(--ease);
+  }
+  .nav{
+    pointer-events:auto;
+    display:flex;align-items:center;justify-content:space-between;gap:18px;
+    width:100%;max-width:1180px;
+    padding:10px 14px 10px 22px;
+    background:linear-gradient(135deg,rgba(11,18,32,.55),rgba(11,18,32,.42));
+    backdrop-filter:blur(18px) saturate(160%);
+    -webkit-backdrop-filter:blur(18px) saturate(160%);
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:999px;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.10),
+      0 14px 38px -18px rgba(0,0,0,.55);
+    transition:background .3s var(--ease),border-color .3s var(--ease),padding .3s var(--ease);
+  }
+  header.scrolled{top:10px}
+  header.scrolled .nav{
+    background:linear-gradient(135deg,rgba(11,18,32,.78),rgba(11,18,32,.64));
+    border-color:rgba(0,208,198,.22);
+    padding:8px 14px 8px 22px;
+  }
+  .brand{display:inline-flex;align-items:center}
+  .brand img{height:32px;width:auto}
+  .nav-links{display:flex;align-items:center;gap:24px}
+  .nav-links a{font-size:.92rem;font-weight:600;color:var(--muted-strong);transition:color .2s;position:relative}
+  .nav-links a:hover{color:var(--soft-white)}
+  .nav-right{display:flex;align-items:center;gap:14px}
+  .lang-toggle{display:flex;border:1px solid var(--glass-border);border-radius:999px;overflow:hidden;background:var(--glass);backdrop-filter:blur(8px)}
+  .lang-toggle button{background:none;border:none;color:var(--muted);font-weight:700;font-size:.78rem;padding:7px 13px;cursor:pointer;transition:all .2s;font-family:inherit}
+  .lang-toggle button.active{background:var(--turquoise);color:#04141a}
+  .lang-toggle button:focus-visible{outline:2px solid var(--turquoise);outline-offset:2px}
+  .hamb{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+  .hamb span{width:24px;height:2px;background:var(--soft-white);border-radius:2px;transition:.3s}
+
+  /* ============ HERO ============ */
+  .hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 210px;position:relative;overflow:hidden;text-align:center}
+  /* Venue photo as base */
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 70%;opacity:.85;transform:scale(1.08) translateY(-3%)}
+  /* Soft vignette + bottom fade + coral warm-up — preserves venue visibility, balances temperature */
+  .hero-bg::after{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(60% 50% at 85% 15%,rgba(255,107,90,.22),transparent 65%),
+      radial-gradient(50% 45% at 12% 75%,rgba(255,107,90,.18),transparent 65%),
+      radial-gradient(120% 80% at 50% 30%,transparent 0%,rgba(11,18,32,.40) 60%,rgba(11,18,32,.82) 100%),
+      linear-gradient(180deg,rgba(11,18,32,.28) 0%,rgba(11,18,32,.08) 35%,rgba(11,18,32,.55) 75%,var(--deep-navy) 100%)
+  }
+  /* Pulsing coral glow accent — counterweights the navy/teal */
+  .hero-coral-glow{
+    position:absolute;top:-100px;right:-150px;width:560px;height:560px;
+    z-index:1;pointer-events:none;
+    background:radial-gradient(closest-side,rgba(255,107,90,.30),transparent 70%);
+    filter:blur(12px);
+    animation:coralPulse 9s ease-in-out infinite;
+  }
+  @keyframes coralPulse{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
+
+
+  /* Grain noise overlay — premium texture */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:1000;pointer-events:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    background-size:160px 160px;
+    opacity:.55;mix-blend-mode:overlay;
+  }
+
+  .hero .wrap{position:relative;z-index:3;max-width:1180px;display:flex;flex-direction:column;align-items:center}
+  .hero-badge{display:inline-flex;align-items:center;gap:10px;background:var(--glass);border:1px solid var(--glass-border);border-radius:999px;padding:9px 18px;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--soft-white);backdrop-filter:blur(8px);margin-bottom:32px}
+  .hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--coral);box-shadow:0 0 14px var(--coral);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+  /* Centered brand lockup (THE hero — XL, dominante absoluto) */
+  .hero-mark{margin-bottom:24px;position:relative;filter:drop-shadow(0 34px 100px rgba(0,208,198,.45)) drop-shadow(0 18px 64px rgba(255,107,90,.18))}
+  .hero-mark img{width:clamp(540px,86vw,1140px);height:auto;animation:floatMark 7s ease-in-out infinite}
+  @keyframes floatMark{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+
+  /* Date pill before the H1 — priming */
+  .hero-datepill{
+    display:inline-flex;align-items:center;gap:10px;
+    margin-bottom:22px;padding:8px 18px;
+    background:rgba(0,208,198,.10);border:1px solid rgba(0,208,198,.35);border-radius:999px;
+    font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--turquoise);
+    backdrop-filter:blur(8px);
+  }
+  .hero-datepill svg{width:14px;height:14px;stroke:var(--turquoise)}
+
+  /* Hero tagline — 2 líneas, blanca, soporta el logo */
+  .hero-tagline{
+    font-size:clamp(1.15rem,2.2vw,1.7rem);font-weight:500;
+    letter-spacing:-.005em;line-height:1.35;
+    margin:8px auto 26px;color:var(--soft-white);text-wrap:balance;
+  }
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px;justify-content:center}
+
+  /* Save badge on the primary CTA — anchoring */
+  .save-badge{
+    display:inline-flex;align-items:center;gap:5px;
+    margin-left:4px;background:var(--coral);color:#240a06;
+    font-size:.7rem;font-weight:800;letter-spacing:.04em;
+    padding:3px 8px;border-radius:6px;
+  }
+
+  /* Trust strip — social proof */
+  .hero-trust{
+    margin-top:42px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 18px;
+    font-size:.74rem;letter-spacing:.04em;color:var(--muted);font-weight:600;
+  }
+  .hero-trust b{color:var(--soft-white);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.72rem}
+  .hero-trust .sep{opacity:.4}
+  .hero-trust .trust-logo{font-weight:800;color:var(--muted-strong);letter-spacing:.05em;text-transform:uppercase;font-size:.74rem}
+
+  /* Hero countdown — bigger, scarcity anchor */
+  .countdown{display:flex;gap:10px;margin-top:32px;flex-wrap:wrap;justify-content:center}
+  .cd-box{
+    background:var(--glass);border:1px solid var(--glass-border);
+    border-radius:14px;padding:14px 10px;min-width:80px;text-align:center;
+    backdrop-filter:blur(8px);
+    position:relative;overflow:hidden;
+  }
+  .cd-box::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 0%,rgba(0,208,198,.18),transparent 60%);pointer-events:none}
+  .cd-box b{display:block;font-size:clamp(1.7rem,5vw,2.3rem);font-weight:800;font-variant-numeric:tabular-nums;color:var(--soft-white);line-height:1;position:relative}
+  .cd-box small{display:block;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:8px;font-weight:700;position:relative}
+
+  /* Scroll cue at bottom of hero */
+  .scroll-cue{
+    margin-top:50px;display:inline-flex;align-items:center;gap:8px;
+    font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:700;
+  }
+  .scroll-cue::after{content:"";width:2px;height:24px;background:linear-gradient(180deg,var(--turquoise),transparent);border-radius:2px;animation:scrollPulse 2.4s ease-in-out infinite}
+  @keyframes scrollPulse{0%,100%{opacity:.5;transform:translateY(0)}50%{opacity:1;transform:translateY(4px)}}
+
+  /* ============ WAVE DIVIDERS ============ */
+  .wave-divider{display:block;width:100%;height:60px;color:var(--turquoise);opacity:.25}
+
+  /* Hero → next section · band with gradient fade-in top + 7 spaced wave lines */
+  .hero-wave-divider{
+    position:absolute;left:0;right:0;bottom:-1px;
+    height:clamp(140px,16vw,210px);
+    z-index:4;pointer-events:none;overflow:hidden;
+    /* Gradient fade from transparent (photo shows through) into solid stats color */
+    background:
+      linear-gradient(180deg,
+        transparent 0%,
+        rgba(11,18,32,.50) 30%,
+        rgba(11,26,45,1) 70%,
+        rgba(11,26,45,1) 100%
+      );
+  }
+  .hero-wave-divider .wd{
+    position:absolute;left:0;bottom:-1px;
+    width:200%;height:100%;display:block;
+    will-change:transform;
+    animation:waveSlide 16s linear infinite;
+  }
+  .hero-wave-divider path{
+    vector-effect:non-scaling-stroke;
+  }
+  /* Brand lines — gradient bottom-up: coral/peach → caribbean teal → turquoise */
+  .hero-wave-divider .ln{
+    fill:none;
+    stroke-width:3.8;
+    stroke-linecap:round;
+  }
+  /* Top (turquoise) → middle (caribbean teal) → bottom (peach → coral) */
+  .hero-wave-divider .c1  {stroke:var(--turquoise);     opacity:.90;filter:drop-shadow(0 0 7px rgba(0,208,198,.75))}
+  .hero-wave-divider .c2  {stroke:var(--turquoise);     opacity:.85;stroke-width:3.4;filter:drop-shadow(0 0 5px rgba(0,208,198,.55))}
+  .hero-wave-divider .c3  {stroke:var(--caribbean-teal);opacity:.85;filter:drop-shadow(0 0 6px rgba(0,181,184,.65))}
+  .hero-wave-divider .c4  {stroke:var(--caribbean-teal);opacity:.70;stroke-width:3.4}
+  .hero-wave-divider .c5  {stroke:var(--caribbean-teal);opacity:.50;stroke-width:3.0}
+  .hero-wave-divider .c6  {stroke:#FFB39C;              opacity:.65;stroke-width:3.0;filter:drop-shadow(0 0 5px rgba(255,179,156,.50))}  /* peach light */
+  .hero-wave-divider .c7  {stroke:#FF9078;              opacity:.80;stroke-width:3.6;filter:drop-shadow(0 0 6px rgba(255,144,120,.60))}  /* peach */
+  .hero-wave-divider .c8  {stroke:var(--coral);         opacity:.85;stroke-width:4.0;filter:drop-shadow(0 0 7px rgba(255,107,90,.65))}
+  .hero-wave-divider .c9  {stroke:var(--coral);         opacity:.95;stroke-width:4.4;filter:drop-shadow(0 0 9px rgba(255,107,90,.75))}
+  .hero-wave-divider .c10 {stroke:var(--coral);         opacity:1;  stroke-width:4.6;filter:drop-shadow(0 0 11px rgba(255,107,90,.85))}
+  /* Solid fill matches the LAST line — no separate edge visible */
+  .hero-wave-divider .l-fill{fill:var(--deep-navy)}
+  @keyframes waveSlide{
+    from{transform:translateX(0)}
+    to{transform:translateX(-50%)}
+  }
+
+  /* ============ STATS ============ */
+  .stats{border-top:none;border-bottom:1px solid var(--line);background:rgba(10,47,79,.28);position:relative}
+  .stats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:26px 14px;padding:50px 0}
+  .stat{text-align:center}
+  .stat b{display:block;font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:900;color:var(--turquoise);font-variant-numeric:tabular-nums;line-height:1}
+  /* Coral accent on every other stat — warmer balance */
+  .stat:nth-child(2) b,
+  .stat:nth-child(5) b{color:var(--coral)}
+  .stat small{display:block;margin-top:10px;font-size:.78rem;color:var(--muted-strong);font-weight:600;letter-spacing:.02em}
+
+  /* Sponsors marquee */
+  .marquee{
+    border-top:1px solid var(--line);padding:24px 0;
+    overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+            mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  }
+  .marquee-track{display:flex;align-items:center;width:max-content;animation:marquee 48s linear infinite}
+  .marquee-track:hover{animation-play-state:paused}
+  /* Each set has its OWN gap, plus padding-right that = gap → ensures perfect -50% loop */
+  .marquee-set{display:flex;align-items:center;gap:36px;padding-right:36px;flex-shrink:0}
+  /* Marquee — free-floating logos, no chip */
+  .m-chip{
+    display:inline-flex;align-items:center;justify-content:center;
+    padding:6px 16px;
+    background:none;border:none;
+    height:80px;flex-shrink:0;opacity:.78;
+    transition:opacity .25s,transform .25s;
+  }
+  .m-chip:hover{opacity:1;transform:translateY(-2px)}
+  .m-chip img{height:74px;width:auto;max-width:220px;object-fit:contain}
+  .m-chip img[src*="waw"]{height:48px}
+  .m-chip:has(img[src*="waw"]) img{filter:drop-shadow(0 0 8px rgba(0,208,198,.30))}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ============ SECTIONS ============ */
+  .sect{padding:96px 0;position:relative}
+  .sect-tight{padding:64px 0}
+  .sect-head{max-width:62ch}
+
+  /* ============ MANIFESTO ============ */
+  .manifesto{text-align:center;position:relative;overflow:hidden}
+  .manifesto-bg{position:absolute;inset:0;z-index:0;opacity:.38}
+  .manifesto-bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:saturate(1.05) brightness(.9)}
+  .manifesto-bg::after{content:"";position:absolute;inset:0;background:
+    radial-gradient(70% 60% at 50% 50%,rgba(11,18,32,.35) 0%,rgba(11,18,32,.75) 65%,var(--deep-navy) 100%)}
+  .manifesto .wrap{position:relative;z-index:2}
+  .manifesto h2{font-size:clamp(2.2rem,6.5vw,3.8rem);max-width:22ch;margin:18px auto 22px;font-weight:900;letter-spacing:-.03em}
+  .manifesto p{margin:0 auto 14px;color:var(--muted-strong);max-width:54ch;font-size:clamp(1.02rem,2.2vw,1.18rem)}
+  .manifesto .slogan-tag{margin-top:32px;display:inline-block;font-style:italic;color:var(--turquoise);font-weight:600;font-size:.95rem;letter-spacing:.02em}
+
+  /* ============ TRACKS CARDS ============ */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px;perspective:1000px}
+  .card{
+    background:var(--glass);border:1px solid var(--glass-border);
+    border-radius:var(--radius);padding:32px 28px;
+    transition:transform .35s var(--ease),border-color .35s,box-shadow .35s;
+    position:relative;overflow:hidden;
+    transform-style:preserve-3d;will-change:transform;
+  }
+  .card::before{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:2px;
+    background:linear-gradient(90deg,transparent,var(--turquoise),transparent);
+    transform:translateX(-100%);transition:transform .6s var(--ease);
+  }
+  .card:hover{transform:translateY(-5px);border-color:var(--turquoise);box-shadow:0 24px 60px -28px rgba(0,208,198,.45)}
+  .card:hover::before{transform:translateX(100%)}
+  /* Corner decorators */
+  .card .corner{position:absolute;width:10px;height:10px;border:1.5px solid var(--turquoise);opacity:0;transition:opacity .35s}
+  .card .corner.tl{top:-1px;left:-1px;border-right:none;border-bottom:none}
+  .card .corner.tr{top:-1px;right:-1px;border-left:none;border-bottom:none}
+  .card .corner.bl{bottom:-1px;left:-1px;border-right:none;border-top:none}
+  .card .corner.br{bottom:-1px;right:-1px;border-left:none;border-top:none}
+  .card:hover .corner{opacity:1}
+  /* Track icon — visual hierarchy */
+  .card .track-icon{
+    width:74px;height:74px;margin-bottom:24px;
+    background:rgba(0,208,198,.06);border:1px solid var(--glass-border);
+    border-radius:18px;padding:14px;
+    display:flex;align-items:center;justify-content:center;
+    transition:background .35s,border-color .35s,transform .35s;
+  }
+  .card:hover .track-icon{background:rgba(0,208,198,.12);border-color:var(--turquoise);transform:rotate(-3deg) scale(1.05)}
+  .card .track-icon svg{width:100%;height:100%}
+  .card .tag{font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--turquoise)}
+  .card h3{font-size:1.5rem;margin:14px 0 6px;font-weight:800;letter-spacing:-.015em}
+  .card .tagline{color:var(--coral);font-weight:700;font-size:.92rem;margin-bottom:14px;font-style:italic}
+  .card p{color:var(--muted-strong);font-size:.96rem;margin-bottom:16px}
+  .card .num{position:absolute;top:22px;right:24px;font-size:2.6rem;font-weight:900;color:rgba(255,255,255,.05);line-height:1}
+  .card .micro-cta{display:inline-flex;align-items:center;gap:6px;font-size:.86rem;font-weight:700;color:var(--turquoise);transition:gap .2s}
+  .card:hover .micro-cta{gap:10px}
+
+  /* ============ HACKATHON ============ */
+  .hack{
+    margin-top:28px;border-radius:24px;overflow:hidden;position:relative;
+    border:1px solid var(--glass-border);
+    display:grid;grid-template-columns:1.05fr .95fr;align-items:stretch;
+    background:
+      radial-gradient(60% 80% at 80% 20%,rgba(255,107,90,.20),transparent 60%),
+      radial-gradient(80% 100% at 0% 100%,rgba(0,181,184,.15),transparent 60%),
+      linear-gradient(135deg,rgba(255,107,90,.08),rgba(0,181,184,.08));
+  }
+  .hack-inner{padding:48px 36px;position:relative;z-index:2}
+
+  /* HACKATHON badge — pulsing dot + shimmering gradient text + terminal brackets */
+  .hack-badge{
+    display:inline-flex;align-items:center;gap:14px;margin-bottom:18px;
+    padding:10px 18px 10px 14px;
+    background:rgba(255,107,90,.10);
+    border:1px solid rgba(255,107,90,.32);
+    border-radius:999px;
+    backdrop-filter:blur(8px);
+    box-shadow:0 0 28px -8px rgba(255,107,90,.30);
+    position:relative;
+    overflow:hidden;
+  }
+  /* Scanning sheen across the badge */
+  .hack-badge::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.10) 50%,transparent 100%);
+    transform:translateX(-100%);
+    animation:hackSheen 4s ease-in-out infinite;
+    pointer-events:none;
+  }
+  @keyframes hackSheen{
+    0%,80%{transform:translateX(-100%)}
+    100%{transform:translateX(200%)}
+  }
+  .hack-dot{
+    width:10px;height:10px;border-radius:50%;
+    background:var(--coral);
+    box-shadow:0 0 12px var(--coral),0 0 22px rgba(255,107,90,.65);
+    animation:hackPulse 1.4s ease-in-out infinite;
+    flex-shrink:0;
+  }
+  @keyframes hackPulse{
+    0%,100%{opacity:1;transform:scale(1)}
+    50%{opacity:.35;transform:scale(.65)}
+  }
+  .hack-label{
+    font-size:clamp(1rem,1.8vw,1.2rem);
+    font-weight:900;letter-spacing:.24em;text-transform:uppercase;
+    background:linear-gradient(100deg,var(--turquoise) 0%,var(--caribbean-teal) 35%,var(--coral) 65%,var(--turquoise) 100%);
+    background-size:200% auto;
+    -webkit-background-clip:text;background-clip:text;
+    color:transparent;
+    animation:hackShimmer 4s linear infinite;
+    line-height:1;
+  }
+  @keyframes hackShimmer{
+    0%{background-position:0% 50%}
+    100%{background-position:-200% 50%}
+  }
+  .hack-bracket{
+    font-family:"SF Mono",Menlo,Consolas,monospace;
+    font-size:.68rem;font-weight:700;letter-spacing:.10em;
+    color:var(--coral);opacity:.85;
+    padding-left:6px;border-left:1px solid rgba(255,107,90,.30);
+    line-height:1;
+    animation:hackBlink 1.6s steps(2) infinite;
+  }
+  @keyframes hackBlink{50%{opacity:.4}}
+  /* Hackathon visual side — real event photo */
+  .hack-media{
+    position:relative;overflow:hidden;min-height:340px;
+    border-left:1px solid var(--glass-border);
+  }
+  .hack-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s var(--ease)}
+  .hack:hover .hack-media img{transform:scale(1.04)}
+  .hack-media::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(95deg,rgba(11,18,32,.55) 0%,transparent 35%);
+  }
+  /* Badge over photo: "REAL EVENT" or similar */
+  .hack-media .hack-tag{
+    position:absolute;top:18px;right:18px;z-index:2;
+    background:rgba(11,18,32,.6);border:1px solid var(--glass-border);
+    backdrop-filter:blur(8px);
+    padding:7px 13px;border-radius:999px;
+    font-size:.66rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--soft-white);
+  }
+  .hack-media .hack-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--coral);box-shadow:0 0 10px var(--coral);display:inline-block;margin-right:7px;vertical-align:middle;animation:pulse 1.6s infinite}
+  @media(max-width:780px){
+    .hack{grid-template-columns:1fr}
+    .hack-media{min-height:260px;border-left:none;border-top:1px solid var(--glass-border)}
+    .hack-media::after{background:linear-gradient(180deg,transparent 50%,rgba(11,18,32,.55))}
+  }
+  .hack .prize{font-size:clamp(2.6rem,10vw,4.4rem);font-weight:900;color:var(--coral);line-height:1;letter-spacing:-.02em}
+  .hack h3{font-size:clamp(1.7rem,5vw,2.4rem);margin:8px 0 14px;font-weight:800;letter-spacing:-.02em}
+  .hack p{color:var(--muted-strong);max-width:56ch;font-size:1.02rem}
+  .hack .hook{margin-top:18px;font-size:clamp(1.15rem,3vw,1.4rem);font-weight:700;font-style:italic;color:var(--soft-white)}
+  .hack .pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .pill{background:rgba(255,255,255,.06);border:1px solid var(--glass-border);border-radius:999px;padding:8px 16px;font-size:.84rem;font-weight:600}
+
+  /* ============ SPEAKERS ============ */
+  .speakers-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:38px}
+  .spk{
+    background:var(--glass);border:1px solid var(--glass-border);
+    border-radius:var(--radius);overflow:hidden;
+    transition:transform .35s var(--ease),border-color .35s,box-shadow .35s;
+    position:relative;
+  }
+  .spk:hover{transform:translateY(-4px);border-color:var(--turquoise);box-shadow:0 20px 40px -20px rgba(0,208,198,.4)}
+
+  /* Confirmed speakers — real photos + check badge */
+  .spk.confirmed{position:relative;border-color:rgba(0,208,198,.30)}
+  .spk.confirmed:hover{border-color:var(--turquoise);box-shadow:0 24px 50px -22px rgba(0,208,198,.55)}
+  .spk.confirmed .photo{
+    background:linear-gradient(150deg,var(--ocean-blue),var(--deep-navy));
+    padding:0;overflow:hidden;
+  }
+  .spk.confirmed .photo img{
+    width:100%;height:100%;
+    object-fit:cover;
+    object-position:var(--obj,center 30%);
+    transition:transform .6s var(--ease),filter .35s var(--ease);
+    filter:saturate(1.05) contrast(1.02);
+  }
+  .spk.confirmed:hover .photo img{transform:scale(1.05);filter:saturate(1.15) contrast(1.05)}
+  /* Gradient overlay at bottom of photo so the next-section feel is preserved */
+  .spk.confirmed .photo::before{
+    content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+    background:linear-gradient(180deg,transparent 55%,rgba(11,18,32,.55) 100%);
+  }
+  /* Tighter info layout for the multi-line role */
+  .spk.confirmed .info small{line-height:1.35}
+  /* Spotlight follow effect — cursor-aware radial light */
+  .spk::after{
+    content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;
+    background:radial-gradient(180px circle at var(--mx,50%) var(--my,50%),rgba(0,208,198,.18),transparent 60%);
+    opacity:0;transition:opacity .25s;
+  }
+  .spk:hover::after{opacity:1}
+  .spk .photo{aspect-ratio:1;background:linear-gradient(150deg,var(--ocean-blue),var(--deep-navy));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+  .spk .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(11,18,32,.7))}
+  .spk .photo svg{width:46px;height:46px;stroke:rgba(0,208,198,.5);position:relative;z-index:1}
+
+  /* Reveal-soon card with blur+glitch */
+  .spk.reveal-card .photo{
+    background:
+      radial-gradient(60% 60% at 30% 30%,rgba(0,181,184,.30),transparent 70%),
+      radial-gradient(60% 60% at 70% 70%,rgba(255,107,90,.20),transparent 70%),
+      linear-gradient(150deg,var(--ocean-blue),var(--deep-navy));
+  }
+  .spk.reveal-card .photo::before{
+    content:"";position:absolute;inset:0;
+    background:repeating-linear-gradient(0deg,transparent 0,transparent 3px,rgba(255,255,255,.04) 3px,rgba(255,255,255,.04) 4px);
+    mix-blend-mode:overlay;filter:blur(.5px);
+  }
+  .spk.reveal-card .soon{
+    position:relative;z-index:2;font-weight:800;color:var(--soft-white);font-size:.85rem;
+    letter-spacing:.14em;text-transform:uppercase;
+    padding:8px 14px;background:rgba(11,18,32,.6);border:1px solid var(--turquoise);border-radius:999px;
+    backdrop-filter:blur(4px);
+  }
+  .spk.reveal-card:hover .photo::before{animation:glitch .6s steps(3) infinite}
+  @keyframes glitch{0%{transform:translateX(0)}33%{transform:translateX(-2px)}66%{transform:translateX(2px)}100%{transform:translateX(0)}}
+
+  .spk .info{padding:16px}
+  .spk .info b{display:block;font-size:1.02rem;font-weight:800;letter-spacing:-.005em}
+  .spk .info small{display:block;color:var(--muted);font-size:.83rem;margin-top:3px;font-weight:500}
+  .spk .info .trk{margin-top:10px;display:inline-block;font-size:.65rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--turquoise);padding:4px 10px;background:rgba(0,208,198,.08);border-radius:999px}
+
+  /* ============ AGENDA ============ */
+  .tabs{display:flex;gap:10px;margin-top:30px;margin-bottom:24px;flex-wrap:wrap}
+  .tabs button{background:var(--glass);border:1px solid var(--glass-border);color:var(--muted-strong);font-weight:700;padding:11px 22px;border-radius:999px;cursor:pointer;transition:.2s;font-family:inherit;font-size:.92rem}
+  .tabs button.active{background:var(--turquoise);color:#04141a;border-color:var(--turquoise)}
+  .tabs button:focus-visible{outline:2px solid var(--turquoise);outline-offset:2px}
+  .agenda-day{display:none}
+  .agenda-day.active{display:block;animation:fade .4s var(--ease)}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .slot{display:grid;grid-template-columns:130px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line);transition:background .2s}
+  .slot:hover{background:rgba(0,208,198,.03)}
+  .slot .time{color:var(--turquoise);font-weight:800;font-variant-numeric:tabular-nums;font-size:.92rem}
+  .slot b{font-size:1.05rem;font-weight:700}
+  .slot p{color:var(--muted);font-size:.9rem;margin-top:4px}
+  .slot .trk{font-size:.65rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin-top:8px;display:inline-block}
+  .note{margin-top:18px;font-size:.84rem;color:var(--muted);font-style:italic}
+
+  /* ============ MADE FOR YOU ============ */
+  .for-you-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap:18px;margin-top:42px;
+  }
+  .fy-card{
+    background:var(--glass);border:1px solid var(--glass-border);
+    border-radius:var(--radius);padding:28px 26px;
+    transition:transform .35s var(--ease),border-color .35s,box-shadow .35s;
+    position:relative;overflow:hidden;
+    display:flex;flex-direction:column;
+  }
+  .fy-card::before{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:2px;
+    background:linear-gradient(90deg,transparent,var(--turquoise),transparent);
+    transform:translateX(-100%);transition:transform .6s var(--ease);
+  }
+  .fy-card:hover{
+    transform:translateY(-4px);border-color:var(--turquoise);
+    box-shadow:0 20px 40px -22px rgba(0,208,198,.40);
+  }
+  .fy-card:hover::before{transform:translateX(100%)}
+  .fy-icon{
+    width:54px;height:54px;margin-bottom:18px;
+    background:rgba(0,208,198,.06);border:1px solid var(--glass-border);
+    border-radius:14px;padding:10px;
+    display:flex;align-items:center;justify-content:center;
+    transition:background .35s,border-color .35s,transform .35s;
+  }
+  .fy-card:hover .fy-icon{
+    background:rgba(0,208,198,.12);border-color:var(--turquoise);
+    transform:rotate(-3deg) scale(1.05);
+  }
+  .fy-icon svg{width:100%;height:100%}
+  .fy-card h3{
+    font-size:1.15rem;font-weight:800;margin-bottom:10px;
+    letter-spacing:-.01em;line-height:1.2;
+  }
+  .fy-card p{color:var(--muted-strong);font-size:.94rem;margin-bottom:18px;flex:1}
+  .fy-tag{
+    display:inline-block;align-self:flex-start;
+    font-size:.66rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--turquoise);
+    padding:5px 11px;background:rgba(0,208,198,.08);border:1px solid rgba(0,208,198,.20);
+    border-radius:999px;
+  }
+
+  /* Moment card — wordmark on a complementary brand background */
+  .moment-card .moment-media{
+    background:
+      radial-gradient(60% 80% at 80% 20%,rgba(255,107,90,.30),transparent 55%),
+      radial-gradient(60% 70% at 20% 80%,rgba(0,208,198,.22),transparent 60%),
+      linear-gradient(135deg,var(--ocean-blue),var(--deep-navy));
+    position:relative;
+  }
+  .moment-card .moment-media::before{
+    content:"";position:absolute;inset:0;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><circle cx='1' cy='1' r='0.8' fill='rgba(0,208,198,0.15)'/></svg>");
+    background-size:40px 40px;
+    opacity:.5;
+    mix-blend-mode:overlay;
+  }
+  .moment-card .moment-media img{
+    width:auto !important;height:auto !important;
+    max-width:78% !important;max-height:78% !important;
+    object-fit:contain !important;
+    position:absolute !important;top:50% !important;left:50% !important;
+    transform:translate(-50%,-50%) !important;
+    aspect-ratio:auto !important;
+    transition:transform .8s var(--ease) !important;
+  }
+  /* Hover: combine centering translate with subtle scale (override .why-card hover) */
+  .moment-card:hover .moment-media img{
+    transform:translate(-50%,-50%) scale(1.05) !important;
+  }
+
+  /* Separación visual entre "for you" y "why PR" */
+  .why-pr-block{margin-top:90px;position:relative;padding-top:60px}
+  .why-pr-block::before{
+    content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+    width:140px;height:1px;
+    background:linear-gradient(90deg,transparent,var(--turquoise),transparent);
+  }
+
+  /* ============ WHY PR ============ */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+  .why-card{
+    background:var(--glass);border:1px solid var(--glass-border);
+    border-radius:var(--radius);overflow:hidden;
+    transition:transform .35s var(--ease),border-color .35s;
+  }
+  .why-card:hover{transform:translateY(-4px);border-color:var(--turquoise)}
+  .why-card .why-media{aspect-ratio:16/10;overflow:hidden;position:relative}
+  .why-card .why-media img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+  .why-card:hover .why-media img{transform:scale(1.06)}
+  .why-card .why-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(11,18,32,.65))}
+  .why-card .why-body{padding:24px}
+  .why-card .why-body h3{font-size:1.25rem;margin-bottom:10px;font-weight:800}
+  .why-card .why-body p{color:var(--muted-strong);font-size:.96rem}
+
+  .venue-meta{margin-top:36px;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:28px;display:grid;gap:14px}
+  .venue-list{list-style:none;display:grid;gap:14px}
+  .venue-list li{display:flex;gap:12px;align-items:flex-start;color:var(--muted-strong);font-size:.96rem}
+  .venue-list svg{width:20px;height:20px;stroke:var(--turquoise);flex-shrink:0;margin-top:3px}
+  .venue-meta .map-cta{margin-top:6px}
+
+  /* ============ PRICING ============ */
+  /* Scarcity — qualitative capacity meter (no exact numbers) */
+  .scarcity{
+    background:var(--glass);border:1px solid var(--glass-border);border-radius:14px;
+    padding:18px 22px;margin-top:30px;
+  }
+  .scarcity-head{
+    display:flex;justify-content:space-between;align-items:center;
+    margin-bottom:12px;flex-wrap:wrap;gap:8px;
+  }
+  .scarcity-eyebrow{
+    font-size:.68rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--turquoise);
+  }
+  .scarcity-status{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.66rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--coral);
+    padding:5px 11px;background:rgba(255,107,90,.10);
+    border:1px solid rgba(255,107,90,.30);border-radius:999px;
+  }
+  /* Status variants */
+  .scarcity-status[data-level="open"]{color:var(--turquoise);background:rgba(0,208,198,.10);border-color:rgba(0,208,198,.30)}
+  .scarcity-status[data-level="up"]  {color:var(--turquoise);background:rgba(0,208,198,.10);border-color:rgba(0,208,198,.30)}
+  .scarcity-status[data-level="fast"]{color:var(--coral);background:rgba(255,107,90,.10);border-color:rgba(255,107,90,.30)}
+  .scarcity-status[data-level="gone"]{color:var(--coral);background:rgba(255,107,90,.18);border-color:rgba(255,107,90,.50)}
+  .scarcity-dot{
+    width:7px;height:7px;border-radius:50%;
+    background:currentColor;
+    box-shadow:0 0 10px currentColor;
+    animation:scarcityPulse 1.6s ease-in-out infinite;
+  }
+  .scarcity-status[data-level="gone"] .scarcity-dot{animation-duration:1s}
+  .scarcity-status[data-level="open"] .scarcity-dot{animation-duration:2.4s}
+  @keyframes scarcityPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+  .scarcity-bar{
+    height:8px;background:rgba(255,255,255,.06);
+    border-radius:999px;overflow:hidden;position:relative;
+  }
+  .scarcity-fill{
+    height:100%;width:0%;
+    background:linear-gradient(90deg,var(--turquoise),var(--caribbean-teal) 60%,var(--coral));
+    border-radius:999px;
+    transition:width 1.4s var(--ease);
+    box-shadow:0 0 16px rgba(0,208,198,.45);
+    position:relative;overflow:hidden;
+  }
+  /* Subtle shimmer travels along the fill */
+  .scarcity-fill::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);
+    transform:translateX(-100%);
+    animation:scarcityShimmer 3.5s ease-in-out infinite;
+  }
+  @keyframes scarcityShimmer{0%,40%{transform:translateX(-100%)}100%{transform:translateX(200%)}}
+  .scarcity-foot{
+    margin-top:10px;font-size:.78rem;color:var(--muted);text-align:center;
+  }
+
+  .price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px;max-width:880px}
+  .price{
+    background:var(--glass);border:1px solid var(--glass-border);
+    border-radius:22px;padding:32px;position:relative;display:flex;flex-direction:column;
+    transition:transform .35s var(--ease);
+  }
+  .price:hover{transform:translateY(-4px)}
+  .price.featured{
+    border-color:transparent;
+    background:linear-gradient(165deg,rgba(0,181,184,.16),var(--glass));
+    box-shadow:0 24px 60px -30px rgba(0,208,198,.6);
+    position:relative;
+  }
+  /* Animated conic gradient border on featured pricing — @property animates angle */
+  @property --ga{syntax:"<angle>";initial-value:0deg;inherits:false}
+  .price.featured::before{
+    content:"";position:absolute;inset:-1.5px;border-radius:inherit;padding:1.5px;
+    background:conic-gradient(from var(--ga),var(--turquoise),var(--caribbean-teal),var(--coral),var(--turquoise));
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+            mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;
+    animation:spinGrad 6s linear infinite;pointer-events:none;
+    opacity:.9;
+  }
+  @keyframes spinGrad{to{--ga:360deg}}
+  .price.vip{
+    background:linear-gradient(165deg,rgba(10,47,79,.6),rgba(11,18,32,.6));
+    border-color:rgba(255,107,90,.30);
+  }
+  .price .ribbon{
+    position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+    background:linear-gradient(90deg,var(--turquoise),var(--coral));
+    color:#04141a;font-size:.68rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+    padding:7px 16px;border-radius:999px;
+    box-shadow:0 10px 24px -8px rgba(0,208,198,.6);
+  }
+  .price h3{font-size:1.35rem;font-weight:800}
+  .price .amt{font-size:3.2rem;font-weight:900;margin:12px 0 2px;line-height:1;letter-spacing:-.02em}
+  .price .amt small{font-size:1rem;font-weight:600;color:var(--muted)}
+  .price .amt .strike{font-size:1.1rem;color:var(--muted);text-decoration:line-through;font-weight:600;margin-left:8px}
+  .price .sub{color:var(--muted);font-size:.88rem;margin-bottom:22px}
+  .price ul{list-style:none;display:grid;gap:11px;margin-bottom:26px}
+  .price li{display:flex;gap:10px;align-items:flex-start;font-size:.93rem;color:var(--muted-strong)}
+  .price li svg{width:17px;height:17px;stroke:var(--turquoise);flex-shrink:0;margin-top:3px}
+  .price.vip li svg{stroke:var(--coral)}
+  .price .btn{margin-top:auto;width:100%}
+
+  .price-note{margin-top:22px;text-align:center;font-size:.86rem;color:var(--muted);max-width:540px;margin-left:auto;margin-right:auto}
+
+  /* Save badge corner — anchoring */
+  .price .save-corner{
+    position:absolute;top:18px;right:18px;
+    background:var(--coral);color:#240a06;
+    font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+    padding:6px 11px;border-radius:8px;
+    box-shadow:0 8px 20px -8px rgba(255,107,90,.7);
+  }
+
+  /* Micro-trust under CTA — scarcity reinforcement */
+  .price .micro-trust{
+    margin-top:14px;text-align:center;font-size:.82rem;color:var(--muted-strong);font-weight:500;
+  }
+  .price .micro-trust b{color:var(--coral);font-variant-numeric:tabular-nums}
+
+  /* Trust row below pricing — payment security signals */
+  .trust-row{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:18px 28px;
+    margin-top:36px;padding:18px 22px;
+    background:var(--glass);border:1px solid var(--glass-border);border-radius:14px;
+    backdrop-filter:blur(8px);
+  }
+  .trust-row span{display:inline-flex;align-items:center;gap:8px;font-size:.86rem;color:var(--muted-strong);font-weight:600}
+  .trust-row svg{width:18px;height:18px;stroke:var(--turquoise)}
+
+  /* ============ SPONSORS ============ */
+  .sponsors{text-align:center}
+  .sponsor-tier{margin-top:36px}
+  .sponsor-tier .tier-label{
+    font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--turquoise);
+    font-weight:800;display:inline-block;padding:5px 14px;border:1px solid var(--line);border-radius:999px;
+    margin-bottom:22px;
+  }
+  .logo-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:56px;row-gap:32px}
+  /* Free-floating logos — transparent backgrounds, no chip, no halo */
+  .logo-chip{
+    display:inline-flex;align-items:center;justify-content:center;
+    padding:8px 12px;
+    background:none;border:none;
+    transition:transform .35s,filter .35s,opacity .35s;
+    opacity:.92;
+  }
+  .logo-chip:hover{
+    transform:translateY(-3px);
+    opacity:1;
+    filter:drop-shadow(0 8px 24px rgba(0,208,198,.30));
+  }
+  .logo-chip img{
+    height:130px;width:auto;max-width:340px;object-fit:contain;
+    transition:transform .35s;
+  }
+  .logo-chip:hover img{transform:scale(1.04)}
+  /* W@W is just the @ symbol — fills its frame tight, needs less px */
+  .logo-chip img[src*="waw"]{height:78px}
+  /* W@W subtle teal glow for extra pop */
+  .logo-chip:has(img[src*="waw"]) img{filter:drop-shadow(0 0 12px rgba(0,208,198,.35))}
+
+  /* Placeholder chips (Silver/Community tier — "Tu logo aquí") */
+  .logo-chip.placeholder{
+    background:var(--glass);border:1px solid var(--glass-border);
+    color:var(--muted);font-weight:600;font-style:italic;font-size:.95rem;
+    height:120px;padding:22px 36px;min-width:200px;
+  }
+  .logo-chip.placeholder:hover{background:rgba(255,255,255,.06);box-shadow:none}
+
+  /* ============ TESTIMONIALS / PRESS ============ */
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+  .quote{
+    background:var(--glass);border:1px solid var(--glass-border);
+    border-radius:var(--radius);padding:28px;
+    display:flex;flex-direction:column;gap:18px;
+    transition:border-color .25s,transform .25s;
+  }
+  .quote:hover{border-color:var(--turquoise);transform:translateY(-3px)}
+  .quote p{color:var(--soft-white);font-size:1.02rem;line-height:1.5;font-weight:500;flex:1}
+  .quote .quote-mark{font-size:2.4rem;font-weight:900;color:var(--turquoise);line-height:.6;opacity:.7}
+  .quote .author{display:flex;align-items:center;gap:12px;padding-top:14px;border-top:1px solid var(--line)}
+  .quote .avatar{
+    width:42px;height:42px;border-radius:50%;
+    background:linear-gradient(135deg,var(--caribbean-teal),var(--coral));
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.95rem;color:#04141a;
+    flex-shrink:0;
+  }
+  .quote .author b{display:block;font-size:.94rem}
+  .quote .author small{display:block;color:var(--muted);font-size:.8rem}
+
+  .press-strip{margin-top:50px;padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .press-strip .press-label{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700;text-align:center;margin-bottom:18px}
+  .press-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:32px}
+  .press-row .press-logo{
+    font-size:.95rem;font-weight:700;color:var(--muted-strong);opacity:.55;
+    letter-spacing:.04em;font-style:italic;
+    transition:opacity .25s;
+  }
+  .press-row .press-logo:hover{opacity:1}
+
+  /* ============ NEWSLETTER ============ */
+  .news{
+    background:
+      radial-gradient(80% 100% at 80% 0%,rgba(0,181,184,.18),transparent 60%),
+      linear-gradient(135deg,rgba(10,47,79,.7),rgba(11,18,32,.5));
+    border:1px solid var(--glass-border);border-radius:24px;
+    padding:50px 36px;text-align:center;margin-top:20px;
+  }
+  .news h2{font-size:clamp(1.8rem,4.5vw,2.6rem);margin:14px auto 12px;max-width:22ch;font-weight:800}
+  .news p{margin:0 auto;max-width:48ch}
+  .news form{display:flex;gap:10px;max-width:480px;margin:28px auto 0;flex-wrap:wrap}
+  .news input{
+    flex:1;min-width:200px;background:rgba(0,0,0,.30);border:1px solid var(--glass-border);
+    border-radius:999px;padding:15px 22px;color:var(--soft-white);font-size:1rem;font-family:inherit;
+  }
+  .news input:focus{outline:none;border-color:var(--turquoise);box-shadow:0 0 0 4px rgba(0,208,198,.15)}
+  .news .msg{width:100%;color:var(--turquoise);font-weight:700;margin-top:10px}
+
+  /* ============ FAQ ============ */
+  .faq{max-width:820px;margin-top:32px}
+  .faq details{border-bottom:1px solid var(--line);padding:6px 0;transition:background .2s}
+  .faq summary{
+    cursor:pointer;list-style:none;padding:18px 0;font-weight:700;font-size:1.05rem;
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";color:var(--turquoise);font-size:1.6rem;font-weight:400;transition:transform .3s;flex-shrink:0}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq details[open] summary{color:var(--turquoise)}
+  .faq p{color:var(--muted-strong);padding:0 0 20px;font-size:.96rem;max-width:68ch}
+
+  /* Authority paragraph (speakers) */
+  .authority{margin-top:18px;color:var(--muted-strong);font-size:.96rem;padding:14px 18px;border-left:2px solid var(--turquoise);background:rgba(0,208,198,.05);max-width:62ch;border-radius:0 8px 8px 0}
+  .authority b{color:var(--turquoise);font-weight:700}
+
+  /* Urgency strip on final CTA */
+  .urgency-strip{
+    display:inline-flex;align-items:center;gap:10px;
+    background:rgba(255,107,90,.10);border:1px solid rgba(255,107,90,.35);border-radius:999px;
+    padding:8px 18px;margin-bottom:18px;
+    font-size:.78rem;font-weight:800;letter-spacing:.10em;text-transform:uppercase;color:var(--coral);
+  }
+  .urgency-strip .blink{width:8px;height:8px;border-radius:50%;background:var(--coral);box-shadow:0 0 14px var(--coral);animation:pulse 1.5s infinite}
+
+  /* ============ FINAL CTA ============ */
+  .final{
+    text-align:center;padding:120px 0 130px;position:relative;overflow:hidden;
+    border-top:1px solid var(--line);
+  }
+  .final-bg{position:absolute;inset:0;z-index:0;opacity:.30}
+  .final-bg img{width:100%;height:100%;object-fit:cover;filter:hue-rotate(-10deg) saturate(1.2)}
+  .final-bg::after{content:"";position:absolute;inset:0;background:
+    radial-gradient(70% 100% at 50% 0%,rgba(0,181,184,.22),transparent 60%),
+    linear-gradient(180deg,rgba(11,18,32,.4),var(--deep-navy))}
+  .final .wrap{position:relative;z-index:2}
+  .final h2{font-size:clamp(2.2rem,7vw,4rem);max-width:22ch;margin:0 auto 12px;font-weight:900;letter-spacing:-.025em}
+  .final .slogan-big{font-size:clamp(1.4rem,4vw,2.2rem);color:var(--turquoise);font-weight:700;font-style:italic;margin:18px auto 26px;max-width:30ch;letter-spacing:-.01em}
+  .final .countdown{justify-content:center;margin:30px auto 36px}
+  .final .countdown .cd-box{min-width:90px}
+
+  /* ============ FOOTER ============ */
+  footer{border-top:1px solid var(--line);padding:60px 0 130px;background:rgba(10,47,79,.15)}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:30px}
+  .foot-grid img{height:38px;margin-bottom:16px}
+  .foot-grid h4{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--turquoise);margin-bottom:16px;font-weight:800}
+  .foot-grid a,.foot-grid p{display:block;color:var(--muted-strong);font-size:.92rem;margin-bottom:10px;transition:color .2s}
+  .foot-grid a:hover{color:var(--soft-white)}
+  .foot-socials{display:flex;gap:12px;margin-top:14px}
+  .foot-socials a{
+    width:36px;height:36px;border-radius:50%;
+    background:var(--glass);border:1px solid var(--glass-border);
+    display:inline-flex;align-items:center;justify-content:center;
+    margin-bottom:0;transition:border-color .2s,transform .2s;
+  }
+  .foot-socials a:hover{border-color:var(--turquoise);transform:translateY(-2px)}
+  .foot-socials svg{width:16px;height:16px;stroke:var(--soft-white)}
+  .foot-bottom{
+    border-top:1px solid var(--line);margin-top:46px;padding-top:24px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+    color:var(--muted);font-size:.82rem;
+  }
+  .foot-slogan{font-style:italic;color:var(--turquoise);font-weight:600}
+
+  /* ============ STICKY MOBILE CTA ============ */
+  .mobile-cta{
+    position:fixed;left:0;right:0;bottom:0;z-index:80;display:none;
+    background:rgba(11,18,32,.94);backdrop-filter:blur(14px);border-top:1px solid var(--line);
+    padding:12px 16px;padding-bottom:calc(12px + env(safe-area-inset-bottom));
+    align-items:center;justify-content:space-between;gap:12px;
+  }
+  .mobile-cta .px{font-weight:700;font-size:.92rem}
+  .mobile-cta .px small{display:block;color:var(--muted);font-size:.72rem;font-weight:500;margin-top:2px}
+  .mobile-cta .px small b{color:var(--coral);font-variant-numeric:tabular-nums}
+  .mobile-cta .btn{padding:13px 22px;font-size:.92rem}
+
+  /* ============ EXIT-INTENT MODAL ============ */
+  .modal-bg{
+    position:fixed;inset:0;z-index:100;display:none;
+    background:rgba(11,18,32,.78);backdrop-filter:blur(8px);
+    align-items:center;justify-content:center;padding:24px;
+  }
+  .modal-bg.show{display:flex;animation:fadeIn .25s ease}
+  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+  .modal{
+    max-width:460px;width:100%;background:var(--ocean-blue);
+    border:1px solid var(--turquoise);border-radius:24px;
+    padding:38px 32px;text-align:center;position:relative;
+    box-shadow:0 40px 80px -20px rgba(0,0,0,.6);
+  }
+  .modal h3{font-size:1.6rem;margin-bottom:10px;font-weight:800;letter-spacing:-.015em}
+  .modal p{color:var(--muted-strong);margin-bottom:24px}
+  .modal .close{
+    position:absolute;top:14px;right:14px;width:34px;height:34px;
+    border-radius:50%;background:var(--glass);border:1px solid var(--glass-border);
+    color:var(--soft-white);font-size:1.4rem;cursor:pointer;display:flex;align-items:center;justify-content:center;
+    transition:border-color .2s;
+  }
+  .modal .close:hover{border-color:var(--turquoise)}
+
+  /* ============ REVEAL ANIMATION ============ */
+  .r{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .r.in{opacity:1;transform:none}
+
+  /* ============ RESPONSIVE ============ */
+  @media(max-width:1100px){
+    .stats-grid{grid-template-columns:repeat(3,1fr)}
+  }
+  @media(max-width:900px){
+    .cards{grid-template-columns:1fr}
+    .speakers-grid{grid-template-columns:repeat(2,1fr)}
+    .why-grid{grid-template-columns:1fr}
+    .for-you-grid{grid-template-columns:1fr 1fr}
+    .price-grid{grid-template-columns:1fr}
+    .quotes{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .nav-links{
+      position:fixed;inset:0 0 0 auto;width:min(82vw,340px);
+      background:rgba(11,18,32,.97);backdrop-filter:blur(18px);
+      flex-direction:column;align-items:flex-start;justify-content:center;
+      gap:28px;padding:40px;
+      transform:translateX(100%);transition:transform .35s var(--ease);
+      border-left:1px solid var(--line);z-index:95;
+    }
+    .nav-links.open{transform:none}
+    .nav-links a{font-size:1.2rem}
+    .hamb{display:flex;z-index:96}
+    .hamb.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamb.open span:nth-child(2){opacity:0}
+    .hamb.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .nav .btn-primary{display:none}
+    .slot{grid-template-columns:90px 1fr;gap:14px}
+  }
+  @media(max-width:560px){
+    .stats-grid{grid-template-columns:repeat(2,1fr);gap:30px 14px;padding:42px 0}
+    .stat b{font-size:clamp(1.8rem,7vw,2.4rem)}
+    .speakers-grid{grid-template-columns:1fr 1fr;gap:12px}
+    .for-you-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+    .cd-box{min-width:64px;padding:13px 6px}
+    .cd-box b{font-size:1.6rem}
+    .cd-box small{font-size:.55rem;letter-spacing:.14em}
+    .hero{padding:110px 0 160px}
+    /* Mobile uses portrait image — reset desktop's vertical shift/scale */
+    .hero-bg img{object-position:center 60%;transform:scale(1.02) translateY(0);opacity:.78}
+    .hero-mark{margin-bottom:4px}
+    .hero-mark img{width:min(100vw,540px)}
+    .hero-tagline{font-size:1.02rem;margin:0 auto 18px;white-space:normal;max-width:30ch;line-height:1.3}
+    .hero-datepill{margin-bottom:16px;font-size:.68rem;padding:7px 14px;letter-spacing:.12em}
+    .hero-trust{margin-top:28px;font-size:.62rem;gap:6px 12px}
+    .hero-coral-glow{width:340px;height:340px;top:-80px;right:-100px}
+    .scroll-cue{margin-top:30px}
+    .sect{padding:72px 0}
+    .why-pr-block{margin-top:68px;padding-top:48px}
+
+    /* Tracks: smaller icons & h3 */
+    .card{padding:26px 22px}
+    .card .track-icon{width:60px;height:60px;margin-bottom:18px;padding:11px}
+    .card h3{font-size:1.3rem}
+    .card .num{font-size:2rem;top:18px;right:20px}
+
+    /* Hackathon: photo top, text bottom, badge wraps */
+    .hack-inner{padding:34px 22px}
+    .hack-badge{padding:8px 14px 8px 12px;gap:10px}
+    .hack-badge .hack-label{font-size:.88rem;letter-spacing:.18em}
+    .hack-badge .hack-bracket{display:none}
+    .hack .prize{font-size:2.8rem}
+    .hack h3{font-size:1.5rem}
+    .hack .pills{gap:7px}
+    .pill{font-size:.78rem;padding:7px 12px}
+
+    /* For-you cards tighter (less scroll on 1col) */
+    .fy-card{padding:24px 22px}
+    .fy-icon{width:48px;height:48px;margin-bottom:14px;padding:9px}
+    .fy-card h3{font-size:1.1rem}
+    .fy-card p{font-size:.92rem;margin-bottom:14px}
+
+    /* Why PR cards */
+    .why-card .why-media{aspect-ratio:16/10}
+    .why-card .why-body{padding:22px}
+    .why-card .why-body h3{font-size:1.2rem}
+
+    /* Pricing: tighter + ribbons readable */
+    .price{padding:28px 22px}
+    .price h3{font-size:1.2rem}
+    .price .amt{font-size:2.6rem}
+    .price .ribbon{font-size:.62rem;letter-spacing:.10em;padding:6px 13px}
+    .price .save-corner{top:14px;right:14px;font-size:.62rem;letter-spacing:.04em;padding:5px 9px}
+
+    /* Scarcity head wraps vertically on small */
+    .scarcity{padding:16px 18px}
+    .scarcity-head{flex-direction:column;align-items:flex-start;gap:10px}
+    .scarcity-foot{font-size:.74rem;text-align:left}
+    .trust-row{gap:12px 18px;padding:14px 16px;margin-top:30px}
+    .trust-row span{font-size:.78rem}
+
+    /* Agenda */
+    .slot{grid-template-columns:72px 1fr;gap:10px;padding:16px 0}
+    .slot .time{font-size:.82rem}
+    .slot b{font-size:.96rem}
+    .tabs button{font-size:.86rem;padding:11px 18px;min-height:44px}
+
+    /* FAQ touch + readability */
+    .faq summary{padding:16px 0;font-size:1rem;min-height:48px}
+    .faq p{font-size:.92rem}
+
+    /* Newsletter form stacks on mobile */
+    .news{padding:38px 22px}
+    .news form{flex-direction:column;gap:10px}
+    .news input,.news .btn{width:100%;min-width:0}
+    .news .btn{padding:14px 22px}
+
+    /* Sponsors: logos smaller, gap tighter */
+    .logo-row{gap:30px;row-gap:24px}
+    .logo-chip img{height:80px}
+    .logo-chip img[src*="waw"]{height:62px}
+    .marquee-track{animation-duration:22s}
+    .marquee-set{gap:32px;padding-right:32px}
+
+    /* Final CTA */
+    .final{padding:90px 0 110px}
+    .final .slogan-big{font-size:clamp(1.3rem,5.5vw,1.8rem);max-width:24ch}
+    .urgency-strip{font-size:.7rem;padding:7px 14px;letter-spacing:.08em}
+
+    /* Footer: clean vertical stack */
+    .foot-bottom{flex-direction:column;align-items:flex-start;gap:8px;font-size:.78rem}
+    footer{padding:50px 0 110px}
+
+    /* Header tighter */
+    .brand img{height:28px}
+    .nav-right{gap:8px}
+    .nav{padding:14px 16px}
+    .lang-toggle button{padding:7px 11px;font-size:.75rem;min-height:32px}
+  }
+
+  /* Extra-tight (320px iPhone SE 1st gen) */
+  @media(max-width:380px){
+    .hero-mark{margin-bottom:2px}
+    .hero-mark img{width:100vw}
+    .hero-tagline{font-size:.96rem;margin-top:0}
+    .cd-box{min-width:58px;padding:12px 4px}
+    .cd-box b{font-size:1.4rem}
+    .btn-lg{padding:16px 22px;font-size:.96rem}
+    .hack .prize{font-size:2.4rem}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    .r{opacity:1;transform:none}
+    .wave-bg{display:none}
+  }
+</style>
+</head>
+<body id="top">
+
+<!-- ============ HEADER ============ -->
+<header id="header">
+  <nav class="nav" role="navigation" aria-label="Main">
+    <a class="brand" href="#top" aria-label="Caribbean AI Summit"><img src="assets/logo-white.svg" alt="Caribbean AI Summit" onerror="this.onerror=null;this.src='assets/logo-white.png'"/></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#tracks" data-i18n="nav.tracks">Tracks</a>
+      <a href="#hackathon" data-i18n="nav.hack">Hackathon</a>
+      <a href="#speakers" data-i18n="nav.speakers">Speakers</a>
+      <a href="#agenda" data-i18n="nav.agenda">Agenda</a>
+      <a href="#venue" data-i18n="nav.venue">Venue</a>
+      <a href="#tickets" data-i18n="nav.tickets">Boletos</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-toggle" role="group" aria-label="Language toggle">
+        <button id="lang-es" onclick="setLang('es')" aria-label="Cambiar a español" aria-pressed="false">ES</button>
+        <button id="lang-en" class="active" onclick="setLang('en')" aria-label="Switch to English" aria-pressed="true">EN</button>
+      </div>
+      <a class="btn btn-primary" href="#" data-eb data-i18n="cta.book">Reserva tu lugar.</a>
+      <button class="hamb" id="hamb" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg">
+    <picture>
+      <source media="(max-width:640px)" srcset="assets/hero-mobile.png"/>
+      <img src="assets/hero-venue.png" alt="" aria-hidden="true" fetchpriority="high" onerror="this.style.display='none'"/>
+    </picture>
+  </div>
+
+
+  <!-- Coral glow accent (top-right) — balance la temperatura azul del fondo -->
+  <div class="hero-coral-glow" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <!-- Brand lockup — visual fixation point (full hero logo, dominante) -->
+    <div class="hero-mark" aria-hidden="true">
+      <img src="assets/hero-logo.png" alt="Caribbean AI Summit" width="640" height="460"/>
+    </div>
+
+    <!-- Tagline — 2 líneas, blanca, soporta el logo predominante -->
+    <p class="hero-tagline">
+      <span data-i18n="hero.tagline.l1">The largest AI conference</span><br>
+      <span data-i18n="hero.tagline.l2">of the Caribbean.</span>
+    </p>
+
+    <!-- Date pill — priming espacio-temporal -->
+    <span class="hero-datepill">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      <span data-i18n="hero.datepill">9–10 oct 2026 · San Juan, PR</span>
+    </span>
+
+    <div class="hero-cta">
+      <a class="btn btn-primary btn-lg" href="#" data-eb data-i18n="cta.book.early">Quiero ser parte</a>
+      <a class="btn btn-ghost btn-lg" href="#tracks" data-i18n="cta.tracks">Ver los tracks</a>
+    </div>
+
+    <div class="countdown" aria-label="Countdown to event">
+      <div class="cd-box"><b class="cd-d">000</b><small data-i18n="cd.days">Días</small></div>
+      <div class="cd-box"><b class="cd-h">00</b><small data-i18n="cd.hours">Horas</small></div>
+      <div class="cd-box"><b class="cd-m">00</b><small data-i18n="cd.min">Min</small></div>
+      <div class="cd-box"><b class="cd-s">00</b><small data-i18n="cd.sec">Seg</small></div>
+    </div>
+
+    <!-- Trust strip: social proof + autoridad -->
+    <div class="hero-trust">
+      <span class="trust-logo">PRAIC</span><span class="sep">·</span>
+      <span data-i18n="hero.trust.members">1,000+ miembros</span><span class="sep">·</span>
+      <span class="trust-logo">JetBrains</span><span class="sep">·</span>
+      <span class="trust-logo">Enalca</span><span class="sep">·</span>
+      <span class="trust-logo">W@W</span>
+    </div>
+
+  </div>
+
+  <!-- Wave divider — 7 lines, BIG amplitude (±115), gradient turquoise→coral -->
+  <div class="hero-wave-divider" aria-hidden="true">
+    <svg class="wd" viewBox="0 0 1440 360" preserveAspectRatio="none">
+      <path class="ln c1"  d="M0,120 C240,5   480,235 720,120 C960,5   1200,235 1440,120"/>
+      <path class="ln c2"  d="M0,140 C240,25  480,255 720,140 C960,25  1200,255 1440,140"/>
+      <path class="ln c3"  d="M0,160 C240,45  480,275 720,160 C960,45  1200,275 1440,160"/>
+      <path class="ln c5"  d="M0,180 C240,65  480,295 720,180 C960,65  1200,295 1440,180"/>
+      <path class="ln c6"  d="M0,200 C240,85  480,315 720,200 C960,85  1200,315 1440,200"/>
+      <path class="ln c8"  d="M0,220 C240,105 480,335 720,220 C960,105 1200,335 1440,220"/>
+      <path class="ln c10" d="M0,240 C240,125 480,355 720,240 C960,125 1200,355 1440,240"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ============ STATS + MARQUEE ============ -->
+<section class="stats" aria-label="Event statistics">
+  <div class="wrap stats-grid">
+    <div class="stat r"><b data-count="2">0</b><small data-i18n="stat.days">Días intensivos</small></div>
+    <div class="stat r"><b data-count="3">0</b><small data-i18n="stat.tracks">Tracks</small></div>
+    <div class="stat r"><b data-count="5">0</b><small data-i18n="stat.keynotes">Keynotes</small></div>
+    <div class="stat r"><b data-count="20" data-suffix="+">0</b><small data-i18n="stat.sessions">Sesiones</small></div>
+    <div class="stat r"><b data-count="800" data-suffix="+">0</b><small data-i18n="stat.attendees">Asistentes esperados</small></div>
+    <div class="stat r"><b data-count="10" data-prefix="$" data-suffix="K">0</b><small data-i18n="stat.prize">En premios · hackathon</small></div>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <!-- Set 1: gap inside + padding-right ensures clean -50% loop with the identical Set 2 -->
+      <div class="marquee-set">
+        <span class="m-chip"><img src="assets/sp-praic.png" alt=""/></span>
+        <span class="m-chip"><img src="assets/sp-enalca.png" alt=""/></span>
+        <span class="m-chip"><img src="assets/sp-jetbrains.png" alt=""/></span>
+        <span class="m-chip"><img src="assets/sp-waw.png" alt=""/></span>
+        <span class="m-chip"><img src="assets/sp-praic.png" alt=""/></span>
+        <span class="m-chip"><img src="assets/sp-enalca.png" alt=""/></span>
+        <span class="m-chip"><img src="assets/sp-jetbrains.png" alt=""/></span>
+        <span class="m-chip"><img src="assets/sp-waw.png" alt=""/></span>
+      </div>
+      <div class="marquee-set" aria-hidden="true">
+        <span class="m-chip"><img src="assets/sp-praic.png" alt=""/></span>
+        <span class="m-chip"><img src="assets/sp-enalca.png" alt=""/></span>
+        <span class="m-chip"><img src="assets/sp-jetbrains.png" alt=""/></span>
+        <span class="m-chip"><img src="assets/sp-waw.png" alt=""/></span>
+        <span class="m-chip"><img src="assets/sp-praic.png" alt=""/></span>
+        <span class="m-chip"><img src="assets/sp-enalca.png" alt=""/></span>
+        <span class="m-chip"><img src="assets/sp-jetbrains.png" alt=""/></span>
+        <span class="m-chip"><img src="assets/sp-waw.png" alt=""/></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MANIFESTO ============ -->
+<section class="sect manifesto">
+  <div class="manifesto-bg" aria-hidden="true"><img src="assets/morro.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/></div>
+  <div class="wrap">
+    <h2 class="r" data-i18n="manifesto.h2">El Caribe se encuentra con el futuro de la IA.</h2>
+    <p class="r" data-i18n="manifesto.p1">Durante siglos, el Caribe ha sido el punto donde culturas, continentes e ideas se cruzan. Hoy, esa misma encrucijada se convierte en el escenario donde el mundo viene a conversar con la IA. No para mirar desde afuera. Para liderar desde aquí.</p>
+    <p class="r" data-i18n="manifesto.p3">Dos días en San Juan para construir lo que viene — con los que ya lo están haciendo.</p>
+    <span class="slogan-tag r">"The Future Starts with Better Questions."</span>
+  </div>
+</section>
+
+<!-- ============ TRACKS ============ -->
+<section class="sect" id="tracks" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow r" data-i18n="tracks.eye">Tres tracks · Un objetivo</span>
+    <h2 class="title r" data-i18n="tracks.h2">Encuentra tu sala.</h2>
+    <p class="lead r" data-i18n="tracks.lead">Lideres de negocio, builders técnicos y curiosos: todos tienen un asiento. Elige tu camino y vamos.</p>
+
+    <div class="cards">
+      <div class="card r" data-track="business">
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <div class="track-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none">
+            <defs><linearGradient id="tg1" x1="0" y1="0" x2="64" y2="64"><stop offset="0" stop-color="#00D0C6"/><stop offset="1" stop-color="#FF6B5A"/></linearGradient></defs>
+            <rect x="6" y="32" width="10" height="22" rx="2" stroke="url(#tg1)" stroke-width="2.4"/>
+            <rect x="20" y="22" width="10" height="32" rx="2" stroke="url(#tg1)" stroke-width="2.4"/>
+            <rect x="34" y="14" width="10" height="40" rx="2" stroke="url(#tg1)" stroke-width="2.4"/>
+            <rect x="48" y="6" width="10" height="48" rx="2" stroke="url(#tg1)" stroke-width="2.4" fill="rgba(0,208,198,.10)"/>
+            <path d="M4 56h56" stroke="rgba(0,208,198,.4)" stroke-width="1.5"/>
+            <path d="M6 22l14-6 14-8 14-2" stroke="#FF6B5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 4"/>
+          </svg>
+        </div>
+        <span class="num">01</span>
+        <span class="tag">Business</span>
+        <h3 data-i18n="track.b.h">Lidera con IA.</h3>
+        <div class="tagline">Lead with AI.</div>
+        <p data-i18n="track.b.p">Estrategia, finanzas, salud, startups e industrias creativas. Para quienes deciden hacia dónde va el negocio.</p>
+        <a class="micro-cta" href="#agenda" data-i18n="track.b.cta">Ver sesiones →</a>
+      </div>
+      <div class="card r" data-track="technical">
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <div class="track-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none">
+            <defs><linearGradient id="tg2" x1="0" y1="0" x2="64" y2="64"><stop offset="0" stop-color="#00D0C6"/><stop offset="1" stop-color="#FF6B5A"/></linearGradient></defs>
+            <rect x="4" y="10" width="56" height="44" rx="6" stroke="url(#tg2)" stroke-width="2.4" fill="rgba(0,208,198,.06)"/>
+            <path d="M4 20h56" stroke="rgba(0,208,198,.4)" stroke-width="1.5"/>
+            <circle cx="10" cy="15" r="1.5" fill="#FF6B5A"/><circle cx="15" cy="15" r="1.5" fill="rgba(0,208,198,.5)"/><circle cx="20" cy="15" r="1.5" fill="rgba(0,208,198,.5)"/>
+            <path d="M16 30l-6 6 6 6M48 30l6 6-6 6M28 42l8-12" stroke="url(#tg2)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="num">02</span>
+        <span class="tag">Technical</span>
+        <h3 data-i18n="track.t.h">Construye lo que viene.</h3>
+        <div class="tagline">Compete with AI.</div>
+        <p data-i18n="track.t.p">IA en producción, talleres prácticos, LLMs, fine-tuning, seguridad, infraestructura. Para los que construyen.</p>
+        <a class="micro-cta" href="#agenda" data-i18n="track.t.cta">Ver sesiones →</a>
+      </div>
+      <div class="card r" data-track="learning">
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <div class="track-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none">
+            <defs><linearGradient id="tg3" x1="0" y1="0" x2="64" y2="64"><stop offset="0" stop-color="#00D0C6"/><stop offset="1" stop-color="#FF6B5A"/></linearGradient></defs>
+            <path d="M32 16C24 10 14 10 8 14v36c6-4 16-4 24 2" stroke="url(#tg3)" stroke-width="2.4" stroke-linejoin="round" fill="rgba(0,208,198,.06)"/>
+            <path d="M32 16c8-6 18-6 24-2v36c-6-4-16-4-24 2V16z" stroke="url(#tg3)" stroke-width="2.4" stroke-linejoin="round" fill="rgba(0,208,198,.06)"/>
+            <path d="M32 16v36" stroke="rgba(0,208,198,.45)" stroke-width="1.5"/>
+            <path d="M14 24h12M14 32h12M38 24h12M38 32h12" stroke="#FF6B5A" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="num">03</span>
+        <span class="tag">Learning</span>
+        <h3 data-i18n="track.l.h">La IA empieza aquí.</h3>
+        <div class="tagline">No experience needed.</div>
+        <p data-i18n="track.l.p">IA para todos. Impacto en la carrera, educación, ética, ecosistema. Cero experiencia previa requerida.</p>
+        <a class="micro-cta" href="#agenda" data-i18n="track.l.cta">Empieza aquí →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HACKATHON ============ -->
+<section class="sect" id="hackathon" style="padding-top:0">
+  <div class="wrap">
+    <div class="hack r">
+      <div class="hack-inner">
+        <div class="hack-badge">
+          <span class="hack-dot" aria-hidden="true"></span>
+          <span class="hack-label" data-i18n="hack.eye">HACKATHON</span>
+          <span class="hack-bracket" aria-hidden="true">[ LIVE ]</span>
+        </div>
+        <div class="prize">$10,000</div>
+        <h3 data-i18n="hack.h">IA para Puerto Rico.</h3>
+        <p data-i18n="hack.p">Equipos de 2–4 personas. 48 horas. Un solo tema: construir IA que resuelva un problema real de la isla. Los ganadores se reparten $10,000.</p>
+        <div class="hook" data-i18n="hack.hook">¿Tienes lo que se necesita?</div>
+        <div class="pills">
+          <span class="pill" data-i18n="hack.pill1">$10K en premios</span>
+          <span class="pill" data-i18n="hack.pill2">Equipos de 2–4</span>
+          <span class="pill" data-i18n="hack.pill3">48 horas</span>
+          <span class="pill" data-i18n="hack.pill4">Tema: IA para PR</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-coral" href="#" data-eb data-i18n="hack.cta">Aplica al hackathon</a>
+        </div>
+      </div>
+      <div class="hack-media">
+        <span class="hack-tag"><span class="dot" aria-hidden="true"></span><span data-i18n="hack.tag">Build the Future</span></span>
+        <img src="assets/hackathon.png" alt="Caribbean AI Summit Hackathon en acción" loading="lazy"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPEAKERS ============ -->
+<section class="sect" id="speakers" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow r" data-i18n="spk.eye">Speakers · Lineup</span>
+    <h2 class="title r" data-i18n="spk.h2">Las voces que están moviendo el AI.</h2>
+    <p class="lead r" data-i18n="spk.lead">5 keynotes + 20 sesiones. Líderes globales de IA y el mejor talento del Caribe en un mismo escenario.</p>
+    <p class="authority r" data-i18n="spk.auth"><b>Anuncios oficiales:</b> una cara nueva cada semana hasta el evento. Suscríbete abajo para recibirlos primero.</p>
+
+    <div class="speakers-grid">
+      <!-- ✅ CONFIRMED SPEAKERS -->
+      <div class="spk confirmed r" style="--obj:65% 22%">
+        <div class="photo">
+          <img src="assets/spk-kay.jpg" alt="Kay Firth-Butterfield" loading="lazy"/>
+        </div>
+        <div class="info">
+          <b>Kay Firth-Butterfield</b>
+          <small>Former Head of AI<br>World Economic Forum</small>
+          <div class="trk">Keynote</div>
+        </div>
+      </div>
+      <div class="spk confirmed r" style="--obj:50% 35%">
+        <div class="photo">
+          <img src="assets/spk-fabio.jpg" alt="Dr. Fabio Duarte" loading="lazy"/>
+        </div>
+        <div class="info">
+          <b>Dr. Fabio Duarte</b>
+          <small>AI Researcher<br>MIT Senseable City Lab</small>
+          <div class="trk">Technical</div>
+        </div>
+      </div>
+      <div class="spk confirmed r" style="--obj:50% 30%">
+        <div class="photo">
+          <img src="assets/spk-idoia.jpg" alt="Idoia Salazar" loading="lazy"/>
+        </div>
+        <div class="info">
+          <b>Idoia Salazar</b>
+          <small>AI Advisor · EU Parliament<br>President · OdiseIA</small>
+          <div class="trk">Business</div>
+        </div>
+      </div>
+      <!-- 🔜 REVEAL SOON -->
+      <!-- TODO: reemplazar tarjetas reveal con speakers confirmados (foto, nombre, cargo, empresa, track) -->
+      <div class="spk reveal-card r"><div class="photo"><span class="soon" data-i18n="spk.soon">Reveal pronto</span></div><div class="info"><b data-i18n="spk.tba">Speaker por anunciar</b><small data-i18n="spk.weekly">Anuncio semanal</small><div class="trk">Keynote</div></div></div>
+      <div class="spk reveal-card r"><div class="photo"><span class="soon" data-i18n="spk.soon">Reveal pronto</span></div><div class="info"><b data-i18n="spk.tba">Speaker por anunciar</b><small data-i18n="spk.weekly">Anuncio semanal</small><div class="trk">Business</div></div></div>
+      <div class="spk reveal-card r"><div class="photo"><span class="soon" data-i18n="spk.soon">Reveal pronto</span></div><div class="info"><b data-i18n="spk.tba">Speaker por anunciar</b><small data-i18n="spk.weekly">Anuncio semanal</small><div class="trk">Technical</div></div></div>
+      <div class="spk reveal-card r"><div class="photo"><span class="soon" data-i18n="spk.soon">Reveal pronto</span></div><div class="info"><b data-i18n="spk.tba">Speaker por anunciar</b><small data-i18n="spk.weekly">Anuncio semanal</small><div class="trk">Learning</div></div></div>
+      <div class="spk reveal-card r"><div class="photo"><span class="soon" data-i18n="spk.soon">Reveal pronto</span></div><div class="info"><b data-i18n="spk.tba">Speaker por anunciar</b><small data-i18n="spk.weekly">Anuncio semanal</small><div class="trk">Keynote</div></div></div>
+    </div>
+    <div class="hero-cta" style="margin-top:36px">
+      <a class="btn btn-ghost" href="mailto:speakers@caribbeansummit.ai" data-i18n="spk.cta">¿Quieres ser speaker? →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AGENDA ============ -->
+<section class="sect" id="agenda" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow r" data-i18n="ag.eye">Agenda · Preliminar</span>
+    <h2 class="title r" data-i18n="ag.h2">Dos días. Cada minuto cuenta.</h2>
+    <p class="note r" data-i18n="ag.note">Agenda preliminar — sujeta a cambios. Última actualización: junio 2026.</p>
+
+    <div class="tabs r" role="tablist">
+      <button class="active" role="tab" aria-selected="true" aria-controls="day1" onclick="showDay(1,this)" data-i18n="ag.tab1">Día 1 · 9 oct</button>
+      <button role="tab" aria-selected="false" aria-controls="day2" onclick="showDay(2,this)" data-i18n="ag.tab2">Día 2 · 10 oct</button>
+    </div>
+
+    <div class="agenda-day active" id="day1" role="tabpanel">
+      <div class="slot"><span class="time">8:00 AM</span><div><b data-i18n="d1.s1.h">Registro · Desayuno · Expo abre</b><p data-i18n="d1.s1.p">Café, networking y check-in. Expo de sponsors empieza.</p></div></div>
+      <div class="slot"><span class="time">9:00 AM</span><div><b data-i18n="d1.s2.h">Keynote de apertura</b><p data-i18n="d1.s2.p">The Future Starts with Better Questions. Ballroom B.</p><span class="trk">Keynote</span></div></div>
+      <div class="slot"><span class="time">10:00 AM</span><div><b data-i18n="d1.s3.h">Coffee + Networking</b><p data-i18n="d1.s3.p">Rompe el hielo. Conecta con tu primera persona del día.</p></div></div>
+      <div class="slot"><span class="time">10:30 AM</span><div><b data-i18n="d1.s4.h">Sesiones · Bloque A</b><p data-i18n="d1.s4.p">3 tracks corriendo en paralelo.</p><span class="trk">3 Tracks</span></div></div>
+      <div class="slot"><span class="time">12:00 PM</span><div><b data-i18n="d1.s5.h">Almuerzo + Expo</b><p data-i18n="d1.s5.p">Conecta con sponsors y la comunidad.</p></div></div>
+      <div class="slot"><span class="time">1:30 PM</span><div><b data-i18n="d1.s6.h">Sesiones · Bloque B</b><p data-i18n="d1.s6.p">3 tracks corriendo en paralelo.</p><span class="trk">3 Tracks</span></div></div>
+      <div class="slot"><span class="time">3:00 PM</span><div><b data-i18n="d1.s7.h">Coffee break</b><p data-i18n="d1.s7.p">Reset. Más conversaciones.</p></div></div>
+      <div class="slot"><span class="time">3:30 PM</span><div><b data-i18n="d1.s8.h">Sesiones · Bloque C</b><p data-i18n="d1.s8.p">3 tracks corriendo en paralelo.</p><span class="trk">3 Tracks</span></div></div>
+      <div class="slot"><span class="time">5:00 PM</span><div><b data-i18n="d1.s9.h">Networking patrocinado</b><p data-i18n="d1.s9.p">Bebidas, conversaciones, cierre del día.</p></div></div>
+      <div class="slot"><span class="time">6:00 PM</span><div><b data-i18n="d1.s10.h">Hackathon Kickoff</b><p data-i18n="d1.s10.p">Arranca el reloj. 48 horas. $10K en premios.</p><span class="trk">Hackathon</span></div></div>
+    </div>
+
+    <div class="agenda-day" id="day2" role="tabpanel">
+      <div class="slot"><span class="time">8:00 AM</span><div><b data-i18n="d2.s1.h">Desayuno · Expo</b><p data-i18n="d2.s1.p">Empieza el día 2.</p></div></div>
+      <div class="slot"><span class="time">9:00 AM</span><div><b data-i18n="d2.s2.h">Keynote 2</b><p data-i18n="d2.s2.p">Líderes globales en escena.</p><span class="trk">Keynote</span></div></div>
+      <div class="slot"><span class="time">10:00 AM</span><div><b data-i18n="d2.s3.h">Coffee break</b><p data-i18n="d2.s3.p">Recarga.</p></div></div>
+      <div class="slot"><span class="time">10:30 AM</span><div><b data-i18n="d2.s4.h">Sesiones · Bloque D</b><p data-i18n="d2.s4.p">3 tracks corriendo en paralelo.</p><span class="trk">3 Tracks</span></div></div>
+      <div class="slot"><span class="time">12:00 PM</span><div><b data-i18n="d2.s5.h">Almuerzo</b><p data-i18n="d2.s5.p">Más conexiones, más ideas.</p></div></div>
+      <div class="slot"><span class="time">1:30 PM</span><div><b data-i18n="d2.s6.h">Talleres prácticos</b><p data-i18n="d2.s6.p">Hands-on. Sales con algo construido.</p><span class="trk">Workshops</span></div></div>
+      <div class="slot"><span class="time">3:00 PM</span><div><b data-i18n="d2.s7.h">Keynote 3</b><p data-i18n="d2.s7.p">Cierre con voz global.</p><span class="trk">Keynote</span></div></div>
+      <div class="slot"><span class="time">4:00 PM</span><div><b data-i18n="d2.s8.h">Hackathon Finals · Pitch + Demo</b><p data-i18n="d2.s8.p">Los equipos hacen pitch ante el jurado.</p><span class="trk">Hackathon</span></div></div>
+      <div class="slot"><span class="time">5:30 PM</span><div><b data-i18n="d2.s9.h">Premiación + Cierre</b><p data-i18n="d2.s9.p">$10K en premios + cierre del Summit.</p></div></div>
+      <div class="slot"><span class="time">6:00 PM</span><div><b data-i18n="d2.s10.h">Wrap</b><p data-i18n="d2.s10.p">Hasta el próximo Caribbean AI Summit.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MADE FOR YOU + WHY PUERTO RICO ============ -->
+<section class="sect" id="venue" style="padding-top:0">
+  <div class="wrap">
+    <!-- PART 1: This event is for you (audience personalization) -->
+    <span class="eyebrow r" data-i18n="for.eye">Hecho para ti · Made for you</span>
+    <h2 class="title r" data-i18n="for.h2">No importa quién seas. Este Summit es tuyo.</h2>
+    <p class="lead r" data-i18n="for.lead">Líderes. Builders. Founders. Estudiantes. Diáspora. Curiosos. Si la IA está moviendo tu mundo, este es tu lugar.</p>
+
+    <div class="for-you-grid">
+      <!-- 1. Leader / C-Suite -->
+      <div class="fy-card r">
+        <div class="fy-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke-width="2">
+            <path d="M4 26L12 18L18 22L28 10" stroke="url(#fg1)" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="28" cy="10" r="2.5" stroke="url(#fg1)"/>
+            <path d="M4 28h24" stroke="rgba(0,208,198,.4)" stroke-linecap="round"/>
+            <defs><linearGradient id="fg1" x1="0" y1="0" x2="32" y2="32"><stop offset="0" stop-color="#00D0C6"/><stop offset="1" stop-color="#FF6B5A"/></linearGradient></defs>
+          </svg>
+        </div>
+        <h3 data-i18n="for.c1.h">Si lideras.</h3>
+        <p data-i18n="for.c1.p">C-Suite, directores, founders. Aquí se está dibujando el próximo capítulo de la IA en el Caribe. Los que llegan primero marcan el rumbo.</p>
+        <span class="fy-tag">VIP · Business</span>
+      </div>
+
+      <!-- 2. Builder / Tech Pro -->
+      <div class="fy-card r">
+        <div class="fy-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke-width="2">
+            <path d="M11 9L4 16L11 23" stroke="url(#fg2)" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 9L28 16L21 23" stroke="url(#fg2)" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 7L14 25" stroke="#FF6B5A" stroke-linecap="round"/>
+            <defs><linearGradient id="fg2" x1="0" y1="0" x2="32" y2="32"><stop offset="0" stop-color="#00D0C6"/><stop offset="1" stop-color="#FF6B5A"/></linearGradient></defs>
+          </svg>
+        </div>
+        <h3 data-i18n="for.c2.h">Si construyes.</h3>
+        <p data-i18n="for.c2.p">Devs, AI engineers, data scientists. No te tienes que ir pa' trabajar en la frontera. La frontera llegó a la isla — y este es tu stage.</p>
+        <span class="fy-tag">Technical · Hackathon</span>
+      </div>
+
+      <!-- 3. Founder / Investor -->
+      <div class="fy-card r">
+        <div class="fy-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke-width="2">
+            <path d="M16 4L20 16L26 18L18 22L16 30L14 22L6 18L12 16L16 4Z" stroke="url(#fg3)" stroke-linejoin="round" fill="rgba(0,208,198,.08)"/>
+            <circle cx="16" cy="14" r="2" fill="#FF6B5A"/>
+            <defs><linearGradient id="fg3" x1="0" y1="0" x2="32" y2="32"><stop offset="0" stop-color="#00D0C6"/><stop offset="1" stop-color="#FF6B5A"/></linearGradient></defs>
+          </svg>
+        </div>
+        <h3 data-i18n="for.c3.h">Si estás levantando algo.</h3>
+        <p data-i18n="for.c3.p">Founders, VCs, family offices. Llegas al cuarto cuando se está formando. Todos van a decir que llegaron temprano — sé el que llegó.</p>
+        <span class="fy-tag">VIP · Networking</span>
+      </div>
+
+      <!-- 4. Student / Hackathon -->
+      <div class="fy-card r">
+        <div class="fy-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke-width="2">
+            <path d="M2 12L16 6L30 12L16 18L2 12Z" stroke="url(#fg4)" stroke-linejoin="round" fill="rgba(0,208,198,.08)"/>
+            <path d="M8 15v6c0 2 4 4 8 4s8-2 8-4v-6" stroke="url(#fg4)" stroke-linecap="round"/>
+            <path d="M30 12v8" stroke="#FF6B5A" stroke-linecap="round"/>
+            <defs><linearGradient id="fg4" x1="0" y1="0" x2="32" y2="32"><stop offset="0" stop-color="#00D0C6"/><stop offset="1" stop-color="#FF6B5A"/></linearGradient></defs>
+          </svg>
+        </div>
+        <h3 data-i18n="for.c4.h">Si estás empezando.</h3>
+        <p data-i18n="for.c4.p">Estudiantes, newcomers. No vienes a mirar. Vienes a hacer tu primera demo frente a la gente que te puede contratar, fondear o construir contigo.</p>
+        <span class="fy-tag">Learning · Hackathon</span>
+      </div>
+
+      <!-- 5. Diáspora -->
+      <div class="fy-card r">
+        <div class="fy-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke-width="2">
+            <path d="M5 14L16 5L27 14V26C27 27 26 28 25 28H7C6 28 5 27 5 26V14Z" stroke="url(#fg5)" stroke-linejoin="round" fill="rgba(0,208,198,.06)"/>
+            <path d="M14 28v-7h4v7" stroke="url(#fg5)" stroke-linecap="round"/>
+            <circle cx="16" cy="14" r="1.5" fill="#FF6B5A"/>
+            <defs><linearGradient id="fg5" x1="0" y1="0" x2="32" y2="32"><stop offset="0" stop-color="#00D0C6"/><stop offset="1" stop-color="#FF6B5A"/></linearGradient></defs>
+          </svg>
+        </div>
+        <h3 data-i18n="for.c5.h">Si eres de la diáspora.</h3>
+        <p data-i18n="for.c5.p">Te fuiste a buscar oportunidades. La oportunidad volvió a casa. Vuelves para ver lo que se está construyendo — y para liderar el próximo capítulo.</p>
+        <span class="fy-tag">Comunidad</span>
+      </div>
+
+      <!-- 6. Curious / Newcomer to AI -->
+      <div class="fy-card r">
+        <div class="fy-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke-width="2">
+            <path d="M16 4a8 8 0 00-5 14c1 1 2 2 2 4h6c0-2 1-3 2-4a8 8 0 00-5-14z" stroke="url(#fg6)" stroke-linejoin="round" fill="rgba(0,208,198,.08)"/>
+            <path d="M12 26h8M13 28h6" stroke="url(#fg6)" stroke-linecap="round"/>
+            <path d="M16 14v3M14 16h4" stroke="#FF6B5A" stroke-linecap="round"/>
+            <defs><linearGradient id="fg6" x1="0" y1="0" x2="32" y2="32"><stop offset="0" stop-color="#00D0C6"/><stop offset="1" stop-color="#FF6B5A"/></linearGradient></defs>
+          </svg>
+        </div>
+        <h3 data-i18n="for.c6.h">Si la IA te intriga.</h3>
+        <p data-i18n="for.c6.p">No hace falta experiencia previa. Solo curiosidad. Sales entendiendo hacia dónde va el mundo — y dónde encajas tú.</p>
+        <span class="fy-tag">Learning</span>
+      </div>
+    </div>
+
+    <!-- PART 2: Why Puerto Rico -->
+    <div class="why-pr-block">
+      <span class="eyebrow r" data-i18n="why.eye">El epicentro · The epicenter</span>
+      <h2 class="title r" data-i18n="why.h2">¿Por qué Puerto Rico?</h2>
+      <p class="lead r" data-i18n="why.lead">Donde el Caribe se encuentra con Estados Unidos. Donde el español y el inglés conviven sin traducir. Donde el próximo capítulo de la IA está empezando.</p>
+
+      <div class="why-grid">
+        <article class="why-card r">
+          <div class="why-media"><img src="assets/morro.jpg" alt="El Morro, San Juan, Puerto Rico" loading="lazy"/></div>
+          <div class="why-body">
+            <h3 data-i18n="why.c1.h">El puente.</h3>
+            <p data-i18n="why.c1.p">3.5 horas de Nueva York, 2.5 de Miami, sin pasaporte ni cambio de moneda. Puerto Rico es la ventana del Caribe a Estados Unidos — y la puerta de EEUU al resto de Latinoamérica.</p>
+          </div>
+        </article>
+        <article class="why-card r">
+          <div class="why-media"><img src="assets/venue-emergence.png" alt="Puerto Rico Convention Center" loading="lazy"/></div>
+          <div class="why-body">
+            <h3 data-i18n="why.c2.h">El venue.</h3>
+            <p data-i18n="why.c2.p">Puerto Rico Convention Center — el más grande y moderno del Caribe. 580,000 sq ft, AV de clase mundial. 5 min de Condado, 15 de Old San Juan, 10 del aeropuerto SJU.</p>
+          </div>
+        </article>
+        <article class="why-card moment-card r">
+          <div class="why-media moment-media">
+            <img src="assets/wordmark-stack.png" alt="Caribbean AI Summit" loading="lazy"/>
+          </div>
+          <div class="why-body">
+            <h3 data-i18n="why.c3.h">El momento.</h3>
+            <p data-i18n="why.c3.p">El primer summit de IA del Caribe. Llegas al cuarto cuando se está formando. El año que viene no es el primero. Este sí.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="venue-meta r">
+      <ul class="venue-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Puerto Rico Convention Center · 100 Bulevar Saint John, Isla Grande, San Juan, PR 00907</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="why.meta.date">9 & 10 de octubre 2026 · 9:00 AM–6:00 PM (puertas 8:45 AM)</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 11l18-5v12L3 14z"/><path d="M11.6 16.8a3 3 0 11-5.8-1.6"/></svg><span data-i18n="why.meta.subs">Subtítulos bilingües EN/ES en tiempo real — sin audífonos.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span data-i18n="why.meta.park">Valet $18/día · Evento 18+ · Wi-Fi rápido + charging stations.</span></li>
+      </ul>
+      <div class="map-cta">
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Puerto+Rico+Convention+Center" target="_blank" rel="noopener" data-i18n="why.map">Abrir en Google Maps →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="sect" id="tickets" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow r" data-i18n="px.eye">Boletos · Limitados</span>
+    <h2 class="title r" data-i18n="px.h2">Asegura tu lugar antes que se acabe.</h2>
+    <p class="lead r" data-i18n="px.lead">Early Bird está limitado a los primeros 150 registros. Después: precio completo. No esperes a que se agote.</p>
+
+    <!-- TODO: actualizar % de capacidad cuando esté disponible (data-sold/data-total en JS) -->
+    <div class="scarcity r" role="status" aria-live="polite">
+      <div class="scarcity-head">
+        <span class="scarcity-eyebrow" data-i18n="px.sc.eyebrow">Early Bird · Limited Release</span>
+        <span class="scarcity-status" id="scStatus">
+          <span class="scarcity-dot"></span>
+          <span class="scarcity-status-text" data-i18n="px.sc.status.fast">Filling Fast</span>
+        </span>
+      </div>
+      <div class="scarcity-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="58" aria-label="Early Bird capacity"><div class="scarcity-fill" id="scFill"></div></div>
+      <div class="scarcity-foot" data-i18n="px.sc.foot">Cupo limitado — los precios suben al agotarse el Early Bird.</div>
+    </div>
+
+    <div class="price-grid">
+      <div class="price featured r">
+        <span class="ribbon" data-i18n="px.ribbon">Más popular · Most popular</span>
+        <span class="save-corner" data-i18n="px.save">Ahorra $200</span>
+        <h3>Early Bird</h3>
+        <div class="amt">$299 <span class="strike">$499</span></div>
+        <div class="sub" data-i18n="px.eb.sub">Solo los primeros 150. Después sube a $499.</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.eb.f1">Acceso a los 2 días completos</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.eb.f2">Los 3 tracks + 5 keynotes</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.eb.f3">20+ sesiones en paralelo</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.eb.f4">Networking + expo de sponsors</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.eb.f5">Subtítulos bilingües en vivo</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.eb.f6">Desayuno y almuerzo ambos días</span></li>
+        </ul>
+        <a class="btn btn-primary" href="#" data-eb data-i18n="px.eb.cta">Reserva Early Bird · $299</a>
+        <p class="micro-trust" data-i18n="px.eb.micro">Cupo limitado a este precio.</p>
+      </div>
+
+      <div class="price vip r">
+        <h3>VIP</h3>
+        <div class="amt">$900</div>
+        <div class="sub" data-i18n="px.vip.sub">La sala donde se decide el futuro de la IA en la isla.</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.vip.f1">Todo lo del Early Bird</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.vip.f2">Asientos preferenciales en keynotes</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.vip.f3">Lounge VIP exclusivo</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.vip.f4">Networking curado con C-suite y speakers</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.vip.f5">Mesa redonda privada con keynote</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.vip.f6">Swag premium</span></li>
+        </ul>
+        <a class="btn btn-coral" href="#" data-eb data-i18n="px.vip.cta">Reserva VIP · $900</a>
+      </div>
+    </div>
+
+    <p class="price-note r" data-i18n="px.note">Los precios suben cuando se agote el Early Bird. No hay descuentos retroactivos. Boletos no reembolsables, sí transferibles.</p>
+    <div class="trust-row r">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span data-i18n="px.trust.1">Pago seguro vía Eventbrite</span></span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg><span data-i18n="px.trust.2">Confirmación instantánea</span></span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 12V8a2 2 0 00-2-2h-2.6L12 2 8.6 6H6a2 2 0 00-2 2v4M4 12l8 10 8-10"/></svg><span data-i18n="px.trust.3">Boleto transferible</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPONSORS ============ -->
+<section class="sect sponsors" id="sponsors" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow r" data-i18n="sp.eye">Quiénes nos respaldan</span>
+    <h2 class="title r" data-i18n="sp.h2">Marcas que están apostando por el AI del Caribe.</h2>
+
+    <div class="sponsor-tier r">
+      <span class="tier-label" data-i18n="sp.tier1">Title Sponsors</span>
+      <div class="logo-row">
+        <a class="logo-chip" href="#" aria-label="PRAIC"><img src="assets/sp-praic.png" alt="PRAIC · Puerto Rico AI Community" loading="lazy"/></a>
+        <a class="logo-chip" href="#" aria-label="Enalca"><img src="assets/sp-enalca.png" alt="Enalca" loading="lazy"/></a>
+      </div>
+    </div>
+    <div class="sponsor-tier r">
+      <span class="tier-label" data-i18n="sp.tier2">Gold</span>
+      <div class="logo-row">
+        <a class="logo-chip" href="#" aria-label="JetBrains"><img src="assets/sp-jetbrains.png" alt="JetBrains" loading="lazy"/></a>
+        <a class="logo-chip" href="#" aria-label="W@W"><img src="assets/sp-waw.png" alt="W@W" loading="lazy"/></a>
+      </div>
+    </div>
+    <div class="sponsor-tier r">
+      <span class="tier-label" data-i18n="sp.tier3">Silver · Community</span>
+      <div class="logo-row">
+        <!-- TODO: añadir sponsors silver/community confirmados -->
+        <div class="logo-chip placeholder" data-i18n="sp.your">Tu logo aquí</div>
+        <div class="logo-chip placeholder" data-i18n="sp.your">Tu logo aquí</div>
+        <div class="logo-chip placeholder" data-i18n="sp.your">Tu logo aquí</div>
+      </div>
+    </div>
+
+    <p class="lead r" style="margin:36px auto 0;text-align:center" data-i18n="sp.tiers">Niveles de patrocinio desde $3,000 hasta $50,000. Pon tu marca frente al ecosistema AI del Caribe.</p>
+    <div class="hero-cta r" style="justify-content:center;margin-top:24px">
+      <a class="btn btn-ghost" href="mailto:sponsors@caribbeansummit.ai" data-i18n="sp.cta">Conviértete en sponsor →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="sect" style="padding-top:0">
+  <div class="wrap">
+    <div class="news r">
+      <span class="eyebrow" data-i18n="nl.eye">Comunidad</span>
+      <h2 data-i18n="nl.h2">Únete antes del primer keynote.</h2>
+      <p class="lead" style="margin:0 auto" data-i18n="nl.p">PRAIC: 1,000+ miembros construyendo el ecosistema AI del Caribe. Suscríbete y recibe el lineup completo y descuentos antes que nadie.</p>
+      <!-- TODO: conectar el form a Mailchimp/ConvertKit/embed PRAIC -->
+      <form id="nlForm" onsubmit="return submitNewsletter(event)">
+        <input type="email" required placeholder="tu@email.com" aria-label="Email"/>
+        <button class="btn btn-primary" type="submit" data-i18n="nl.btn">Únete</button>
+        <p class="msg" hidden data-i18n="nl.msg">¡Estás dentro! Te escribimos pronto.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sect" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow r" data-i18n="faq.eye">Preguntas frecuentes · FAQ</span>
+    <h2 class="title r" data-i18n="faq.h2">Lo que necesitas saber.</h2>
+    <div class="faq r">
+      <details><summary data-i18n="faq.q1.q">¿En qué idioma es el evento?</summary><p data-i18n="faq.q1.a">Bilingüe ES/EN. Subtítulos en vivo en ambos idiomas vía PowerPoint 365 — sin audífonos.</p></details>
+      <details><summary data-i18n="faq.q2.q">¿Qué incluye el boleto Early Bird?</summary><p data-i18n="faq.q2.a">Acceso completo a los 2 días, los 3 tracks, 5 keynotes, 20+ sesiones, networking, expo, desayuno y almuerzo ambos días.</p></details>
+      <details><summary data-i18n="faq.q3.q">¿Cuál es la política de reembolso?</summary><p data-i18n="faq.q3.a">Los boletos son no reembolsables. Sí puedes transferirlo a otra persona hasta 48h antes del evento — escríbenos a info@caribbeansummit.ai.</p></details>
+      <details><summary data-i18n="faq.q4.q">¿Hay parking?</summary><p data-i18n="faq.q4.a">Sí. Valet del Convention Center: $18/día. También hay rideshare y taxi (~$20 desde el aeropuerto SJU).</p></details>
+      <details><summary data-i18n="faq.q5.q">¿Edad mínima?</summary><p data-i18n="faq.q5.a">18+. Estudiantes universitarios con ID válida tienen descuento — escríbenos a info@caribbeansummit.ai.</p></details>
+      <details><summary data-i18n="faq.q6.q">¿Cómo participo en el hackathon?</summary><p data-i18n="faq.q6.a">Tu boleto da acceso. Equipos de 2–4 personas, formación in-situ el primer día. Tema: IA para Puerto Rico. $10K en premios.</p></details>
+      <details><summary data-i18n="faq.q7.q">¿Hay descuentos para grupos?</summary><p data-i18n="faq.q7.a">Sí, para grupos de 5+. Escribe a info@caribbeansummit.ai con la cantidad y nombres.</p></details>
+      <details><summary data-i18n="faq.q8.q">¿Cómo me hago sponsor o speaker?</summary><p data-i18n="faq.q8.a">Sponsors → sponsors@caribbeansummit.ai (niveles $3K–$50K). Speakers → speakers@caribbeansummit.ai (open call).</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final">
+  <div class="final-bg" aria-hidden="true"><img src="assets/venue-fountains.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/></div>
+  <div class="wrap">
+    <span class="urgency-strip r"><span class="blink" aria-hidden="true"></span><span data-i18n="final.urg">Cupo limitado · Early Bird $299</span></span>
+    <h2 class="r" style="margin-top:18px"><span class="slogan-big">"The Future Starts with Better Questions."</span></h2>
+    <p class="r" style="color:var(--muted-strong);max-width:50ch;margin:0 auto;font-size:1.1rem" data-i18n="final.sub">Nos vemos en San Juan. 9–10 octubre. El año que viene no es el primero. Este sí.</p>
+
+    <div class="countdown r" aria-label="Countdown">
+      <div class="cd-box"><b class="cd-d">000</b><small data-i18n="cd.days">Días</small></div>
+      <div class="cd-box"><b class="cd-h">00</b><small data-i18n="cd.hours">Horas</small></div>
+      <div class="cd-box"><b class="cd-m">00</b><small data-i18n="cd.min">Min</small></div>
+      <div class="cd-box"><b class="cd-s">00</b><small data-i18n="cd.sec">Seg</small></div>
+    </div>
+
+    <div class="hero-cta r" style="justify-content:center;margin-top:24px">
+      <a class="btn btn-primary btn-lg" href="#" data-eb data-i18n="final.cta">Voy a estar ahí.</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="assets/logo-white.svg" alt="Caribbean AI Summit" onerror="this.onerror=null;this.src='assets/logo-white.png'"/>
+        <p data-i18n="ft.about">La primera conferencia de IA a gran escala del Caribe. San Juan, Puerto Rico.</p>
+        <div class="foot-socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 9h4v12H4z"/><circle cx="6" cy="5" r="2"/><path d="M10 9h4v2c.7-1.4 2.3-2.4 4-2.4 3 0 4 2 4 5V21h-4v-6.4c0-1.4-.5-2.4-1.8-2.4-1.4 0-2.2 1-2.2 2.4V21h-4z"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="3"/><path d="M10 9.5l5 2.5-5 2.5z" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="ft.explore">Explora</h4>
+        <a href="#tracks" data-i18n="nav.tracks">Tracks</a>
+        <a href="#hackathon">Hackathon</a>
+        <a href="#speakers" data-i18n="nav.speakers">Speakers</a>
+        <a href="#agenda" data-i18n="nav.agenda">Agenda</a>
+      </div>
+      <div>
+        <h4 data-i18n="ft.attend">Atiende</h4>
+        <a href="#tickets" data-i18n="nav.tickets">Boletos</a>
+        <a href="#venue" data-i18n="nav.venue">Venue</a>
+        <a href="#sponsors" data-i18n="ft.sponsor">Patrocinios</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Caribbean AI Summit · <a href="https://caribbeanaisummit.com" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--line)">caribbeanaisummit.com</a></span>
+      <span class="foot-slogan">"The Future Starts with Better Questions."</span>
+      <span data-i18n="ft.credits">Organiza: PRAIC · Desarrollo: Enalca · Identidad: W@W</span>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  /* ========================================
+     CARIBBEAN AI SUMMIT — Vanilla JS
+     ======================================== */
+
+  /* ---- Eventbrite link ---- */
+  var EB = "https://www.eventbrite.com/e/caribbean-ai-summit-2026-registration-1981768097728?aff=website";
+  document.querySelectorAll("[data-eb]").forEach(function(a){ a.href = EB; a.target = "_blank"; a.rel = "noopener"; });
+
+  /* ---- i18n dictionary ---- */
+  var i18n = {
+    es: {
+      "nav.tracks":"Tracks","nav.hack":"Hackathon","nav.speakers":"Speakers","nav.agenda":"Agenda","nav.venue":"Venue","nav.tickets":"Boletos",
+      "cta.book":"Reserva tu lugar.","cta.book.early":"Quiero ser parte","cta.save":"Ahorra $200","cta.tracks":"Ver los tracks",
+      "hero.badge":"El primero · del Caribe · en Puerto Rico",
+      "hero.tagline.l1":"La conferencia de IA","hero.tagline.l2":"más grande del Caribe.",
+      "hero.datepill":"9–10 oct 2026 · San Juan, PR",
+      "hero.trust.label":"Powered by","hero.trust.members":"1,000+ miembros",
+      "hero.scroll":"Scroll",
+      "hero.meta.date":"9–10 oct 2026 · 9AM–6PM",
+      "cd.days":"Días","cd.hours":"Horas","cd.min":"Min","cd.sec":"Seg",
+      "stat.days":"Días intensivos","stat.tracks":"Tracks","stat.keynotes":"Keynotes","stat.sessions":"Sesiones","stat.attendees":"Asistentes esperados","stat.prize":"En premios · hackathon",
+      "manifesto.eye":"Manifiesto","manifesto.h2":"El Caribe se encuentra con el futuro de la IA.",
+      "manifesto.p1":"Durante siglos, el Caribe ha sido el punto donde culturas, continentes e ideas se cruzan. Hoy, esa misma encrucijada se convierte en el escenario donde el mundo viene a conversar con la IA. No para mirar desde afuera. Para liderar desde aquí.",
+      "manifesto.p2":"El Caribbean AI Summit no es una conferencia más. Es la primera. Y eso pasa una sola vez.",
+      "manifesto.p3":"Dos días en San Juan para construir lo que viene — con los que ya lo están haciendo.",
+      "tracks.eye":"Tres tracks · Un objetivo","tracks.h2":"Encuentra tu sala.","tracks.lead":"Lideres de negocio, builders técnicos y curiosos: todos tienen un asiento. Elige tu camino y vamos.",
+      "track.b.h":"Lidera con IA.","track.b.p":"Estrategia, finanzas, salud, startups e industrias creativas. Para quienes deciden hacia dónde va el negocio.","track.b.cta":"Ver sesiones →",
+      "track.t.h":"Construye lo que viene.","track.t.p":"IA en producción, talleres prácticos, LLMs, fine-tuning, seguridad, infraestructura. Para los que construyen.","track.t.cta":"Ver sesiones →",
+      "track.l.h":"La IA empieza aquí.","track.l.p":"IA para todos. Impacto en la carrera, educación, ética, ecosistema. Cero experiencia previa requerida.","track.l.cta":"Empieza aquí →",
+      "hack.eye":"HACKATHON","hack.h":"IA para Puerto Rico.",
+      "hack.p":"Equipos de 2–4 personas. 48 horas. Un solo tema: construir IA que resuelva un problema real de la isla. Los ganadores se reparten $10,000.",
+      "hack.hook":"¿Tienes lo que se necesita?",
+      "hack.pill1":"$10K en premios","hack.pill2":"Equipos de 2–4","hack.pill3":"48 horas","hack.pill4":"Tema: IA para PR","hack.cta":"Aplica al hackathon","hack.tag":"Build the Future",
+      "spk.eye":"Speakers · Lineup","spk.h2":"Las voces que están moviendo el AI.",
+      "spk.lead":"5 keynotes + 20 sesiones. Líderes globales de IA y el mejor talento del Caribe en un mismo escenario.",
+      "spk.auth":"Anuncios oficiales: una cara nueva cada semana hasta el evento. Suscríbete abajo para recibirlos primero.",
+      "spk.soon":"Reveal pronto","spk.tba":"Speaker por anunciar","spk.weekly":"Anuncio semanal",
+      "spk.cta":"¿Quieres ser speaker? →",
+      "ag.eye":"Agenda · Preliminar","ag.h2":"Dos días. Cada minuto cuenta.","ag.note":"Agenda preliminar — sujeta a cambios. Última actualización: junio 2026.",
+      "ag.tab1":"Día 1 · 9 oct","ag.tab2":"Día 2 · 10 oct",
+      "d1.s1.h":"Registro · Desayuno · Expo abre","d1.s1.p":"Café, networking y check-in. Expo de sponsors empieza.",
+      "d1.s2.h":"Keynote de apertura","d1.s2.p":"The Future Starts with Better Questions. Ballroom B.",
+      "d1.s3.h":"Coffee + Networking","d1.s3.p":"Rompe el hielo. Conecta con tu primera persona del día.",
+      "d1.s4.h":"Sesiones · Bloque A","d1.s4.p":"3 tracks corriendo en paralelo.",
+      "d1.s5.h":"Almuerzo + Expo","d1.s5.p":"Conecta con sponsors y la comunidad.",
+      "d1.s6.h":"Sesiones · Bloque B","d1.s6.p":"3 tracks corriendo en paralelo.",
+      "d1.s7.h":"Coffee break","d1.s7.p":"Reset. Más conversaciones.",
+      "d1.s8.h":"Sesiones · Bloque C","d1.s8.p":"3 tracks corriendo en paralelo.",
+      "d1.s9.h":"Networking patrocinado","d1.s9.p":"Bebidas, conversaciones, cierre del día.",
+      "d1.s10.h":"Hackathon Kickoff","d1.s10.p":"Arranca el reloj. 48 horas. $10K en premios.",
+      "d2.s1.h":"Desayuno · Expo","d2.s1.p":"Empieza el día 2.",
+      "d2.s2.h":"Keynote 2","d2.s2.p":"Líderes globales en escena.",
+      "d2.s3.h":"Coffee break","d2.s3.p":"Recarga.",
+      "d2.s4.h":"Sesiones · Bloque D","d2.s4.p":"3 tracks corriendo en paralelo.",
+      "d2.s5.h":"Almuerzo","d2.s5.p":"Más conexiones, más ideas.",
+      "d2.s6.h":"Talleres prácticos","d2.s6.p":"Hands-on. Sales con algo construido.",
+      "d2.s7.h":"Keynote 3","d2.s7.p":"Cierre con voz global.",
+      "d2.s8.h":"Hackathon Finals · Pitch + Demo","d2.s8.p":"Los equipos hacen pitch ante el jurado.",
+      "d2.s9.h":"Premiación + Cierre","d2.s9.p":"$10K en premios + cierre del Summit.",
+      "d2.s10.h":"Wrap","d2.s10.p":"Hasta el próximo Caribbean AI Summit.",
+      "for.eye":"Hecho para ti · Made for you",
+      "for.h2":"No importa quién seas. Este Summit es tuyo.",
+      "for.lead":"Líderes. Builders. Founders. Estudiantes. Diáspora. Curiosos. Si la IA está moviendo tu mundo, este es tu lugar.",
+      "for.c1.h":"Si lideras.","for.c1.p":"C-Suite, directores, founders. Aquí se está dibujando el próximo capítulo de la IA en el Caribe. Los que llegan primero marcan el rumbo.",
+      "for.c2.h":"Si construyes.","for.c2.p":"Devs, AI engineers, data scientists. No te tienes que ir pa' trabajar en la frontera. La frontera llegó a la isla — y este es tu stage.",
+      "for.c3.h":"Si estás levantando algo.","for.c3.p":"Founders, VCs, family offices. Llegas al cuarto cuando se está formando. Todos van a decir que llegaron temprano — sé el que llegó.",
+      "for.c4.h":"Si estás empezando.","for.c4.p":"Estudiantes, newcomers. No vienes a mirar. Vienes a hacer tu primera demo frente a la gente que te puede contratar, fondear o construir contigo.",
+      "for.c5.h":"Si eres de la diáspora.","for.c5.p":"Te fuiste a buscar oportunidades. La oportunidad volvió a casa. Vuelves para ver lo que se está construyendo — y para liderar el próximo capítulo.",
+      "for.c6.h":"Si la IA te intriga.","for.c6.p":"No hace falta experiencia previa. Solo curiosidad. Sales entendiendo hacia dónde va el mundo — y dónde encajas tú.",
+      "why.eye":"El epicentro · The epicenter","why.h2":"¿Por qué Puerto Rico?",
+      "why.lead":"Donde el Caribe se encuentra con Estados Unidos. Donde el español y el inglés conviven sin traducir. Donde el próximo capítulo de la IA está empezando.",
+      "why.c1.h":"El puente.","why.c1.p":"3.5 horas de Nueva York, 2.5 de Miami, sin pasaporte ni cambio de moneda. Puerto Rico es la ventana del Caribe a Estados Unidos — y la puerta de EEUU al resto de Latinoamérica.",
+      "why.c2.h":"El venue.","why.c2.p":"Puerto Rico Convention Center — el más grande y moderno del Caribe. 580,000 sq ft, AV de clase mundial. 5 min de Condado, 15 de Old San Juan, 10 del aeropuerto SJU.",
+      "why.c3.h":"El momento.","why.c3.p":"El primer summit de IA del Caribe. Llegas al cuarto cuando se está formando. El año que viene no es el primero. Este sí.",
+      "why.meta.date":"9 & 10 de octubre 2026 · 9:00 AM–6:00 PM (puertas 8:45 AM)",
+      "why.meta.subs":"Subtítulos bilingües EN/ES en tiempo real — sin audífonos.",
+      "why.meta.park":"Valet $18/día · Evento 18+ · Wi-Fi rápido + charging stations.",
+      "why.map":"Abrir en Google Maps →",
+      "px.eye":"Boletos · Limitados","px.h2":"Asegura tu lugar antes que se acabe.",
+      "px.lead":"Early Bird está limitado a los primeros 150 registros. Después: precio completo. No esperes a que se agote.",
+      "px.sc.eyebrow":"Early Bird · Cupo Limitado",
+      "px.sc.status.open":"Disponible","px.sc.status.up":"Llenándose","px.sc.status.fast":"Se está agotando","px.sc.status.gone":"Casi agotado",
+      "px.sc.foot":"Cupo limitado — los precios suben al agotarse el Early Bird.",
+      "px.ribbon":"Más popular","px.save":"Ahorra $200",
+      "px.eb.sub":"Solo los primeros 150. Después sube a $499.",
+      "px.eb.f1":"Acceso a los 2 días completos","px.eb.f2":"Los 3 tracks + 5 keynotes","px.eb.f3":"20+ sesiones en paralelo","px.eb.f4":"Networking + expo de sponsors","px.eb.f5":"Subtítulos bilingües en vivo","px.eb.f6":"Desayuno y almuerzo ambos días",
+      "px.eb.cta":"Reserva Early Bird · $299","px.eb.micro":"Cupo limitado a este precio.",
+      "px.trust.1":"Pago seguro vía Eventbrite","px.trust.2":"Confirmación instantánea","px.trust.3":"Boleto transferible",
+      "px.vip.sub":"La sala donde se decide el futuro de la IA en la isla.",
+      "px.vip.f1":"Todo lo del Early Bird","px.vip.f2":"Asientos preferenciales en keynotes","px.vip.f3":"Lounge VIP exclusivo","px.vip.f4":"Networking curado con C-suite y speakers","px.vip.f5":"Mesa redonda privada con keynote","px.vip.f6":"Swag premium",
+      "px.vip.cta":"Reserva VIP · $900",
+      "px.note":"Los precios suben cuando se agote el Early Bird. No hay descuentos retroactivos. Boletos no reembolsables, sí transferibles.",
+      "sp.eye":"Quiénes nos respaldan","sp.h2":"Marcas que están apostando por el AI del Caribe.",
+      "sp.tier1":"Title Sponsors","sp.tier2":"Gold","sp.tier3":"Silver · Community","sp.your":"Tu logo aquí",
+      "sp.tiers":"Niveles de patrocinio desde $3,000 hasta $50,000. Pon tu marca frente al ecosistema AI del Caribe.",
+      "sp.cta":"Conviértete en sponsor →",
+      "ts.eye":"La comunidad habla","ts.h2":"Lo que dicen los que ya están dentro.",
+      "ts.q1.p":"Llevamos años construyendo en la isla en silencio. El Summit es la primera vez que el mundo se sienta a escuchar.",
+      "ts.q1.role":"AI Engineer · San Juan",
+      "ts.q2.p":"Salí hace 12 años para hacer carrera en tech. Por primera vez tengo una razón profesional para volver.",
+      "ts.q2.role":"Founder · Brooklyn → PR",
+      "ts.q3.p":"Soy estudiante. El hackathon es mi primera demo frente a la gente que me puede contratar. No me lo pierdo.",
+      "ts.q3.role":"CS Student · UPR",
+      "press.label":"Cobertura · Coverage",
+      "nl.eye":"Comunidad","nl.h2":"Únete antes del primer keynote.",
+      "nl.p":"PRAIC: 1,000+ miembros construyendo el ecosistema AI del Caribe. Suscríbete y recibe el lineup completo y descuentos antes que nadie.",
+      "nl.btn":"Únete","nl.msg":"¡Estás dentro! Te escribimos pronto.",
+      "faq.eye":"Preguntas frecuentes","faq.h2":"Lo que necesitas saber.",
+      "faq.q1.q":"¿En qué idioma es el evento?","faq.q1.a":"Bilingüe ES/EN. Subtítulos en vivo en ambos idiomas vía PowerPoint 365 — sin audífonos.",
+      "faq.q2.q":"¿Qué incluye el boleto Early Bird?","faq.q2.a":"Acceso completo a los 2 días, los 3 tracks, 5 keynotes, 20+ sesiones, networking, expo, desayuno y almuerzo ambos días.",
+      "faq.q3.q":"¿Cuál es la política de reembolso?","faq.q3.a":"Los boletos son no reembolsables. Sí puedes transferirlo a otra persona hasta 48h antes del evento — escríbenos a info@caribbeansummit.ai.",
+      "faq.q4.q":"¿Hay parking?","faq.q4.a":"Sí. Valet del Convention Center: $18/día. También hay rideshare y taxi (~$20 desde el aeropuerto SJU).",
+      "faq.q5.q":"¿Edad mínima?","faq.q5.a":"18+. Estudiantes universitarios con ID válida tienen descuento — escríbenos a info@caribbeansummit.ai.",
+      "faq.q6.q":"¿Cómo participo en el hackathon?","faq.q6.a":"Tu boleto da acceso. Equipos de 2–4 personas, formación in-situ el primer día. Tema: IA para Puerto Rico. $10K en premios.",
+      "faq.q7.q":"¿Hay descuentos para grupos?","faq.q7.a":"Sí, para grupos de 5+. Escribe a info@caribbeansummit.ai con la cantidad y nombres.",
+      "faq.q8.q":"¿Cómo me hago sponsor o speaker?","faq.q8.a":"Sponsors → sponsors@caribbeansummit.ai (niveles $3K–$50K). Speakers → speakers@caribbeansummit.ai (open call).",
+      "final.urg":"Cupo limitado · Early Bird $299",
+      "final.sub":"Nos vemos en San Juan. 9–10 octubre. El año que viene no es el primero. Este sí.",
+      "final.cta":"Voy a estar ahí.",
+      "ft.about":"La primera conferencia de IA a gran escala del Caribe. San Juan, Puerto Rico.",
+      "ft.contact":"Contacto","ft.explore":"Explora","ft.attend":"Asiste","ft.sponsor":"Patrocinios",
+      "ft.credits":"Organiza: PRAIC · Desarrollo: Enalca · Identidad: W@W",
+      "m.eb":"Early Bird · $299","m.in":"Faltan","m.days":"días","m.cta":"Reserva",
+      "exit.h":"¿Antes que se acabe el Early Bird?",
+      "exit.p":"Solo 150 boletos a $299. Después: precio completo. Te tomamos 30 segundos.",
+      "exit.cta":"Reserva mi boleto · $299"
+    },
+    en: {
+      "nav.tracks":"Tracks","nav.hack":"Hackathon","nav.speakers":"Speakers","nav.agenda":"Agenda","nav.venue":"Venue","nav.tickets":"Tickets",
+      "cta.book":"Save my seat.","cta.book.early":"I want in","cta.save":"Save $200","cta.tracks":"See the tracks",
+      "hero.badge":"The first · in the Caribbean · in Puerto Rico",
+      "hero.tagline.l1":"The largest AI conference","hero.tagline.l2":"of the Caribbean.",
+      "hero.datepill":"Oct 9–10, 2026 · San Juan, PR",
+      "hero.trust.label":"Powered by","hero.trust.members":"1,000+ members",
+      "hero.scroll":"Scroll",
+      "hero.meta.date":"Oct 9–10, 2026 · 9AM–6PM",
+      "cd.days":"Days","cd.hours":"Hrs","cd.min":"Min","cd.sec":"Sec",
+      "stat.days":"Full days","stat.tracks":"Tracks","stat.keynotes":"Keynotes","stat.sessions":"Sessions","stat.attendees":"Expected attendees","stat.prize":"Hackathon prize pool",
+      "manifesto.eye":"Manifesto","manifesto.h2":"The Caribbean meets the future of AI.",
+      "manifesto.p1":"For centuries, the Caribbean has been where cultures, continents and ideas meet. Today, that same crossroads becomes the stage where the world comes to engage with AI. Not to watch from the sidelines. To lead from here.",
+      "manifesto.p2":"The Caribbean AI Summit isn't just another conference. It's the first. And firsts only happen once.",
+      "manifesto.p3":"Two days in San Juan to build what's next — with the people already building it.",
+      "tracks.eye":"Three tracks · One goal","tracks.h2":"Find your room.","tracks.lead":"Business leaders, technical builders and the AI-curious: everyone has a seat. Pick your path.",
+      "track.b.h":"Lead with AI.","track.b.p":"Strategy, finance, healthcare, startups, creative industries. For the people deciding where the business goes.","track.b.cta":"See sessions →",
+      "track.t.h":"Build what comes next.","track.t.p":"AI in production, hands-on workshops, LLMs, fine-tuning, security, infrastructure. For the builders.","track.t.cta":"See sessions →",
+      "track.l.h":"AI starts here.","track.l.p":"AI for everyone. Career impact, education, ethics, ecosystem. No prior experience needed.","track.l.cta":"Start here →",
+      "hack.eye":"HACKATHON","hack.h":"AI for Puerto Rico.",
+      "hack.p":"Teams of 2–4. 48 hours. One theme: build AI that solves a real problem on the island. Winners split $10,000.",
+      "hack.hook":"Do you have what it takes?",
+      "hack.pill1":"$10K in prizes","hack.pill2":"Teams of 2–4","hack.pill3":"48 hours","hack.pill4":"Theme: AI for PR","hack.cta":"Apply to the hackathon","hack.tag":"Build the Future",
+      "spk.eye":"Speakers · Lineup","spk.h2":"The voices moving AI forward.",
+      "spk.lead":"5 keynotes + 20 sessions. Global AI leaders and the best Caribbean talent on one stage.",
+      "spk.auth":"Official reveals: one new face every week until the event. Subscribe below to get them first.",
+      "spk.soon":"Coming soon","spk.tba":"Speaker TBA","spk.weekly":"Weekly reveal",
+      "spk.cta":"Want to speak? →",
+      "ag.eye":"Agenda · Preliminary","ag.h2":"Two days. Every minute counts.","ag.note":"Preliminary agenda — subject to change. Last updated: June 2026.",
+      "ag.tab1":"Day 1 · Oct 9","ag.tab2":"Day 2 · Oct 10",
+      "d1.s1.h":"Registration · Breakfast · Expo opens","d1.s1.p":"Coffee, networking and check-in. Sponsor expo opens.",
+      "d1.s2.h":"Opening Keynote","d1.s2.p":"The Future Starts with Better Questions. Ballroom B.",
+      "d1.s3.h":"Coffee + Networking","d1.s3.p":"Break the ice. Connect with your first person of the day.",
+      "d1.s4.h":"Sessions · Block A","d1.s4.p":"3 tracks running in parallel.",
+      "d1.s5.h":"Lunch + Expo","d1.s5.p":"Connect with sponsors and the community.",
+      "d1.s6.h":"Sessions · Block B","d1.s6.p":"3 tracks running in parallel.",
+      "d1.s7.h":"Coffee break","d1.s7.p":"Reset. More conversations.",
+      "d1.s8.h":"Sessions · Block C","d1.s8.p":"3 tracks running in parallel.",
+      "d1.s9.h":"Sponsored networking","d1.s9.p":"Drinks, conversations, day wrap.",
+      "d1.s10.h":"Hackathon Kickoff","d1.s10.p":"Clock starts. 48 hours. $10K in prizes.",
+      "d2.s1.h":"Breakfast · Expo","d2.s1.p":"Day 2 begins.",
+      "d2.s2.h":"Keynote 2","d2.s2.p":"Global leaders on stage.",
+      "d2.s3.h":"Coffee break","d2.s3.p":"Refuel.",
+      "d2.s4.h":"Sessions · Block D","d2.s4.p":"3 tracks running in parallel.",
+      "d2.s5.h":"Lunch","d2.s5.p":"More connections, more ideas.",
+      "d2.s6.h":"Hands-on workshops","d2.s6.p":"You leave with something built.",
+      "d2.s7.h":"Keynote 3","d2.s7.p":"Closing with a global voice.",
+      "d2.s8.h":"Hackathon Finals · Pitch + Demo","d2.s8.p":"Teams pitch to the jury.",
+      "d2.s9.h":"Awards + Closing","d2.s9.p":"$10K in prizes + Summit close.",
+      "d2.s10.h":"Wrap","d2.s10.p":"Until the next Caribbean AI Summit.",
+      "for.eye":"Made for you · Hecho para ti",
+      "for.h2":"Whoever you are. This Summit is yours.",
+      "for.lead":"Leaders. Builders. Founders. Students. Diaspora. The curious. If AI is moving your world, this is your place.",
+      "for.c1.h":"If you lead.","for.c1.p":"C-Suite, directors, founders. The next chapter of AI in the Caribbean is being shaped here. The first ones in the room set the direction.",
+      "for.c2.h":"If you build.","for.c2.p":"Devs, AI engineers, data scientists. You don't have to leave to work at the frontier. The frontier came home — and this is your stage.",
+      "for.c3.h":"If you're raising.","for.c3.p":"Founders, VCs, family offices. You walk into the room when it's still forming. Everyone will say they were early — be the one who was.",
+      "for.c4.h":"If you're starting out.","for.c4.p":"Students, newcomers. You're not here to watch. You're here to make your first demo in front of the people who can hire you, fund you, or build with you.",
+      "for.c5.h":"If you're diaspora.","for.c5.p":"You left for opportunity. Opportunity came home. You come back to see what's being built — and to lead the next chapter.",
+      "for.c6.h":"If AI intrigues you.","for.c6.p":"No prior experience needed. Just curiosity. You leave understanding where the world is heading — and where you fit.",
+      "why.eye":"The epicenter · El epicentro","why.h2":"Why Puerto Rico?",
+      "why.lead":"Where the Caribbean meets the U.S. Where Spanish and English coexist without translation. Where the next chapter of AI is being written.",
+      "why.c1.h":"The bridge.","why.c1.p":"3.5 hours from NYC, 2.5 from Miami, no passport or currency change. Puerto Rico is the Caribbean's window to the United States — and the U.S.'s door to Latin America.",
+      "why.c2.h":"The venue.","why.c2.p":"Puerto Rico Convention Center — the largest, most modern in the Caribbean. 580,000 sq ft, world-class AV. 5 min from Condado, 15 from Old San Juan, 10 from SJU airport.",
+      "why.c3.h":"The moment.","why.c3.p":"The Caribbean's first AI summit. You're walking in when it's still forming. Next year won't be the first. This one will.",
+      "why.meta.date":"October 9 & 10, 2026 · 9:00 AM–6:00 PM (doors 8:45 AM)",
+      "why.meta.subs":"Real-time bilingual EN/ES subtitles — no headsets needed.",
+      "why.meta.park":"Valet $18/day · 18+ event · Fast Wi-Fi + charging stations.",
+      "why.map":"Open in Google Maps →",
+      "px.eye":"Tickets · Limited","px.h2":"Lock in your spot before it's gone.",
+      "px.lead":"Early Bird is limited to the first 150 registrations. After that: full price. Don't wait.",
+      "px.sc.eyebrow":"Early Bird · Limited Release",
+      "px.sc.status.open":"Open","px.sc.status.up":"Filling Up","px.sc.status.fast":"Filling Fast","px.sc.status.gone":"Almost Gone",
+      "px.sc.foot":"Limited capacity — prices go up once Early Bird sells out.",
+      "px.ribbon":"Most popular","px.save":"Save $200",
+      "px.eb.sub":"First 150 only. After that it jumps to $499.",
+      "px.eb.f1":"Full 2-day access","px.eb.f2":"All 3 tracks + 5 keynotes","px.eb.f3":"20+ parallel sessions","px.eb.f4":"Networking + sponsor expo","px.eb.f5":"Live bilingual subtitles","px.eb.f6":"Breakfast and lunch both days",
+      "px.eb.cta":"Grab Early Bird · $299","px.eb.micro":"Limited capacity at this price.",
+      "px.trust.1":"Secure checkout via Eventbrite","px.trust.2":"Instant confirmation","px.trust.3":"Ticket is transferable",
+      "px.vip.sub":"The room where the island's AI future is decided.",
+      "px.vip.f1":"Everything in Early Bird","px.vip.f2":"Preferred keynote seating","px.vip.f3":"Exclusive VIP lounge","px.vip.f4":"Curated networking with C-suite and speakers","px.vip.f5":"Private roundtable with keynote","px.vip.f6":"Premium swag",
+      "px.vip.cta":"Reserve VIP · $900",
+      "px.note":"Prices go up once Early Bird sells out. No retroactive discounts. Tickets are non-refundable, but transferable.",
+      "sp.eye":"Who backs us","sp.h2":"Brands betting on Caribbean AI.",
+      "sp.tier1":"Title Sponsors","sp.tier2":"Gold","sp.tier3":"Silver · Community","sp.your":"Your logo here",
+      "sp.tiers":"Sponsorship tiers from $3,000 to $50,000. Put your brand in front of the Caribbean's AI ecosystem.",
+      "sp.cta":"Become a sponsor →",
+      "ts.eye":"The community speaks","ts.h2":"What the community is saying.",
+      "ts.q1.p":"We've been building on the island in silence for years. The Summit is the first time the world sits down to listen.",
+      "ts.q1.role":"AI Engineer · San Juan",
+      "ts.q2.p":"I left 12 years ago to build a tech career. For the first time, I have a professional reason to come home.",
+      "ts.q2.role":"Founder · Brooklyn → PR",
+      "ts.q3.p":"I'm a student. The hackathon is my first demo in front of the people who can hire me. Not missing it.",
+      "ts.q3.role":"CS Student · UPR",
+      "press.label":"Coverage",
+      "nl.eye":"Community","nl.h2":"Join us before the first keynote.",
+      "nl.p":"PRAIC: 1,000+ members building the Caribbean's AI ecosystem. Subscribe to get the full lineup and early-access discounts.",
+      "nl.btn":"Join","nl.msg":"You're in! We'll be in touch.",
+      "faq.eye":"FAQ","faq.h2":"What you need to know.",
+      "faq.q1.q":"What language will the event be in?","faq.q1.a":"Bilingual ES/EN. Live captions in both languages via PowerPoint 365 — no headsets required.",
+      "faq.q2.q":"What does the Early Bird ticket include?","faq.q2.a":"Full 2-day access, all 3 tracks, 5 keynotes, 20+ sessions, networking, expo, breakfast and lunch both days.",
+      "faq.q3.q":"What's the refund policy?","faq.q3.a":"Tickets are non-refundable. You can transfer to another person up to 48h before the event — email info@caribbeansummit.ai.",
+      "faq.q4.q":"Is there parking?","faq.q4.a":"Yes. Convention Center valet: $18/day. Rideshare and taxi available (~$20 from SJU airport).",
+      "faq.q5.q":"Age requirement?","faq.q5.a":"18+. University students with valid ID get a discount — reach out to info@caribbeansummit.ai.",
+      "faq.q6.q":"How do I join the hackathon?","faq.q6.a":"Your ticket gives access. Teams of 2–4, formed on-site Day 1. Theme: AI for Puerto Rico. $10K in prizes.",
+      "faq.q7.q":"Group discounts?","faq.q7.a":"Yes, for groups of 5+. Email info@caribbeansummit.ai with the headcount and names.",
+      "faq.q8.q":"How do I sponsor or speak?","faq.q8.a":"Sponsors → sponsors@caribbeansummit.ai (tiers $3K–$50K). Speakers → speakers@caribbeansummit.ai (open call).",
+      "final.urg":"Limited capacity · Early Bird $299",
+      "final.sub":"See you in San Juan. Oct 9–10. Next year isn't the first. This one is.",
+      "final.cta":"I'll be there.",
+      "ft.about":"The Caribbean's first large-scale AI conference. San Juan, Puerto Rico.",
+      "ft.contact":"Contact","ft.explore":"Explore","ft.attend":"Attend","ft.sponsor":"Sponsors",
+      "ft.credits":"By: PRAIC · Built by: Enalca · Identity: W@W",
+      "m.eb":"Early Bird · $299","m.in":"In","m.days":"days","m.cta":"Get yours",
+      "exit.h":"Before Early Bird's gone?",
+      "exit.p":"Only 150 tickets at $299. Then: full price. 30 seconds to lock yours in.",
+      "exit.cta":"Reserve my ticket · $299"
+    }
+  };
+
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    var dict = i18n[lang];
+    document.querySelectorAll("[data-i18n]").forEach(function(el){
+      var k = el.getAttribute("data-i18n");
+      if(dict[k] !== undefined) el.textContent = dict[k];
+    });
+    var es = document.getElementById("lang-es"), en = document.getElementById("lang-en");
+    es.classList.toggle("active", lang==="es");
+    en.classList.toggle("active", lang==="en");
+    es.setAttribute("aria-pressed", lang==="es");
+    en.setAttribute("aria-pressed", lang==="en");
+    try{ localStorage.setItem("cais.lang", lang); }catch(e){}
+  }
+  (function initLang(){
+    var saved = "en";
+    try{ saved = localStorage.getItem("cais.lang") || "en"; }catch(e){}
+    setLang(saved);
+  })();
+
+  /* ---- Header scroll compact ---- */
+  var header = document.getElementById("header");
+  window.addEventListener("scroll", function(){
+    header.classList.toggle("scrolled", window.scrollY > 40);
+  }, {passive:true});
+
+  /* ---- Mobile menu ---- */
+  var hamb = document.getElementById("hamb"), navLinks = document.getElementById("navLinks");
+  hamb.addEventListener("click", function(){
+    var open = navLinks.classList.toggle("open");
+    hamb.classList.toggle("open", open);
+    hamb.setAttribute("aria-expanded", open);
+  });
+  navLinks.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){ navLinks.classList.remove("open"); hamb.classList.remove("open"); hamb.setAttribute("aria-expanded","false"); });
+  });
+
+  /* ---- Countdown (target: 2026-10-09T09:00:00-04:00 AST) ---- */
+  var TARGET = new Date("2026-10-09T09:00:00-04:00").getTime();
+  function pad(n, l){ l = l||2; return String(n).padStart(l, "0"); }
+  function tick(){
+    var d = Math.max(0, TARGET - Date.now());
+    var dd = Math.floor(d / 86400000),
+        hh = Math.floor(d % 86400000 / 3600000),
+        mm = Math.floor(d % 3600000 / 60000),
+        ss = Math.floor(d % 60000 / 1000);
+    document.querySelectorAll(".cd-d").forEach(function(el){ el.textContent = pad(dd, 3); });
+    document.querySelectorAll(".cd-h").forEach(function(el){ el.textContent = pad(hh); });
+    document.querySelectorAll(".cd-m").forEach(function(el){ el.textContent = pad(mm); });
+    document.querySelectorAll(".cd-s").forEach(function(el){ el.textContent = pad(ss); });
+  }
+  tick(); setInterval(tick, 1000);
+
+  /* ---- Agenda tabs ---- */
+  function showDay(n, btn){
+    document.querySelectorAll(".agenda-day").forEach(function(d){ d.classList.remove("active"); });
+    document.getElementById("day"+n).classList.add("active");
+    btn.parentNode.querySelectorAll("button").forEach(function(b){ b.classList.remove("active"); b.setAttribute("aria-selected","false"); });
+    btn.classList.add("active");
+    btn.setAttribute("aria-selected","true");
+  }
+  window.showDay = showDay;
+
+  /* ---- Scroll reveal + count-up ---- */
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function countUp(el){
+    var end = +el.getAttribute("data-count"),
+        pre = el.getAttribute("data-prefix") || "",
+        suf = el.getAttribute("data-suffix") || "",
+        dur = 1200, t0 = null;
+    function step(ts){
+      if(!t0) t0 = ts;
+      var pr = Math.min((ts - t0) / dur, 1);
+      var val = Math.floor((1 - Math.pow(1 - pr, 3)) * end);
+      el.textContent = pre + val + suf;
+      if(pr < 1) requestAnimationFrame(step);
+      else el.textContent = pre + end + suf;
+    }
+    requestAnimationFrame(step);
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add("in");
+        var c = e.target.querySelector("[data-count]");
+        if(c && !c.dataset.done){
+          c.dataset.done = "1";
+          if(!reduce) countUp(c);
+          else c.textContent = (c.getAttribute("data-prefix")||"") + c.getAttribute("data-count") + (c.getAttribute("data-suffix")||"");
+        }
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold: .15});
+  document.querySelectorAll(".r").forEach(function(el){ io.observe(el); });
+
+  /* ---- Scarcity meter — qualitative status, no exact numbers ----
+     TODO: when you have real registrations, update CAPACITY_PCT below. */
+  (function initScarcity(){
+    var CAPACITY_PCT = 58;     // 58% full → "Filling Fast"
+    var fill   = document.getElementById("scFill");
+    var status = document.getElementById("scStatus");
+    if(!fill || !status) return;
+
+    // Pick status level based on % thresholds
+    var level, key;
+    if      (CAPACITY_PCT < 40) { level = "open"; key = "px.sc.status.open"; }
+    else if (CAPACITY_PCT < 65) { level = "up";   key = "px.sc.status.up";   }
+    else if (CAPACITY_PCT < 90) { level = "fast"; key = "px.sc.status.fast"; }
+    else                        { level = "gone"; key = "px.sc.status.gone"; }
+
+    status.setAttribute("data-level", level);
+    var lang = document.documentElement.lang || "es";
+    var label = status.querySelector(".scarcity-status-text");
+    if(label){
+      label.setAttribute("data-i18n", key);
+      if (i18n[lang] && i18n[lang][key]) label.textContent = i18n[lang][key];
+    }
+    // Update aria value
+    var bar = fill.parentNode;
+    bar.setAttribute("aria-valuenow", CAPACITY_PCT);
+
+    // Animate fill on viewport intersection
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          if(reduce) fill.style.width = CAPACITY_PCT + "%";
+          else { fill.style.width = "0%"; setTimeout(function(){ fill.style.width = CAPACITY_PCT + "%"; }, 200); }
+          observer.disconnect();
+        }
+      });
+    }, {threshold: .3});
+    observer.observe(bar);
+  })();
+
+  /* ---- Newsletter form (placeholder) ---- */
+  function submitNewsletter(e){
+    e.preventDefault();
+    var f = e.target;
+    f.querySelector("input").value = "";
+    var msg = f.querySelector(".msg");
+    if(msg){ msg.hidden = false; }
+    // TODO: enviar al endpoint real (Mailchimp / ConvertKit / etc.)
+    return false;
+  }
+  window.submitNewsletter = submitNewsletter;
+
+  /* ---- Tilt 3D on track cards (desktop only, respects reduced-motion) ---- */
+  (function tiltCards(){
+    if(reduce) return;
+    if(window.matchMedia("(pointer: coarse)").matches) return;
+    var cards = document.querySelectorAll(".cards .card");
+    cards.forEach(function(card){
+      card.addEventListener("mousemove", function(e){
+        var r = card.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width;
+        var y = (e.clientY - r.top) / r.height;
+        var rx = (y - .5) * -8;
+        var ry = (x - .5) * 8;
+        card.style.transform = "translateY(-5px) rotateX("+rx+"deg) rotateY("+ry+"deg)";
+      });
+      card.addEventListener("mouseleave", function(){
+        card.style.transform = "";
+      });
+    });
+  })();
+
+  /* ---- Spotlight follow on speaker cards ---- */
+  (function spotlightCards(){
+    if(window.matchMedia("(pointer: coarse)").matches) return;
+    document.querySelectorAll(".spk").forEach(function(card){
+      card.addEventListener("mousemove", function(e){
+        var r = card.getBoundingClientRect();
+        card.style.setProperty("--mx", (e.clientX - r.left) + "px");
+        card.style.setProperty("--my", (e.clientY - r.top) + "px");
+      });
+    });
+  })();
+
+</script>
+</body>
+</html>
