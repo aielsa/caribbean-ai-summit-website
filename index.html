@@ -1226,21 +1226,17 @@
     .logo-row{gap:30px;row-gap:24px}
     .logo-chip img{height:80px}
     .logo-chip img[src*="waw"]{height:62px}
-    /* MARQUEE MOBILE FIX — Safari mobile struggles with max-content + mask + animation */
+    /* MARQUEE MOBILE — show all chips, smooth GPU rendering */
     .marquee{-webkit-mask:none;mask:none;padding:18px 0}
     .marquee-track{
-      animation-duration:30s;
+      animation-duration:40s;
       will-change:transform;
-      transform:translateZ(0);
       backface-visibility:hidden;
     }
     .marquee-set{gap:28px;padding-right:28px}
-    /* Lighter chips for mobile rendering */
     .m-chip{height:60px;padding:4px 12px}
     .m-chip img{height:50px}
     .m-chip img[src*="waw"]{height:38px}
-    /* Render only 4 chips per set (8 total) instead of 8 per set (16 total) — sets stay identical */
-    .marquee-set .m-chip:nth-child(n+5){display:none}
 
     /* Final CTA */
     .final{padding:90px 0 110px}
