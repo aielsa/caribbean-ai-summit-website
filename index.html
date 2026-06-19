@@ -302,14 +302,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .hero-tagline span + span::before{content:" "}
   .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px;justify-content:center}
 
-  /* Save badge on the primary CTA — anchoring */
-  .save-badge{
-    display:inline-flex;align-items:center;gap:5px;
-    margin-left:4px;background:var(--coral);color:#240a06;
-    font-size:.7rem;font-weight:800;letter-spacing:.04em;
-    padding:3px 8px;border-radius:6px;
-  }
-
   /* Trust strip — social proof */
   .hero-trust{
     margin-top:42px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 18px;
@@ -913,7 +905,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .price h3{font-size:1.35rem;font-weight:800}
   .price .amt{font-size:3.2rem;font-weight:900;margin:12px 0 2px;line-height:1;letter-spacing:-.02em}
   .price .amt small{font-size:1rem;font-weight:600;color:var(--muted)}
-  .price .amt .strike{font-size:1.1rem;color:var(--muted);text-decoration:line-through;font-weight:600;margin-left:8px}
   .price .sub{color:var(--muted);font-size:.88rem;margin-bottom:22px}
   .price ul{list-style:none;display:grid;gap:11px;margin-bottom:26px}
   .price li{display:flex;gap:10px;align-items:flex-start;font-size:.93rem;color:var(--muted-strong)}
@@ -922,15 +913,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .price .btn{margin-top:auto;width:100%}
 
   .price-note{margin-top:22px;text-align:center;font-size:.86rem;color:var(--muted);max-width:540px;margin-left:auto;margin-right:auto}
-
-  /* Save badge corner — anchoring */
-  .price .save-corner{
-    position:absolute;top:18px;right:18px;
-    background:var(--coral);color:#240a06;
-    font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
-    padding:6px 11px;border-radius:8px;
-    box-shadow:0 8px 20px -8px rgba(255,107,90,.7);
-  }
 
   /* Micro-trust under CTA — scarcity reinforcement */
   .price .micro-trust{
@@ -1210,7 +1192,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .price h3{font-size:1.2rem}
     .price .amt{font-size:2.6rem}
     .price .ribbon{font-size:.62rem;letter-spacing:.10em;padding:6px 13px}
-    .price .save-corner{top:14px;right:14px;font-size:.62rem;letter-spacing:.04em;padding:5px 9px}
 
     /* Scarcity head wraps vertically on small */
     .scarcity{padding:16px 18px}
@@ -1581,7 +1562,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="spk reveal-card r"><div class="photo"><span class="soon" data-i18n="spk.soon">Reveal pronto</span></div><div class="info"><b data-i18n="spk.tba">Speaker por anunciar</b><small data-i18n="spk.weekly">Anuncio semanal</small><div class="trk">Keynote</div></div></div>
     </div>
     <div class="hero-cta" style="margin-top:36px">
-      <a class="btn btn-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSccGSy2cNjtLSZdkMh8r9fhVsTD4hWeEmz6cPnvK8F7IABfdg/viewform?pli=1" target="_blank" rel="noopener" data-i18n="spk.cta">¿Quieres ser speaker? →</a>
+      <a class="btn btn-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSccGSy2cNjtLSZdkMh8r9fhVsTD4hWeEmz6cPnvK8F7IABfdg/viewform?pli=1" target="_blank" rel="noopener" data-i18n="spk.cta">Aplica como speaker →</a>
     </div>
   </div>
 </section>
@@ -1795,10 +1776,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="price-grid">
       <div class="price featured r">
         <span class="ribbon" data-i18n="px.ribbon">Más popular · Most popular</span>
-        <span class="save-corner" data-i18n="px.save">Ahorra $200</span>
         <h3>Early Bird</h3>
-        <div class="amt">$299 <span class="strike">$499</span></div>
-        <div class="sub" data-i18n="px.eb.sub">Solo los primeros 150. Después sube a $499.</div>
+        <div class="amt">$299</div>
+        <div class="sub" data-i18n="px.eb.sub">Solo los primeros 150. Cupo limitado.</div>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.eb.f1">Acceso a los 2 días completos</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.eb.f2">Los 3 tracks + 5 keynotes</span></li>
@@ -1827,7 +1807,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
-    <p class="price-note r" data-i18n="px.note">Los precios suben cuando se agote el Early Bird. No hay descuentos retroactivos. Boletos no reembolsables, sí transferibles.</p>
+    <p class="price-note r" data-i18n="px.note">Cupo limitado. Boletos no reembolsables, sí transferibles.</p>
     <div class="trust-row r">
       <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span data-i18n="px.trust.1">Pago seguro vía Eventbrite</span></span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg><span data-i18n="px.trust.2">Confirmación instantánea</span></span>
@@ -1843,32 +1823,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="title r" data-i18n="sp.h2">Marcas que están apostando por el AI del Caribe.</h2>
 
     <div class="sponsor-tier r">
-      <span class="tier-label" data-i18n="sp.tier1">Title Sponsors</span>
+      <span class="tier-label" data-i18n="sp.partners">Partners</span>
       <div class="logo-row">
         <a class="logo-chip" href="#" aria-label="PRAIC"><img src="assets/sp-praic.png" alt="PRAIC · Puerto Rico AI Community" loading="lazy"/></a>
         <a class="logo-chip" href="#" aria-label="Enalca"><img src="assets/sp-enalca.png" alt="Enalca" loading="lazy"/></a>
       </div>
     </div>
     <div class="sponsor-tier r">
-      <span class="tier-label" data-i18n="sp.tier2">Gold</span>
+      <span class="tier-label" data-i18n="sp.sponsors">Sponsors</span>
       <div class="logo-row">
         <a class="logo-chip" href="#" aria-label="JetBrains"><img src="assets/sp-jetbrains.png" alt="JetBrains" loading="lazy"/></a>
         <a class="logo-chip" href="#" aria-label="W@W"><img src="assets/sp-waw.png" alt="W@W" loading="lazy"/></a>
       </div>
     </div>
-    <div class="sponsor-tier r">
-      <span class="tier-label" data-i18n="sp.tier3">Silver · Community</span>
-      <div class="logo-row">
-        <!-- TODO: añadir sponsors silver/community confirmados -->
-        <div class="logo-chip placeholder" data-i18n="sp.your">Tu logo aquí</div>
-        <div class="logo-chip placeholder" data-i18n="sp.your">Tu logo aquí</div>
-        <div class="logo-chip placeholder" data-i18n="sp.your">Tu logo aquí</div>
-      </div>
-    </div>
 
     <p class="lead r" style="margin:36px auto 0;text-align:center" data-i18n="sp.tiers">Niveles de patrocinio desde $3,000 hasta $50,000. Pon tu marca frente al ecosistema AI del Caribe.</p>
     <div class="hero-cta r" style="justify-content:center;margin-top:24px">
-      <a class="btn btn-ghost" href="mailto:caribbeanaisummit@gmail.com" data-i18n="sp.cta">Conviértete en sponsor →</a>
+      <a class="btn btn-ghost" href="sponsors.html" data-i18n="sp.cta">Aplica como sponsor →</a>
     </div>
   </div>
 </section>
@@ -1972,7 +1943,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var i18n = {
     es: {
       "nav.tracks":"Tracks","nav.hack":"Hackathon","nav.speakers":"Speakers","nav.agenda":"Agenda","nav.venue":"Venue","nav.tickets":"Boletos",
-      "cta.book":"Reserva tu lugar.","cta.book.early":"Quiero ser parte","cta.save":"Ahorra $200","cta.tracks":"Ver los tracks",
+      "cta.book":"Reserva tu lugar.","cta.book.early":"Quiero ser parte","cta.tracks":"Ver los tracks",
       "hero.badge":"El primero · del Caribe · en Puerto Rico",
       "hero.tagline.l1":"La conferencia de IA","hero.tagline.l2":"más grande del Caribe.",
       "hero.datepill":"9–10 oct 2026 · San Juan, PR",
@@ -1997,7 +1968,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "spk.lead":"5 keynotes + 20 sesiones. Líderes globales de IA y el mejor talento del Caribe en un mismo escenario.",
       "spk.auth":"Anuncios oficiales: una cara nueva cada semana hasta el evento. Suscríbete abajo para recibirlos primero.",
       "spk.soon":"Reveal pronto","spk.tba":"Speaker por anunciar","spk.weekly":"Anuncio semanal",
-      "spk.cta":"¿Quieres ser speaker? →",
+      "spk.cta":"Aplica como speaker →",
       "ag.eye":"Agenda · Preliminar","ag.h2":"Dos días. Cada minuto cuenta.","ag.note":"Agenda preliminar — sujeta a cambios. Última actualización: junio 2026.",
       "ag.tab1":"Día 1 · 9 oct","ag.tab2":"Día 2 · 10 oct",
       "d1.s1.h":"Registro · Desayuno · Expo abre","d1.s1.p":"Café, networking y check-in. Expo de sponsors empieza.",
@@ -2043,19 +2014,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "px.sc.eyebrow":"Early Bird · Cupo Limitado",
       "px.sc.status.open":"Disponible","px.sc.status.up":"Llenándose","px.sc.status.fast":"Se está agotando","px.sc.status.gone":"Casi agotado",
       "px.sc.foot":"Cupo limitado — los precios suben al agotarse el Early Bird.",
-      "px.ribbon":"Más popular","px.save":"Ahorra $200",
-      "px.eb.sub":"Solo los primeros 150. Después sube a $499.",
+      "px.ribbon":"Más popular",
+      "px.eb.sub":"Solo los primeros 150. Cupo limitado.",
       "px.eb.f1":"Acceso a los 2 días completos","px.eb.f2":"Los 3 tracks + 5 keynotes","px.eb.f3":"20+ sesiones en paralelo","px.eb.f4":"Networking + expo de sponsors","px.eb.f5":"Subtítulos bilingües en vivo","px.eb.f6":"Desayuno y almuerzo ambos días",
       "px.eb.cta":"Reserva Early Bird · $299","px.eb.micro":"Cupo limitado a este precio.",
       "px.trust.1":"Pago seguro vía Eventbrite","px.trust.2":"Confirmación instantánea","px.trust.3":"Boleto transferible",
       "px.vip.sub":"La sala donde se decide el futuro de la IA en la isla.",
       "px.vip.f1":"Todo lo del Early Bird","px.vip.f2":"Asientos preferenciales en keynotes","px.vip.f3":"Lounge VIP exclusivo","px.vip.f4":"Networking curado con C-suite y speakers","px.vip.f5":"Mesa redonda privada con keynote","px.vip.f6":"Swag premium",
       "px.vip.cta":"Reserva VIP · $900",
-      "px.note":"Los precios suben cuando se agote el Early Bird. No hay descuentos retroactivos. Boletos no reembolsables, sí transferibles.",
+      "px.note":"Cupo limitado. Boletos no reembolsables, sí transferibles.",
       "sp.eye":"Quiénes nos respaldan","sp.h2":"Marcas que están apostando por el AI del Caribe.",
-      "sp.tier1":"Title Sponsors","sp.tier2":"Gold","sp.tier3":"Silver · Community","sp.your":"Tu logo aquí",
+      "sp.partners":"Partners","sp.sponsors":"Sponsors",
       "sp.tiers":"Niveles de patrocinio desde $3,000 hasta $50,000. Pon tu marca frente al ecosistema AI del Caribe.",
-      "sp.cta":"Conviértete en sponsor →",
+      "sp.cta":"Aplica como sponsor →",
       "ts.eye":"La comunidad habla","ts.h2":"Lo que dicen los que ya están dentro.",
       "ts.q1.p":"Llevamos años construyendo en la isla en silencio. El Summit es la primera vez que el mundo se sienta a escuchar.",
       "ts.q1.role":"AI Engineer · San Juan",
@@ -2086,7 +2057,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     },
     en: {
       "nav.tracks":"Tracks","nav.hack":"Hackathon","nav.speakers":"Speakers","nav.agenda":"Agenda","nav.venue":"Venue","nav.tickets":"Tickets",
-      "cta.book":"Save my seat.","cta.book.early":"I want in","cta.save":"Save $200","cta.tracks":"See the tracks",
+      "cta.book":"Save my seat.","cta.book.early":"I want in","cta.tracks":"See the tracks",
       "hero.badge":"The first · in the Caribbean · in Puerto Rico",
       "hero.tagline.l1":"The largest AI conference","hero.tagline.l2":"of the Caribbean.",
       "hero.datepill":"Oct 9–10, 2026 · San Juan, PR",
@@ -2111,7 +2082,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "spk.lead":"5 keynotes + 20 sessions. Global AI leaders and the best Caribbean talent on one stage.",
       "spk.auth":"Official reveals: one new face every week until the event. Subscribe below to get them first.",
       "spk.soon":"Coming soon","spk.tba":"Speaker TBA","spk.weekly":"Weekly reveal",
-      "spk.cta":"Want to speak? →",
+      "spk.cta":"Apply as a speaker →",
       "ag.eye":"Agenda · Preliminary","ag.h2":"Two days. Every minute counts.","ag.note":"Preliminary agenda — subject to change. Last updated: June 2026.",
       "ag.tab1":"Day 1 · Oct 9","ag.tab2":"Day 2 · Oct 10",
       "d1.s1.h":"Registration · Breakfast · Expo opens","d1.s1.p":"Coffee, networking and check-in. Sponsor expo opens.",
@@ -2157,17 +2128,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "px.sc.eyebrow":"Early Bird · Limited Release",
       "px.sc.status.open":"Open","px.sc.status.up":"Filling Up","px.sc.status.fast":"Filling Fast","px.sc.status.gone":"Almost Gone",
       "px.sc.foot":"Limited capacity — prices go up once Early Bird sells out.",
-      "px.ribbon":"Most popular","px.save":"Save $200",
-      "px.eb.sub":"First 150 only. After that it jumps to $499.",
+      "px.ribbon":"Most popular",
+      "px.eb.sub":"First 150 only. Limited capacity.",
       "px.eb.f1":"Full 2-day access","px.eb.f2":"All 3 tracks + 5 keynotes","px.eb.f3":"20+ parallel sessions","px.eb.f4":"Networking + sponsor expo","px.eb.f5":"Live bilingual subtitles","px.eb.f6":"Breakfast and lunch both days",
       "px.eb.cta":"Grab Early Bird · $299","px.eb.micro":"Limited capacity at this price.",
       "px.trust.1":"Secure checkout via Eventbrite","px.trust.2":"Instant confirmation","px.trust.3":"Ticket is transferable",
       "px.vip.sub":"The room where the island's AI future is decided.",
       "px.vip.f1":"Everything in Early Bird","px.vip.f2":"Preferred keynote seating","px.vip.f3":"Exclusive VIP lounge","px.vip.f4":"Curated networking with C-suite and speakers","px.vip.f5":"Private roundtable with keynote","px.vip.f6":"Premium swag",
       "px.vip.cta":"Reserve VIP · $900",
-      "px.note":"Prices go up once Early Bird sells out. No retroactive discounts. Tickets are non-refundable, but transferable.",
+      "px.note":"Limited capacity. Tickets are non-refundable, but transferable.",
       "sp.eye":"Who backs us","sp.h2":"Brands betting on Caribbean AI.",
-      "sp.tier1":"Title Sponsors","sp.tier2":"Gold","sp.tier3":"Silver · Community","sp.your":"Your logo here",
+      "sp.partners":"Partners","sp.sponsors":"Sponsors",
       "sp.tiers":"Sponsorship tiers from $3,000 to $50,000. Put your brand in front of the Caribbean's AI ecosystem.",
       "sp.cta":"Become a sponsor →",
       "ts.eye":"The community speaks","ts.h2":"What the community is saying.",
