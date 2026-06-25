@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MSCDJ9DW');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Hackathon · Caribbean AI Summit 2026</title>
+<meta name="description" content="48 hours to build for Puerto Rico. The Caribbean AI Summit Hackathon — $10,000 in prizes. October 9–10, 2026 · San Juan, Puerto Rico." />
+<meta name="theme-color" content="#0B1220" />
+<link rel="icon" type="image/png" href="assets/icon.png" />
+<link rel="canonical" href="https://caribbeanaisummit.com/hackathon.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Hackathon · Caribbean AI Summit 2026" />
+<meta property="og:description" content="48 hours to build for Puerto Rico. $10K in prizes. Join the waitlist." />
+<meta property="og:image" content="assets/og-banner.png" />
+<meta property="og:url" content="https://caribbeanaisummit.com/hackathon.html" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --deep-navy:#0B1220;
+    --ocean-blue:#0A2F4F;
+    --caribbean-teal:#00B5B8;
+    --turquoise:#00D0C6;
+    --coral:#FF6B5A;
+    --soft-white:#F2F4F7;
+    --muted:rgba(242,244,247,.62);
+    --muted-strong:rgba(242,244,247,.82);
+    --line:rgba(0,208,198,.16);
+    --glass:rgba(255,255,255,.04);
+    --glass-strong:rgba(255,255,255,.06);
+    --glass-border:rgba(255,255,255,.10);
+    --maxw:1180px;
+    --radius:18px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:"Avenir Next","Figtree",-apple-system,"Segoe UI",sans-serif;
+    background:var(--deep-navy);color:var(--soft-white);
+    line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--turquoise);color:#04141a}
+  section[id]{scroll-margin-top:90px}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+  /* ============ HEADER ============ */
+  header{position:fixed;top:14px;left:14px;right:14px;z-index:90;display:flex;justify-content:center;pointer-events:none}
+  .nav{
+    pointer-events:auto;
+    display:flex;align-items:center;justify-content:space-between;gap:18px;
+    width:100%;max-width:1180px;padding:10px 14px 10px 22px;
+    background:linear-gradient(135deg,rgba(11,18,32,.78),rgba(11,18,32,.62));
+    backdrop-filter:blur(18px) saturate(160%);
+    -webkit-backdrop-filter:blur(18px) saturate(160%);
+    border:1px solid rgba(0,208,198,.22);border-radius:999px;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.10),0 14px 38px -18px rgba(0,0,0,.55);
+  }
+  .brand{display:inline-flex;align-items:center;gap:10px}
+  .brand img{height:32px;width:auto}
+  .nav-right{display:flex;align-items:center;gap:14px}
+  .brand-back{
+    font-size:.78rem;font-weight:700;letter-spacing:.05em;
+    color:var(--muted-strong);transition:color .2s;
+    display:inline-flex;align-items:center;gap:6px;
+  }
+  .brand-back:hover{color:var(--turquoise)}
+  .brand-back .arrow{font-size:1rem;transition:transform .2s var(--ease)}
+  .brand-back:hover .arrow{transform:translateX(-3px)}
+  .lang-toggle{display:flex;border:1px solid var(--glass-border);border-radius:999px;overflow:hidden;background:var(--glass);backdrop-filter:blur(8px)}
+  .lang-toggle button{
+    background:none;border:none;color:var(--muted);font-weight:700;font-size:.78rem;
+    padding:7px 13px;cursor:pointer;transition:all .2s;font-family:inherit;
+  }
+  .lang-toggle button.active{background:var(--turquoise);color:#04141a}
+
+  /* ============ BUTTONS ============ */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    font-weight:700;font-size:.98rem;padding:15px 26px;border-radius:999px;cursor:pointer;
+    border:1px solid transparent;font-family:inherit;text-align:center;white-space:nowrap;
+    transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s,border-color .25s;
+  }
+  .btn-primary{
+    background:linear-gradient(100deg,var(--turquoise),var(--caribbean-teal));
+    color:#04141a;box-shadow:0 10px 34px -10px rgba(0,208,198,.7);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 44px -12px rgba(0,208,198,.95)}
+  .btn-coral{background:var(--coral);color:#240a06;box-shadow:0 10px 30px -10px rgba(255,107,90,.7)}
+  .btn-coral:hover{transform:translateY(-2px);box-shadow:0 18px 40px -12px rgba(255,107,90,.9)}
+  .btn-ghost{background:var(--glass);border:1px solid var(--glass-border);color:var(--soft-white);backdrop-filter:blur(8px)}
+  .btn-ghost:hover{border-color:var(--turquoise);transform:translateY(-2px)}
+  .btn-lg{padding:18px 34px;font-size:1.05rem}
+
+  /* ============ HERO ============ */
+  .h-hero{
+    position:relative;min-height:88svh;padding:140px 0 80px;
+    display:flex;align-items:center;overflow:hidden;
+    background:var(--deep-navy);
+  }
+  .h-hero-bg{position:absolute;inset:0;z-index:0}
+  .h-hero-bg img{
+    width:100%;height:100%;object-fit:cover;object-position:center;
+    opacity:.55;filter:saturate(115%) contrast(105%);
+  }
+  .h-hero-bg::after{
+    content:"";position:absolute;inset:0;
+    background:
+      linear-gradient(90deg,var(--deep-navy) 0%,rgba(11,18,32,.78) 38%,rgba(11,18,32,.45) 70%,transparent 100%),
+      linear-gradient(180deg,rgba(11,18,32,.55) 0%,transparent 30%,rgba(11,18,32,.6) 100%);
+  }
+  .h-hero-dots{
+    position:absolute;inset:0;z-index:1;pointer-events:none;
+    background-image:radial-gradient(rgba(0,208,198,.10) 1px,transparent 1px);
+    background-size:34px 34px;opacity:.55;
+  }
+  .h-hero .wrap{position:relative;z-index:2;width:100%}
+  .h-hero-inner{max-width:620px}
+  .h-eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    background:rgba(0,208,198,.10);border:1px solid rgba(0,208,198,.35);
+    border-radius:999px;padding:8px 18px;
+    font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--turquoise);
+    backdrop-filter:blur(8px);margin-bottom:26px;
+  }
+  .h-eyebrow::before{
+    content:"";width:8px;height:8px;border-radius:50%;background:var(--turquoise);
+    box-shadow:0 0 12px var(--turquoise);
+    animation:hDot 1.4s ease-in-out infinite;
+  }
+  @keyframes hDot{0%,100%{opacity:1}50%{opacity:.35}}
+  .h-hero h1{
+    font-size:clamp(2.8rem,6.6vw,5.4rem);font-weight:900;
+    letter-spacing:-.028em;line-height:1.02;text-wrap:balance;margin-bottom:24px;
+  }
+  .h-hero h1 .grad{
+    background:linear-gradient(105deg,var(--coral) 0%,#FF9078 60%,var(--coral) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .h-hero p.lead{font-size:clamp(1.05rem,2.2vw,1.22rem);color:var(--muted-strong);max-width:54ch;margin:0 0 38px}
+
+  .meta-row{
+    display:flex;flex-wrap:wrap;gap:34px;margin:0 0 40px;
+  }
+  .meta-item{display:flex;align-items:flex-start;gap:12px;min-width:0}
+  .meta-item svg{
+    width:22px;height:22px;flex-shrink:0;color:var(--turquoise);margin-top:2px;
+    stroke:currentColor;stroke-width:2;fill:none;
+  }
+  .meta-item b{display:block;font-weight:800;font-size:.98rem;color:var(--soft-white);margin-bottom:3px}
+  .meta-item small{display:block;font-size:.78rem;color:var(--muted);font-weight:600;letter-spacing:.02em}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+
+  /* ============ SECTION BASE ============ */
+  .sect{padding:60px 0;position:relative}
+  .sect.compact{padding:32px 0}
+  .head{text-align:center;max-width:780px;margin:0 auto 36px}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--turquoise);
+  }
+  .eyebrow::before{content:"";width:24px;height:2px;background:linear-gradient(90deg,var(--turquoise),transparent);border-radius:2px}
+  .head h2{font-size:clamp(1.8rem,4.2vw,2.6rem);font-weight:900;letter-spacing:-.025em;line-height:1.08;margin:14px 0 10px;color:var(--soft-white)}
+  .head p{color:var(--muted-strong);font-size:1.02rem}
+
+  /* ============ WAITLIST ============ */
+  .waitlist-card{
+    background:linear-gradient(135deg,rgba(10,47,79,.45),rgba(11,18,32,.4));
+    border:1px solid var(--glass-border);
+    border-radius:22px;padding:30px 34px;
+    display:flex;align-items:center;gap:28px;
+  }
+  .wl-icon{
+    width:54px;height:54px;border-radius:14px;flex-shrink:0;
+    background:rgba(0,208,198,.10);border:1px solid rgba(0,208,198,.30);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .wl-icon svg{width:24px;height:24px;color:var(--turquoise);stroke:currentColor;stroke-width:2;fill:none}
+  .wl-text{flex:1;min-width:0}
+  .wl-text b{display:block;font-size:1.12rem;font-weight:800;margin-bottom:4px;color:var(--soft-white)}
+  .wl-text small{display:block;font-size:.86rem;color:var(--muted)}
+  .wl-btn{flex-shrink:0;padding:14px 26px}
+
+  /* ============ PRIZES (PODIUM) ============ */
+  #prizes{padding:70px 0 60px}
+  .prizes-head{text-align:center;max-width:680px;margin:0 auto 46px;padding:0 6px}
+  .prizes-eye{
+    display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--turquoise);padding:7px 16px;border-radius:999px;
+    background:rgba(0,208,198,.10);border:1px solid rgba(0,208,198,.30);
+    margin-bottom:18px;
+  }
+  .prizes-head h2{font-size:clamp(1.9rem,4.4vw,2.7rem);font-weight:900;letter-spacing:-.025em;line-height:1.08;color:var(--soft-white);margin-bottom:14px}
+  .prizes-head p{color:var(--muted-strong);font-size:1.02rem;max-width:50ch;margin:0 auto;line-height:1.5}
+
+  .podium{
+    display:flex;flex-direction:column;gap:18px;
+    max-width:880px;margin:0 auto;
+  }
+  .podium-step{
+    position:relative;
+    background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+    border:1px solid var(--glass-border);
+    border-radius:24px;padding:32px 22px 30px;
+    text-align:center;overflow:hidden;
+    transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+  }
+  .podium-step:hover{transform:translateY(-4px)}
+
+  /* 1st — coral champion, glowing, animated */
+  .podium-1{
+    background:
+      radial-gradient(120% 80% at 50% 0%,rgba(255,107,90,.22),transparent 70%),
+      linear-gradient(180deg,rgba(255,107,90,.10),rgba(11,18,32,.4));
+    border:1.5px solid rgba(255,107,90,.50);
+    box-shadow:
+      0 0 64px -10px rgba(255,107,90,.45),
+      0 28px 70px -22px rgba(255,107,90,.45),
+      inset 0 1px 0 rgba(255,255,255,.18);
+  }
+  .podium-1::before{
+    content:"";position:absolute;inset:-1px;border-radius:inherit;
+    background:linear-gradient(120deg,transparent 30%,rgba(255,200,180,.22) 50%,transparent 70%);
+    background-size:200% 100%;
+    animation:coralShine 5s ease-in-out infinite;
+    pointer-events:none;
+  }
+  @keyframes coralShine{0%,100%{background-position:200% 0}50%{background-position:-100% 0}}
+  .podium-spark{
+    position:absolute;top:14px;right:14px;width:18px;height:18px;
+    background:radial-gradient(circle,rgba(255,200,180,.9),transparent 70%);
+    border-radius:50%;
+    animation:sparkle 2.8s ease-in-out infinite;
+    pointer-events:none;
+  }
+  .podium-spark::before,.podium-spark::after{
+    content:"";position:absolute;top:50%;left:50%;width:24px;height:1.5px;
+    background:rgba(255,200,180,.75);transform:translate(-50%,-50%);
+    border-radius:2px;
+  }
+  .podium-spark::after{transform:translate(-50%,-50%) rotate(90deg)}
+  @keyframes sparkle{0%,100%{opacity:.4;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
+
+  /* 2nd — turquoise */
+  .podium-2{
+    background:linear-gradient(180deg,rgba(0,208,198,.10),rgba(11,18,32,.3));
+    border:1px solid rgba(0,208,198,.35);
+    box-shadow:0 22px 56px -24px rgba(0,208,198,.32);
+  }
+
+  /* 3rd — caribbean-teal (deeper, muted) */
+  .podium-3{
+    background:linear-gradient(180deg,rgba(0,181,184,.08),rgba(10,47,79,.30));
+    border:1px solid rgba(0,181,184,.30);
+    box-shadow:0 22px 56px -24px rgba(0,181,184,.25);
+  }
+
+  /* Medal disc */
+  .podium-medal{
+    position:relative;width:78px;height:78px;margin:0 auto 18px;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    transition:transform .35s var(--ease);
+  }
+  .podium-1 .podium-medal{
+    width:96px;height:96px;
+    background:radial-gradient(circle at 32% 30%,#FFC4B5,#FF6B5A 55%,#B83C2A);
+    box-shadow:
+      0 0 36px rgba(255,107,90,.65),
+      0 14px 32px -8px rgba(255,107,90,.60),
+      inset 0 -5px 10px rgba(0,0,0,.28),
+      inset 0 5px 10px rgba(255,255,255,.40);
+  }
+  .podium-2 .podium-medal{
+    background:radial-gradient(circle at 32% 30%,#9FF1EC,#00D0C6 55%,#008580);
+    box-shadow:
+      0 0 28px rgba(0,208,198,.60),
+      0 10px 24px -8px rgba(0,208,198,.50),
+      inset 0 -4px 8px rgba(0,0,0,.24),
+      inset 0 4px 8px rgba(255,255,255,.40);
+  }
+  .podium-3 .podium-medal{
+    background:radial-gradient(circle at 32% 30%,#7DD7D9,#00B5B8 55%,#005A5C);
+    box-shadow:
+      0 0 24px rgba(0,181,184,.48),
+      0 10px 24px -8px rgba(0,181,184,.40),
+      inset 0 -4px 8px rgba(0,0,0,.26),
+      inset 0 4px 8px rgba(255,255,255,.32);
+  }
+  .podium-step:hover .podium-medal{transform:scale(1.06) rotate(-3deg)}
+  .podium-1:hover .podium-medal{transform:scale(1.08) rotate(-4deg)}
+
+  .podium-medal svg{
+    width:38px;height:38px;
+    fill:#0B1220;stroke:#0B1220;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round;
+    position:relative;z-index:2;
+  }
+  .podium-1 .podium-medal svg{width:50px;height:50px;stroke-width:1.4}
+  .podium-2 .podium-medal svg,.podium-3 .podium-medal svg{fill:none;stroke-width:2}
+  .podium-2 .podium-medal text,.podium-3 .podium-medal text{
+    fill:#0B1220;stroke:none;
+    font-family:"Figtree","Avenir Next",sans-serif;
+    font-weight:900;
+  }
+
+  /* Place label */
+  .podium-place{
+    font-size:.74rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  .podium-1 .podium-place{color:#FF9078}
+  .podium-2 .podium-place{color:var(--turquoise)}
+  .podium-3 .podium-place{color:var(--caribbean-teal)}
+
+  /* Amount */
+  .podium-amount{
+    font-size:clamp(2.2rem,6vw,2.6rem);font-weight:900;letter-spacing:-.025em;
+    color:var(--soft-white);font-variant-numeric:tabular-nums;line-height:1;
+    margin-bottom:10px;
+  }
+  .podium-1 .podium-amount{
+    font-size:clamp(2.6rem,7vw,3.2rem);
+    background:linear-gradient(135deg,#FFC4B5 0%,#FF6B5A 60%,#E04A3A 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    text-shadow:0 0 24px rgba(255,107,90,.35);
+  }
+
+  /* Tag */
+  .podium-tag{
+    display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);padding:5px 12px;border-radius:999px;
+    background:rgba(255,255,255,.04);border:1px solid var(--glass-border);
+  }
+  .podium-1 .podium-tag{color:#240a06;background:linear-gradient(135deg,#FFC4B5,#FF6B5A);border-color:rgba(255,107,90,.5);font-weight:800}
+
+  /* Desktop: side-by-side with 1st centered and elevated */
+  @media(min-width:760px){
+    .podium{flex-direction:row;align-items:flex-end;gap:18px}
+    .podium-step{flex:1;padding:32px 18px 28px}
+    .podium-1{order:2;flex:1.18;padding:46px 22px 38px;transform:translateY(-12px)}
+    .podium-1:hover{transform:translateY(-18px)}
+    .podium-2{order:1}
+    .podium-3{order:3}
+  }
+
+  /* MISSION card */
+  .mission-card{
+    max-width:760px;margin:0 auto;
+    background:linear-gradient(135deg,rgba(0,181,184,.10),rgba(10,47,79,.35));
+    border:1px solid rgba(0,208,198,.28);
+    border-radius:22px;padding:28px 32px;
+    display:flex;align-items:center;gap:22px;
+    transition:transform .3s var(--ease),border-color .3s;
+  }
+  .mission-card:hover{transform:translateY(-3px);border-color:var(--turquoise)}
+  .mission-icon{
+    width:54px;height:54px;border-radius:14px;flex-shrink:0;
+    background:rgba(0,208,198,.12);border:1px solid rgba(0,208,198,.30);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .mission-icon svg{width:24px;height:24px;color:var(--turquoise);stroke:currentColor;stroke-width:2;fill:none}
+  .mission-eye{display:block;font-size:.66rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--turquoise);margin-bottom:6px}
+  .mission-card h3{font-size:1.25rem;font-weight:900;letter-spacing:-.018em;line-height:1.2;margin-bottom:6px;color:var(--soft-white)}
+  .mission-card p{color:var(--muted-strong);font-size:.95rem;line-height:1.55}
+
+  /* ============ TIMELINE ============ */
+  .how-title{text-align:center;font-size:.78rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--muted-strong);margin-bottom:34px}
+  .timeline{position:relative;display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:20px;align-items:start}
+  .tl-step{text-align:left;padding:0 6px}
+  .tl-icon{
+    width:46px;height:46px;border-radius:50%;
+    background:rgba(0,208,198,.08);border:1px solid rgba(0,208,198,.30);
+    display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+  }
+  .tl-icon svg{width:20px;height:20px;color:var(--turquoise);stroke:currentColor;stroke-width:2;fill:none}
+  .tl-day{font-size:.68rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--turquoise);margin-bottom:6px}
+  .tl-date{font-size:1.25rem;font-weight:900;color:var(--soft-white);letter-spacing:-.01em;margin-bottom:10px;line-height:1.1}
+  .tl-step h4{font-size:1.05rem;font-weight:800;margin-bottom:8px;color:var(--soft-white);letter-spacing:-.005em}
+  .tl-step p{font-size:.9rem;color:var(--muted-strong);line-height:1.5}
+  .tl-arrow{
+    color:var(--turquoise);opacity:.55;font-size:1.4rem;font-weight:900;
+    margin-top:18px;align-self:center;letter-spacing:.2em;line-height:1;
+  }
+
+  /* ============ TICKET BANNER ============ */
+  .ticket-banner{
+    background:linear-gradient(135deg,rgba(0,181,184,.14),rgba(10,47,79,.5));
+    border:1px solid rgba(0,208,198,.32);
+    border-radius:22px;padding:28px 34px;
+    display:flex;align-items:center;gap:24px;
+    box-shadow:0 18px 50px -28px rgba(0,208,198,.4);
+  }
+  .tb-icon{
+    width:54px;height:54px;border-radius:14px;flex-shrink:0;
+    background:rgba(0,208,198,.14);border:1px solid rgba(0,208,198,.40);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .tb-icon svg{width:26px;height:26px;color:var(--turquoise);stroke:currentColor;stroke-width:2;fill:none}
+  .tb-text{flex:1;min-width:0}
+  .tb-text b{display:block;font-size:1.15rem;font-weight:800;margin-bottom:4px;color:var(--soft-white)}
+  .tb-text small{display:block;font-size:.9rem;color:var(--muted-strong);line-height:1.5}
+  .tb-btn{flex-shrink:0}
+
+  /* ============ BOTTOM CARDS ============ */
+  .who-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .who-card{
+    background:var(--glass-strong);border:1px solid var(--glass-border);
+    border-radius:22px;padding:30px 32px;
+    transition:transform .3s var(--ease),border-color .3s;
+  }
+  .who-card:hover{transform:translateY(-3px);border-color:var(--turquoise)}
+  .who-head{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+  .who-icon{
+    width:48px;height:48px;border-radius:12px;flex-shrink:0;
+    background:rgba(0,208,198,.08);border:1px solid var(--glass-border);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .who-icon svg{width:22px;height:22px;color:var(--turquoise);stroke:currentColor;stroke-width:2;fill:none}
+  .who-card h3{font-size:1.25rem;font-weight:900;letter-spacing:-.015em}
+  .who-card p{color:var(--muted-strong);font-size:.95rem;line-height:1.55}
+
+  /* ============ FAQ ============ */
+  .faq-head{text-align:center;max-width:740px;margin:0 auto 36px}
+  .faq-eye{
+    display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--turquoise);margin-bottom:12px;
+  }
+  .faq-head h2{font-size:clamp(1.8rem,4.2vw,2.6rem);font-weight:900;letter-spacing:-.025em;line-height:1.1;color:var(--soft-white);margin-bottom:10px}
+  .faq-head p{color:var(--muted-strong);font-size:1rem;max-width:56ch;margin:0 auto}
+  .faq{display:flex;flex-direction:column;gap:12px;max-width:880px;margin:0 auto}
+  .faq details{
+    background:var(--glass-strong);border:1px solid var(--glass-border);
+    border-radius:16px;overflow:hidden;
+    transition:border-color .25s var(--ease),background .25s;
+  }
+  .faq details:hover{border-color:rgba(0,208,198,.30)}
+  .faq details[open]{
+    border-color:rgba(0,208,198,.40);
+    background:linear-gradient(135deg,rgba(0,181,184,.06),rgba(11,18,32,.4));
+  }
+  .faq summary{
+    list-style:none;cursor:pointer;
+    padding:20px 56px 20px 24px;
+    font-size:1rem;font-weight:700;color:var(--soft-white);
+    position:relative;line-height:1.4;
+    transition:color .2s;
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary:hover{color:var(--turquoise)}
+  .faq summary::after{
+    content:"+";
+    position:absolute;right:22px;top:50%;transform:translateY(-50%);
+    width:28px;height:28px;border-radius:50%;
+    background:rgba(0,208,198,.10);border:1px solid rgba(0,208,198,.30);
+    color:var(--turquoise);font-size:1.2rem;font-weight:700;line-height:1;
+    display:flex;align-items:center;justify-content:center;
+    transition:transform .25s var(--ease),background .25s;
+  }
+  .faq details[open] summary::after{
+    content:"−";background:var(--turquoise);color:#04141a;border-color:var(--turquoise);
+    transform:translateY(-50%) rotate(180deg);
+  }
+  .faq details > div{
+    padding:0 24px 22px;
+    color:var(--muted-strong);font-size:.94rem;line-height:1.6;
+  }
+  .faq details > div p + p{margin-top:10px}
+  .faq details > div strong{color:var(--soft-white);font-weight:700}
+  .faq details > div ul{margin:8px 0 0 18px;display:flex;flex-direction:column;gap:6px}
+  .faq details > div ul li::marker{color:var(--turquoise)}
+
+  /* ============ RESPONSIVE ============ */
+  @media(max-width:900px){
+    .timeline{grid-template-columns:1fr;gap:30px}
+    .tl-arrow{display:none}
+    .who-grid{grid-template-columns:1fr}
+    .waitlist-card,.ticket-banner{flex-direction:column;align-items:flex-start;gap:18px}
+    .wl-btn{width:100%}
+    .tb-btn{width:100%}
+    .tb-btn .btn{width:100%}
+    .h-hero{padding:120px 0 60px}
+    .h-hero-inner{max-width:100%}
+    .meta-row{gap:22px}
+    .meta-item{flex:1;min-width:140px}
+    .h-hero-bg::after{
+      background:
+        linear-gradient(180deg,rgba(11,18,32,.7) 0%,rgba(11,18,32,.4) 35%,rgba(11,18,32,.85) 100%);
+    }
+    .mission-card{flex-direction:column;text-align:center;align-items:flex-start}
+    .mission-icon{margin:0 auto}
+    .mission-text{text-align:center;width:100%}
+  }
+  @media(max-width:560px){
+    .sect{padding:44px 0}
+    #prizes{padding:48px 0 40px}
+    .who-card,.waitlist-card,.ticket-banner,.mission-card{padding:24px 22px}
+    .podium-step{padding:26px 18px 24px}
+    .podium-1{padding:34px 20px 30px}
+    .podium-medal{width:68px;height:68px}
+    .podium-1 .podium-medal{width:84px;height:84px}
+    .podium-medal svg{width:32px;height:32px}
+    .podium-1 .podium-medal svg{width:42px;height:42px}
+    .nav{padding:9px 12px 9px 16px}
+    .brand img{height:28px}
+    .brand-back{font-size:.72rem}
+    .hero-cta{flex-direction:column;width:100%}
+    .hero-cta .btn{width:100%}
+    .meta-row{flex-direction:column;gap:16px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  }
+</style>
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSCDJ9DW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- ============ HEADER ============ -->
+<header>
+  <nav class="nav">
+    <a class="brand" href="index.html" aria-label="Back to Caribbean AI Summit">
+      <img src="assets/logo-white.svg" alt="Caribbean AI Summit" onerror="this.onerror=null;this.src='assets/logo-white.png'"/>
+    </a>
+    <div class="nav-right">
+      <a class="brand-back" href="index.html">
+        <span class="arrow">←</span>
+        <span data-i18n="nav.back">Back to event</span>
+      </a>
+      <div class="lang-toggle" role="group" aria-label="Language toggle">
+        <button id="lang-es" onclick="setLang('es')" aria-label="Cambiar a español" aria-pressed="false">ES</button>
+        <button id="lang-en" class="active" onclick="setLang('en')" aria-label="Switch to English" aria-pressed="true">EN</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="h-hero">
+  <div class="h-hero-bg"><img src="assets/morro.jpg" alt="" loading="eager" onerror="this.style.display='none'"/></div>
+  <div class="h-hero-dots" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="h-hero-inner">
+      <span class="h-eyebrow" data-i18n="hero.eye">Caribbean AI Summit Hackathon</span>
+      <h1>
+        <span data-i18n="hero.h1.a">48 hours to build for</span>
+        <span class="grad" data-i18n="hero.h1.b">Puerto Rico.</span>
+      </h1>
+      <p class="lead" data-i18n="hero.lead">Collaborate, build, and bring ideas to life. Create solutions that make a real difference for Puerto Rico and its people.</p>
+
+      <div class="meta-row">
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
+          <div><b data-i18n="meta.date">October 9–10, 2026</b><small data-i18n="meta.date.s">During the Caribbean AI Summit</small></div>
+        </div>
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><b data-i18n="meta.loc">San Juan, Puerto Rico</b><small data-i18n="meta.loc.s">In-person</small></div>
+        </div>
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div><b data-i18n="meta.dur">48 Hours</b><small data-i18n="meta.dur.s">Build. Collaborate. Present.</small></div>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" data-form data-i18n="cta.wl">Join Waitlist</a>
+        <a class="btn btn-ghost" href="#" data-eb data-i18n="cta.tix">Get Tickets</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WAITLIST CTA ============ -->
+<section class="sect" id="waitlist">
+  <div class="wrap">
+    <div class="waitlist-card">
+      <div class="wl-icon">
+        <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+      </div>
+      <div class="wl-text">
+        <b data-i18n="wl.h">Already have a Summit ticket? Join the hackathon waitlist.</b>
+        <small data-i18n="wl.s">Takes 2 minutes. Spots get allocated in waitlist order, so the earlier you're on it, the better.</small>
+      </div>
+      <a class="btn btn-primary wl-btn" data-form data-i18n="wl.cta">Join Waitlist →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRIZES (PODIUM) ============ -->
+<section class="sect" id="prizes">
+  <div class="wrap">
+    <div class="prizes-head">
+      <span class="prizes-eye" data-i18n="prize.eye">$10,000 in prizes</span>
+      <h2 data-i18n="prize.h">Big ideas. Real impact.</h2>
+      <p data-i18n="prize.lead">Three teams take home cash prizes. Plus the bragging rights of having built something real for Puerto Rico.</p>
+    </div>
+
+    <div class="podium">
+      <!-- 1st place (semantic first; visually centered on desktop) -->
+      <article class="podium-step podium-1">
+        <div class="podium-spark" aria-hidden="true"></div>
+        <div class="podium-medal">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 3h10v8a5 5 0 01-10 0V3z"/>
+            <path d="M7 6H4v3a3 3 0 003 3" fill="none"/>
+            <path d="M17 6h3v3a3 3 0 01-3 3" fill="none"/>
+            <path d="M10 16h4v3h-4z"/>
+            <path d="M6 19h12v3H6z"/>
+          </svg>
+        </div>
+        <div class="podium-place" data-i18n="prize.1st">1st Place</div>
+        <div class="podium-amount">$5,000</div>
+        <div class="podium-tag" data-i18n="prize.1st.tag">Champion</div>
+      </article>
+
+      <!-- 2nd place (left on desktop) -->
+      <article class="podium-step podium-2">
+        <div class="podium-medal">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8 2l3 9M16 2l-3 9"/>
+            <circle cx="12" cy="16" r="6"/>
+            <text x="12" y="19.5" text-anchor="middle" font-size="8" font-weight="900" stroke="none">2</text>
+          </svg>
+        </div>
+        <div class="podium-place" data-i18n="prize.2nd">2nd Place</div>
+        <div class="podium-amount">$3,000</div>
+        <div class="podium-tag" data-i18n="prize.2nd.tag">Runner-up</div>
+      </article>
+
+      <!-- 3rd place (right on desktop) -->
+      <article class="podium-step podium-3">
+        <div class="podium-medal">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8 2l3 9M16 2l-3 9"/>
+            <circle cx="12" cy="16" r="6"/>
+            <text x="12" y="19.5" text-anchor="middle" font-size="8" font-weight="900" stroke="none">3</text>
+          </svg>
+        </div>
+        <div class="podium-place" data-i18n="prize.3rd">3rd Place</div>
+        <div class="podium-amount">$2,000</div>
+        <div class="podium-tag" data-i18n="prize.3rd.tag">Honorable</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MISSION ============ -->
+<section class="sect compact">
+  <div class="wrap">
+    <div class="mission-card">
+      <div class="mission-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg>
+      </div>
+      <div class="mission-text">
+        <span class="mission-eye" data-i18n="mission.eye">Build for Puerto Rico</span>
+        <h3 data-i18n="mission.h">Build solutions for Puerto Rico.</h3>
+        <p data-i18n="mission.p">Create solutions that address real challenges and opportunities in our communities, businesses, and environment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="sect">
+  <div class="wrap">
+    <h3 class="how-title" data-i18n="how.eye">How it works</h3>
+    <div class="timeline">
+      <div class="tl-step">
+        <div class="tl-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
+        </div>
+        <div class="tl-day" data-i18n="how.d1.day">Day 1</div>
+        <div class="tl-date" data-i18n="how.d1.date">Oct 9, 2026</div>
+        <h4 data-i18n="how.d1.h">Registration & Kickoff</h4>
+        <p data-i18n="how.d1.p">Registration opens in August. Hackathon kicks off the first day of the Summit.</p>
+      </div>
+      <div class="tl-arrow" aria-hidden="true">→</div>
+      <div class="tl-step">
+        <div class="tl-icon">
+          <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <div class="tl-day" data-i18n="how.d2.day">Day 1–2</div>
+        <div class="tl-date" data-i18n="how.d2.date">Oct 9, 2026</div>
+        <h4 data-i18n="how.d2.h">Build for 48 Hours</h4>
+        <p data-i18n="how.d2.p">Collaborate, build, and refine your solution with mentors and resources.</p>
+      </div>
+      <div class="tl-arrow" aria-hidden="true">→</div>
+      <div class="tl-step">
+        <div class="tl-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div class="tl-day" data-i18n="how.d3.day">Day 2</div>
+        <div class="tl-date" data-i18n="how.d3.date">Oct 10, 2026</div>
+        <h4 data-i18n="how.d3.h">Present & Celebrate</h4>
+        <p data-i18n="how.d3.p">Present your solution on the main stage of the Summit. Winners announced!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TICKET BANNER ============ -->
+<section class="sect compact">
+  <div class="wrap">
+    <div class="ticket-banner">
+      <div class="tb-icon">
+        <svg viewBox="0 0 24 24"><path d="M2 9.5V7a2 2 0 012-2h16a2 2 0 012 2v2.5a2.5 2.5 0 000 5V17a2 2 0 01-2 2H4a2 2 0 01-2-2v-2.5a2.5 2.5 0 000-5z"/><path d="M13 5v14"/></svg>
+      </div>
+      <div class="tb-text">
+        <b data-i18n="tix.h">You need a ticket to participate.</b>
+        <small data-i18n="tix.p">Hackathon participants must have a valid ticket to the Caribbean AI Summit. Get your ticket today and join the challenge.</small>
+      </div>
+      <div class="tb-btn">
+        <a class="btn btn-primary btn-lg" href="#" data-eb data-i18n="tix.cta">Get Tickets</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHO + WHAT ============ -->
+<section class="sect compact">
+  <div class="wrap">
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-head">
+          <div class="who-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3 data-i18n="who.h">Who can join?</h3>
+        </div>
+        <p data-i18n="who.p">Students, developers, designers, entrepreneurs, and problem solvers from all backgrounds. Teams of 2–5 members.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-head">
+          <div class="who-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 017 7c0 3-2 4.5-2.5 6H7.5C7 13.5 5 12 5 9a7 7 0 017-7z"/></svg>
+          </div>
+          <h3 data-i18n="what.h">What to build</h3>
+        </div>
+        <p data-i18n="what.p">Build any solution that addresses real challenges or opportunities in Puerto Rico. Use any tools, any tech, and bring your ideas to life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sect" id="faq">
+  <div class="wrap">
+    <div class="faq-head">
+      <span class="faq-eye" data-i18n="faq.eye">Frequently Asked Questions</span>
+      <h2 data-i18n="faq.h2">Everything you need to know.</h2>
+      <p data-i18n="faq.lead">Got a question we didn't answer? Email us at <a href="mailto:caribbeanaisummit@gmail.com" style="color:var(--turquoise)">caribbeanaisummit@gmail.com</a>.</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary data-i18n="faq.q1.q">When does registration open?</summary>
+        <div data-i18n="faq.q1.a"><p>Registration opens in <strong>August 2026</strong>. Join the waitlist above to be the first to know — waitlist members get priority access before public registration goes live. Spots are limited.</p></div>
+      </details>
+      <details>
+        <summary data-i18n="faq.q2.q">Do I need a Caribbean AI Summit ticket to participate?</summary>
+        <div data-i18n="faq.q2.a"><p>Yes. <strong>All hackathon participants must have a valid Summit ticket</strong> (Early Bird, GA, or VIP). Your ticket covers full Summit access plus the hackathon — keynotes, sessions, networking, meals, and the closing reception. Get yours via the <strong>Get Tickets</strong> button above.</p></div>
+      </details>
+      <details>
+        <summary data-i18n="faq.q3.q">Do I need prior experience? I'm a beginner — can I still join?</summary>
+        <div data-i18n="faq.q3.a"><p><strong>Yes, beginners are welcome.</strong> The hackathon is for anyone curious about AI — students, designers, product folks, founders, engineers, and first-timers alike. What matters is that you bring an idea and a willingness to build.</p><p>If you've never coded with AI before, we recommend teaming up with at least one technical builder. We'll also have mentors on-site to help unblock teams.</p></div>
+      </details>
+      <details>
+        <summary data-i18n="faq.q4.q">How do I form a team? Can I come solo?</summary>
+        <div data-i18n="faq.q4.a"><p>Teams are <strong>2 to 5 people</strong>. You can sign up as a team, or as a solo participant and we'll help match you with others during the kickoff.</p><p>We'll host a team-formation mixer at the start of Day 1 for everyone looking for a team. Bring an idea, bring a skill, or bring nothing but energy — we'll connect you.</p></div>
+      </details>
+      <details>
+        <summary data-i18n="faq.q5.q">What can I build? Is there a specific theme?</summary>
+        <div data-i18n="faq.q5.a"><p>The theme is <strong>"AI for Puerto Rico"</strong> — broadly defined. Build any AI-powered solution that addresses a real challenge or opportunity for Puerto Rico's communities, businesses, government, environment, culture, or people.</p><p>Examples: tools for small business, climate resilience, education, health access, tourism, civic tech, language preservation, public safety. Be bold.</p></div>
+      </details>
+      <details>
+        <summary data-i18n="faq.q6.q">Can I work on a pre-existing project or use code I wrote before?</summary>
+        <div data-i18n="faq.q6.a"><p><strong>No pre-built submissions.</strong> The core build must happen during the 48 hours of the hackathon. You may use open-source libraries, APIs, pre-trained models, and design assets — but the application itself and the AI integration must be new.</p><p>Coming in with a clear idea, sketches, or a tech plan is encouraged. Coming in with finished code is not.</p></div>
+      </details>
+      <details>
+        <summary data-i18n="faq.q7.q">What tools, APIs, and AI models can I use?</summary>
+        <div data-i18n="faq.q7.a"><p><strong>Any tools, any stack, any AI model.</strong> Use whatever helps you ship: Claude, GPT, open-source LLMs, Cursor, JetBrains, Figma, Vercel, Supabase, AWS, GCP — your call.</p><p>Sponsors will provide free credits, API access, and integration support during the event. Details published closer to the date.</p></div>
+      </details>
+      <details>
+        <summary data-i18n="faq.q8.q">How is the hackathon judged? What are the criteria?</summary>
+        <div data-i18n="faq.q8.a"><p>A panel of judges (founders, engineers, investors, and PR ecosystem leaders) scores projects on four criteria, weighted equally:</p><ul><li><strong>Impact:</strong> How meaningfully does it address a real problem for Puerto Rico?</li><li><strong>Technical execution:</strong> Quality of the build, smart use of AI, and what was shipped in 48 hours.</li><li><strong>Originality:</strong> Is the idea fresh? Does it approach the problem differently?</li><li><strong>Presentation:</strong> Clarity, demo quality, and storytelling on the main stage.</li></ul></div>
+      </details>
+      <details>
+        <summary data-i18n="faq.q9.q">Who owns the intellectual property of what I build?</summary>
+        <div data-i18n="faq.q9.a"><p><strong>You do.</strong> Teams retain full ownership of all IP they create during the hackathon — code, designs, models, and ideas. The Caribbean AI Summit and PRAIC claim no rights to your work.</p><p>By participating, you grant us permission to feature your project for promotional purposes (photos, names, project descriptions) — no rights to the underlying IP.</p></div>
+      </details>
+      <details>
+        <summary data-i18n="faq.q10.q">Will there be mentors, food, and a place to work?</summary>
+        <div data-i18n="faq.q10.a"><p><strong>Yes to all three.</strong> Industry mentors will rotate through team tables throughout Day 1 and Day 2 for technical and product guidance. Meals, coffee, and snacks are provided continuously.</p><p>The hackathon takes place inside the Caribbean AI Summit venue at the <strong>Puerto Rico Convention Center</strong> — open-floor team tables, fast WiFi, charging everywhere, and direct access to the Summit programming.</p></div>
+      </details>
+      <details>
+        <summary data-i18n="faq.q11.q">What do I need to bring? Can I sleep at the venue?</summary>
+        <div data-i18n="faq.q11.a"><p>Bring your <strong>laptop, charger, valid ID, and your Summit badge</strong>. That's it. We provide everything else: WiFi, power, food, coffee, snacks, swag, and workspace.</p><p>The venue is open for working hours, but there's no overnight sleeping inside. Most teams book a nearby hotel — Distrito T-Mobile and the Condado area are walking distance. We'll share a discounted hotel block closer to the event.</p></div>
+      </details>
+      <details>
+        <summary data-i18n="faq.q12.q">How are the prizes paid out? Are they taxable?</summary>
+        <div data-i18n="faq.q12.a"><p>The <strong>$10,000 prize pool</strong> is split as 1st: $5,000 · 2nd: $3,000 · 3rd: $2,000. Prizes are awarded to the team and split evenly among team members unless the team specifies otherwise.</p><p>Prizes are paid via bank transfer or check within 30 days of the event. <strong>Prizes are considered taxable income</strong> in both the US and Puerto Rico — we'll issue the appropriate tax forms (1099-MISC or equivalent) where required. Consult a tax professional for your situation.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<script>
+  /* Scroll restoration to top on load */
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  window.scrollTo(0,0);
+  window.addEventListener("DOMContentLoaded",function(){window.scrollTo(0,0)});
+
+  /* ---- Eventbrite + Waitlist URLs ---- */
+  var EB = "https://www.eventbrite.com/e/caribbean-ai-summit-2026-registration-1981768097728?aff=website";
+  var HACKATHON_FORM = "https://forms.gle/j4WJ7vKZ8XZbDpEEA";
+
+  document.querySelectorAll("[data-eb]").forEach(function(a){ a.href = EB; a.target = "_blank"; a.rel = "noopener"; });
+  document.querySelectorAll("[data-form]").forEach(function(a){ a.href = HACKATHON_FORM; a.target = "_blank"; a.rel = "noopener"; });
+
+  /* ---- i18n dictionary ---- */
+  var i18n = {
+    es:{
+      "nav.back":"Volver al evento",
+      "hero.eye":"Caribbean AI Summit Hackathon",
+      "hero.h1.a":"48 horas para construir para","hero.h1.b":"Puerto Rico.",
+      "hero.lead":"Colabora, construye y trae ideas a la vida. Crea soluciones que hagan una diferencia real para Puerto Rico y su gente.",
+      "meta.date":"9–10 de octubre, 2026","meta.date.s":"Durante el Caribbean AI Summit",
+      "meta.loc":"San Juan, Puerto Rico","meta.loc.s":"Presencial",
+      "meta.dur":"48 Horas","meta.dur.s":"Construye. Colabora. Presenta.",
+      "cta.wl":"Únete al waitlist","cta.tix":"Compra tu boleto",
+
+      "wl.h":"¿Ya tienes tu boleto del Summit? Únete al waitlist del hackathon.",
+      "wl.s":"Te toma 2 minutos. Los cupos se asignan en orden de llegada desde el waitlist, así que mientras antes entres, mejor.",
+      "wl.cta":"Únete al waitlist →",
+
+      "prize.eye":"$10,000 en premios","prize.h":"Grandes ideas. Impacto real.",
+      "prize.lead":"Tres equipos se llevan premios en efectivo. Y el bragging right de haber construido algo real para Puerto Rico.",
+      "prize.1st":"1er Lugar","prize.2nd":"2do Lugar","prize.3rd":"3er Lugar",
+      "prize.1st.tag":"Campeón","prize.2nd.tag":"Subcampeón","prize.3rd.tag":"Honorable",
+      "mission.eye":"Construye para Puerto Rico","mission.h":"Soluciones para Puerto Rico.",
+      "mission.p":"Crea soluciones que respondan a retos y oportunidades reales en nuestras comunidades, negocios y medio ambiente.",
+
+      "how.eye":"Cómo funciona",
+      "how.d1.day":"Día 1","how.d1.date":"9 de octubre, 2026","how.d1.h":"Registro & Apertura",
+      "how.d1.p":"Los registros abren en agosto. El hackathon arranca el primer día del Summit.",
+      "how.d2.day":"Día 1–2","how.d2.date":"9 de octubre, 2026","how.d2.h":"Construye 48 horas",
+      "how.d2.p":"Colabora, construye y refina tu solución con mentores y recursos.",
+      "how.d3.day":"Día 2","how.d3.date":"10 de octubre, 2026","how.d3.h":"Presenta & Celebra",
+      "how.d3.p":"Presenta tu solución en el escenario principal del Summit. ¡Ganadores anunciados!",
+
+      "tix.h":"Necesitas un boleto para participar.",
+      "tix.p":"Los participantes del hackathon deben tener un boleto válido al Caribbean AI Summit. Asegura tu boleto y entra al reto.",
+      "tix.cta":"Compra tu boleto",
+
+      "who.h":"¿Quién puede participar?",
+      "who.p":"Estudiantes, developers, diseñadores, emprendedores y resolvedores de problemas de todas las disciplinas. Equipos de 2–5 personas.",
+      "what.h":"Qué construir",
+      "what.p":"Cualquier solución que responda a retos u oportunidades reales en Puerto Rico. Usa cualquier herramienta, cualquier tecnología, y trae tus ideas a la vida.",
+
+      "faq.eye":"Preguntas frecuentes",
+      "faq.h2":"Todo lo que necesitas saber.",
+      "faq.lead":"¿Tienes una pregunta que no respondimos? Escríbenos a <a href=\"mailto:caribbeanaisummit@gmail.com\" style=\"color:var(--turquoise)\">caribbeanaisummit@gmail.com</a>.",
+      "faq.q1.q":"¿Cómo me inscribo al hackathon?",
+      "faq.q1.a":"<p><strong>El waitlist ya está abierto.</strong> Una vez compras tu boleto del Caribbean AI Summit, puedes unirte al waitlist del hackathon. Los cupos se asignan en orden de llegada desde el waitlist al abrir el registro final — mientras antes entres al waitlist, mejor posición tienes.</p><p>¿Aún no tienes equipo? Compra tu boleto y únete al waitlist solo. Te conectamos con otros participantes en el team-formation mixer del Día 1.</p>",
+      "faq.q2.q":"¿Necesito un boleto del Caribbean AI Summit para participar?",
+      "faq.q2.a":"<p>Sí. <strong>Todos los participantes del hackathon deben tener un boleto válido del Summit</strong> (Early Bird, GA o VIP). Tu boleto cubre acceso completo al Summit más el hackathon — keynotes, sesiones, networking, comidas y la fiesta de cierre. Asegura el tuyo con el botón <strong>Compra tu boleto</strong> arriba.</p>",
+      "faq.q3.q":"¿Necesito experiencia previa? Soy principiante — ¿igual puedo unirme?",
+      "faq.q3.a":"<p><strong>Sí, los principiantes son bienvenidos.</strong> El hackathon es para cualquier persona curiosa sobre IA — estudiantes, diseñadores, product folks, founders, ingenieros y first-timers por igual. Lo que importa es que traigas una idea y ganas de construir.</p><p>Si nunca has programado con IA, recomendamos formar equipo con al menos un builder técnico. También tendremos mentores en el sitio ayudando a destrabar equipos.</p>",
+      "faq.q4.q":"¿Cómo formo un equipo? ¿Puedo venir solo?",
+      "faq.q4.a":"<p>Los equipos son de <strong>2 a 5 personas</strong>. Puedes registrarte con tu equipo, o como participante solo y te ayudamos a hacer match con otros durante el kickoff.</p><p>Tendremos un mixer de formación de equipos al inicio del Día 1 para todos los que busquen team. Trae una idea, trae una habilidad, o trae solo energía — te conectamos.</p>",
+      "faq.q5.q":"¿Qué puedo construir? ¿Hay un tema específico?",
+      "faq.q5.a":"<p>El tema es <strong>\"IA para Puerto Rico\"</strong> — definido ampliamente. Construye cualquier solución impulsada por IA que responda a un reto u oportunidad real para las comunidades, negocios, gobierno, medio ambiente, cultura o gente de Puerto Rico.</p><p>Ejemplos: herramientas para pequeños negocios, resiliencia climática, educación, acceso a salud, turismo, civic tech, preservación del idioma, seguridad pública. Sé audaz.</p>",
+      "faq.q6.q":"¿Puedo trabajar en un proyecto existente o usar código que escribí antes?",
+      "faq.q6.a":"<p><strong>No se aceptan submissions pre-hechos.</strong> El core del build tiene que pasar durante las 48 horas del hackathon. Puedes usar librerías open-source, APIs, modelos pre-entrenados y assets de diseño — pero la aplicación en sí y la integración de IA tienen que ser nuevas.</p><p>Llegar con una idea clara, sketches o un plan técnico está encouraged. Llegar con código terminado, no.</p>",
+      "faq.q7.q":"¿Qué herramientas, APIs y modelos de IA puedo usar?",
+      "faq.q7.a":"<p><strong>Cualquier herramienta, cualquier stack, cualquier modelo de IA.</strong> Usa lo que te ayude a shippear: Claude, GPT, LLMs open-source, Cursor, JetBrains, Figma, Vercel, Supabase, AWS, GCP — tú decides.</p><p>Los sponsors proveerán créditos gratis, acceso a APIs y soporte de integración durante el evento. Detalles cerca de la fecha.</p>",
+      "faq.q8.q":"¿Cómo se juzga el hackathon? ¿Cuáles son los criterios?",
+      "faq.q8.a":"<p>Un panel de jueces (founders, ingenieros, inversionistas y líderes del ecosistema PR) puntúa los proyectos en cuatro criterios, todos con el mismo peso:</p><ul><li><strong>Impacto:</strong> ¿Qué tan significativamente responde a un problema real de Puerto Rico?</li><li><strong>Ejecución técnica:</strong> Calidad del build, uso inteligente de IA, y qué se logró en 48 horas.</li><li><strong>Originalidad:</strong> ¿La idea es fresca? ¿Aborda el problema de forma distinta?</li><li><strong>Presentación:</strong> Claridad, calidad del demo y storytelling en escenario principal.</li></ul>",
+      "faq.q9.q":"¿Quién es dueño de la propiedad intelectual de lo que construyo?",
+      "faq.q9.a":"<p><strong>Tú.</strong> Los equipos retienen full ownership de toda la IP que creen durante el hackathon — código, diseños, modelos e ideas. El Caribbean AI Summit y PRAIC no reclaman derecho alguno sobre tu trabajo.</p><p>Al participar nos das permiso para presentar tu proyecto con fines promocionales (fotos, nombres, descripciones de proyecto) — ningún derecho sobre la IP subyacente.</p>",
+      "faq.q10.q":"¿Habrá mentores, comida y un lugar para trabajar?",
+      "faq.q10.a":"<p><strong>Sí a los tres.</strong> Mentores de la industria rotarán por las mesas de equipos durante el Día 1 y Día 2 dando guía técnica y de producto. Comidas, café y snacks continuos.</p><p>El hackathon ocurre dentro del venue del Summit en el <strong>Centro de Convenciones de Puerto Rico</strong> — open-floor con mesas de equipos, WiFi rápido, carga en todas partes, y acceso directo a la programación del Summit.</p>",
+      "faq.q11.q":"¿Qué necesito traer? ¿Puedo dormir en el venue?",
+      "faq.q11.a":"<p>Trae tu <strong>laptop, cargador, ID válida y tu badge del Summit</strong>. Eso es todo. Nosotros proveemos el resto: WiFi, electricidad, comida, café, snacks, swag y espacio de trabajo.</p><p>El venue está abierto en horario de trabajo, pero no se duerme dentro. La mayoría de los equipos reservan un hotel cercano — Distrito T-Mobile y Condado están a distancia caminable. Compartimos un bloque de hoteles con descuento cerca de la fecha del evento.</p>",
+      "faq.q12.q":"¿Cómo se pagan los premios? ¿Son tributables?",
+      "faq.q12.a":"<p>El <strong>premio de $10,000</strong> se reparte como 1er lugar: $5,000 · 2do: $3,000 · 3ro: $2,000. Los premios se otorgan al equipo y se dividen en partes iguales entre los miembros a menos que el equipo indique lo contrario.</p><p>Los premios se pagan por transferencia bancaria o cheque dentro de 30 días después del evento. <strong>Los premios se consideran ingreso tributable</strong> tanto en EE.UU. como en Puerto Rico — emitimos los formularios fiscales correspondientes (1099-MISC o equivalente) cuando aplique. Consulta a un profesional de impuestos para tu situación específica.</p>",
+
+    },
+    en:{
+      "nav.back":"Back to event",
+      "hero.eye":"Caribbean AI Summit Hackathon",
+      "hero.h1.a":"48 hours to build for","hero.h1.b":"Puerto Rico.",
+      "hero.lead":"Collaborate, build, and bring ideas to life. Create solutions that make a real difference for Puerto Rico and its people.",
+      "meta.date":"October 9–10, 2026","meta.date.s":"During the Caribbean AI Summit",
+      "meta.loc":"San Juan, Puerto Rico","meta.loc.s":"In-person",
+      "meta.dur":"48 Hours","meta.dur.s":"Build. Collaborate. Present.",
+      "cta.wl":"Join Waitlist","cta.tix":"Get Tickets",
+
+      "wl.h":"Already have a Summit ticket? Join the hackathon waitlist.",
+      "wl.s":"Takes 2 minutes. Spots get allocated in waitlist order, so the earlier you're on it, the better.",
+      "wl.cta":"Join Waitlist →",
+
+      "prize.eye":"$10,000 in prizes","prize.h":"Big ideas. Real impact.",
+      "prize.lead":"Three teams take home cash prizes. Plus the bragging rights of having built something real for Puerto Rico.",
+      "prize.1st":"1st Place","prize.2nd":"2nd Place","prize.3rd":"3rd Place",
+      "prize.1st.tag":"Champion","prize.2nd.tag":"Runner-up","prize.3rd.tag":"Honorable",
+      "mission.eye":"Build for Puerto Rico","mission.h":"Build solutions for Puerto Rico.",
+      "mission.p":"Create solutions that address real challenges and opportunities in our communities, businesses, and environment.",
+
+      "how.eye":"How it works",
+      "how.d1.day":"Day 1","how.d1.date":"Oct 9, 2026","how.d1.h":"Registration & Kickoff",
+      "how.d1.p":"Registration opens in August. Hackathon kicks off the first day of the Summit.",
+      "how.d2.day":"Day 1–2","how.d2.date":"Oct 9, 2026","how.d2.h":"Build for 48 Hours",
+      "how.d2.p":"Collaborate, build, and refine your solution with mentors and resources.",
+      "how.d3.day":"Day 2","how.d3.date":"Oct 10, 2026","how.d3.h":"Present & Celebrate",
+      "how.d3.p":"Present your solution on the main stage of the Summit. Winners announced!",
+
+      "tix.h":"You need a ticket to participate.",
+      "tix.p":"Hackathon participants must have a valid ticket to the Caribbean AI Summit. Get your ticket today and join the challenge.",
+      "tix.cta":"Get Tickets",
+
+      "who.h":"Who can join?",
+      "who.p":"Students, developers, designers, entrepreneurs, and problem solvers from all backgrounds. Teams of 2–5 members.",
+      "what.h":"What to build",
+      "what.p":"Build any solution that addresses real challenges or opportunities in Puerto Rico. Use any tools, any tech, and bring your ideas to life.",
+
+      "faq.eye":"Frequently Asked Questions",
+      "faq.h2":"Everything you need to know.",
+      "faq.lead":"Got a question we didn't answer? Email us at <a href=\"mailto:caribbeanaisummit@gmail.com\" style=\"color:var(--turquoise)\">caribbeanaisummit@gmail.com</a>.",
+      "faq.q1.q":"How do I sign up for the hackathon?",
+      "faq.q1.a":"<p><strong>The waitlist is open now.</strong> Once you purchase your Caribbean AI Summit ticket, you can join the hackathon waitlist. Spots are allocated in waitlist order as final registration opens — the earlier you're on the waitlist, the better your position.</p><p>Don't have a team yet? Buy your ticket and join the waitlist solo. We'll connect you with other participants at the Day 1 team-formation mixer.</p>",
+      "faq.q2.q":"Do I need a Caribbean AI Summit ticket to participate?",
+      "faq.q2.a":"<p>Yes. <strong>All hackathon participants must have a valid Summit ticket</strong> (Early Bird, GA, or VIP). Your ticket covers full Summit access plus the hackathon — keynotes, sessions, networking, meals, and the closing reception. Get yours via the <strong>Get Tickets</strong> button above.</p>",
+      "faq.q3.q":"Do I need prior experience? I'm a beginner — can I still join?",
+      "faq.q3.a":"<p><strong>Yes, beginners are welcome.</strong> The hackathon is for anyone curious about AI — students, designers, product folks, founders, engineers, and first-timers alike. What matters is that you bring an idea and a willingness to build.</p><p>If you've never coded with AI before, we recommend teaming up with at least one technical builder. We'll also have mentors on-site to help unblock teams.</p>",
+      "faq.q4.q":"How do I form a team? Can I come solo?",
+      "faq.q4.a":"<p>Teams are <strong>2 to 5 people</strong>. You can sign up as a team, or as a solo participant and we'll help match you with others during the kickoff.</p><p>We'll host a team-formation mixer at the start of Day 1 for everyone looking for a team. Bring an idea, bring a skill, or bring nothing but energy — we'll connect you.</p>",
+      "faq.q5.q":"What can I build? Is there a specific theme?",
+      "faq.q5.a":"<p>The theme is <strong>\"AI for Puerto Rico\"</strong> — broadly defined. Build any AI-powered solution that addresses a real challenge or opportunity for Puerto Rico's communities, businesses, government, environment, culture, or people.</p><p>Examples: tools for small business, climate resilience, education, health access, tourism, civic tech, language preservation, public safety. Be bold.</p>",
+      "faq.q6.q":"Can I work on a pre-existing project or use code I wrote before?",
+      "faq.q6.a":"<p><strong>No pre-built submissions.</strong> The core build must happen during the 48 hours of the hackathon. You may use open-source libraries, APIs, pre-trained models, and design assets — but the application itself and the AI integration must be new.</p><p>Coming in with a clear idea, sketches, or a tech plan is encouraged. Coming in with finished code is not.</p>",
+      "faq.q7.q":"What tools, APIs, and AI models can I use?",
+      "faq.q7.a":"<p><strong>Any tools, any stack, any AI model.</strong> Use whatever helps you ship: Claude, GPT, open-source LLMs, Cursor, JetBrains, Figma, Vercel, Supabase, AWS, GCP — your call.</p><p>Sponsors will provide free credits, API access, and integration support during the event. Details published closer to the date.</p>",
+      "faq.q8.q":"How is the hackathon judged? What are the criteria?",
+      "faq.q8.a":"<p>A panel of judges (founders, engineers, investors, and PR ecosystem leaders) scores projects on four criteria, weighted equally:</p><ul><li><strong>Impact:</strong> How meaningfully does it address a real problem for Puerto Rico?</li><li><strong>Technical execution:</strong> Quality of the build, smart use of AI, and what was shipped in 48 hours.</li><li><strong>Originality:</strong> Is the idea fresh? Does it approach the problem differently?</li><li><strong>Presentation:</strong> Clarity, demo quality, and storytelling on the main stage.</li></ul>",
+      "faq.q9.q":"Who owns the intellectual property of what I build?",
+      "faq.q9.a":"<p><strong>You do.</strong> Teams retain full ownership of all IP they create during the hackathon — code, designs, models, and ideas. The Caribbean AI Summit and PRAIC claim no rights to your work.</p><p>By participating, you grant us permission to feature your project for promotional purposes (photos, names, project descriptions) — no rights to the underlying IP.</p>",
+      "faq.q10.q":"Will there be mentors, food, and a place to work?",
+      "faq.q10.a":"<p><strong>Yes to all three.</strong> Industry mentors will rotate through team tables throughout Day 1 and Day 2 for technical and product guidance. Meals, coffee, and snacks are provided continuously.</p><p>The hackathon takes place inside the Caribbean AI Summit venue at the <strong>Puerto Rico Convention Center</strong> — open-floor team tables, fast WiFi, charging everywhere, and direct access to the Summit programming.</p>",
+      "faq.q11.q":"What do I need to bring? Can I sleep at the venue?",
+      "faq.q11.a":"<p>Bring your <strong>laptop, charger, valid ID, and your Summit badge</strong>. That's it. We provide everything else: WiFi, power, food, coffee, snacks, swag, and workspace.</p><p>The venue is open for working hours, but there's no overnight sleeping inside. Most teams book a nearby hotel — Distrito T-Mobile and the Condado area are walking distance. We'll share a discounted hotel block closer to the event.</p>",
+      "faq.q12.q":"How are the prizes paid out? Are they taxable?",
+      "faq.q12.a":"<p>The <strong>$10,000 prize pool</strong> is split as 1st: $5,000 · 2nd: $3,000 · 3rd: $2,000. Prizes are awarded to the team and split evenly among team members unless the team specifies otherwise.</p><p>Prizes are paid via bank transfer or check within 30 days of the event. <strong>Prizes are considered taxable income</strong> in both the US and Puerto Rico — we'll issue the appropriate tax forms (1099-MISC or equivalent) where required. Consult a tax professional for your situation.</p>",
+
+    }
+  };
+
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    var dict = i18n[lang];
+    document.querySelectorAll("[data-i18n]").forEach(function(el){
+      var k = el.getAttribute("data-i18n");
+      if(dict[k] !== undefined){
+        var attr = el.getAttribute("data-i18n-attr");
+        if(attr) el.setAttribute(attr, dict[k]);
+        else if(dict[k].indexOf("<") !== -1) el.innerHTML = dict[k];
+        else el.textContent = dict[k];
+      }
+    });
+    var es = document.getElementById("lang-es"), en = document.getElementById("lang-en");
+    es.classList.toggle("active", lang==="es");
+    en.classList.toggle("active", lang==="en");
+    es.setAttribute("aria-pressed", lang==="es");
+    en.setAttribute("aria-pressed", lang==="en");
+    try{ localStorage.setItem("cais.lang", lang); }catch(e){}
+  }
+  (function initLang(){
+    var saved = "en";
+    try{ saved = localStorage.getItem("cais.lang") || "en"; }catch(e){}
+    setLang(saved);
+  })();
+</script>
+</body>
+</html>
