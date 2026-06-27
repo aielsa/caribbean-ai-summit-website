@@ -61,21 +61,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "offers": [
     {
       "@type": "Offer",
-      "name": "Early Bird",
-      "price": "299",
+      "name": "General Admission (Early Bird)",
+      "price": "199",
       "priceCurrency": "USD",
       "availability": "https://schema.org/LimitedAvailability",
       "url": "https://www.eventbrite.com/e/caribbean-ai-summit-2026-registration-1981768097728?aff=website",
-      "validThrough": "2026-10-09T00:00:00-04:00"
+      "validThrough": "2026-07-15T23:59:00-04:00"
     },
     {
       "@type": "Offer",
-      "name": "VIP",
-      "price": "900",
+      "name": "Inner Circle (Early Bird)",
+      "price": "699",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "url": "https://www.eventbrite.com/e/caribbean-ai-summit-2026-registration-1981768097728?aff=website",
-      "validThrough": "2026-10-09T00:00:00-04:00"
+      "validThrough": "2026-07-15T23:59:00-04:00"
     }
   ]
 }
@@ -411,8 +411,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .m-chip:hover{opacity:1;transform:translateY(-2px)}
   .m-chip img{height:74px;width:auto;max-width:220px;object-fit:contain}
-  .m-chip img[src*="waw"]{height:48px}
-  .m-chip:has(img[src*="waw"]) img{filter:drop-shadow(0 0 8px rgba(0,208,198,.30))}
+  .m-chip img[src*="waw"]{height:100px;max-width:280px}
   @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
   /* ============ SECTIONS ============ */
@@ -866,7 +865,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin-top:10px;font-size:.78rem;color:var(--muted);text-align:center;
   }
 
-  .price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px;max-width:880px}
+  .price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:30px auto 0;max-width:880px}
   .price{
     background:var(--glass);border:1px solid var(--glass-border);
     border-radius:22px;padding:32px;position:relative;display:flex;flex-direction:column;
@@ -891,7 +890,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     opacity:.9;
   }
   @keyframes spinGrad{to{--ga:360deg}}
-  .price.vip{
+  .price.inner{
     background:linear-gradient(165deg,rgba(10,47,79,.6),rgba(11,18,32,.6));
     border-color:rgba(255,107,90,.30);
   }
@@ -902,15 +901,104 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     padding:7px 16px;border-radius:999px;
     box-shadow:0 10px 24px -8px rgba(0,208,198,.6);
   }
+  /* Early Bird badge — chip above the tier name */
+  .eb-badge{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:.62rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--turquoise);
+    padding:5px 11px;background:rgba(0,208,198,.10);border:1px solid rgba(0,208,198,.30);
+    border-radius:999px;margin-bottom:10px;align-self:flex-start;
+  }
+  .eb-badge::before{
+    content:"";width:6px;height:6px;border-radius:50%;background:var(--turquoise);
+    box-shadow:0 0 8px var(--turquoise);
+  }
+  .eb-badge-coral{color:var(--coral);background:rgba(255,107,90,.10);border-color:rgba(255,107,90,.30)}
+  .eb-badge-coral::before{background:var(--coral);box-shadow:0 0 8px var(--coral)}
   .price h3{font-size:1.35rem;font-weight:800}
-  .price .amt{font-size:3.2rem;font-weight:900;margin:12px 0 2px;line-height:1;letter-spacing:-.02em}
+  /* Amount row — current price + strike-through old price */
+  .amt-row{display:flex;align-items:baseline;gap:14px;margin:12px 0 2px;flex-wrap:wrap}
+  .price .amt{font-size:3.2rem;font-weight:900;line-height:1;letter-spacing:-.02em}
   .price .amt small{font-size:1rem;font-weight:600;color:var(--muted)}
+  .amt-strike{
+    font-size:1.4rem;font-weight:700;color:var(--muted);
+    text-decoration:line-through;text-decoration-thickness:2px;
+    text-decoration-color:rgba(255,107,90,.7);
+    letter-spacing:-.01em;
+  }
   .price .sub{color:var(--muted);font-size:.88rem;margin-bottom:22px}
-  .price ul{list-style:none;display:grid;gap:11px;margin-bottom:26px}
+  .price ul{list-style:none;display:grid;gap:11px;margin-bottom:26px;padding:0}
   .price li{display:flex;gap:10px;align-items:flex-start;font-size:.93rem;color:var(--muted-strong)}
   .price li svg{width:17px;height:17px;stroke:var(--turquoise);flex-shrink:0;margin-top:3px}
-  .price.vip li svg{stroke:var(--coral)}
+  .price.inner li svg{stroke:var(--coral)}
   .price .btn{margin-top:auto;width:100%}
+
+  /* ============ EARLY BIRD COUNTDOWN TIMER ============ */
+  .px-timer{
+    background:
+      radial-gradient(80% 100% at 50% 0%,rgba(255,107,90,.12),transparent 70%),
+      linear-gradient(135deg,rgba(11,18,32,.6),rgba(10,47,79,.4));
+    border:1px solid rgba(255,107,90,.34);
+    border-radius:22px;padding:30px 32px;
+    text-align:center;margin:30px 0 36px;
+    box-shadow:0 18px 60px -28px rgba(255,107,90,.45);
+    position:relative;overflow:hidden;
+  }
+  .px-timer::before{
+    content:"";position:absolute;inset:-1px;border-radius:inherit;
+    background:linear-gradient(120deg,transparent 40%,rgba(255,107,90,.18) 50%,transparent 60%);
+    background-size:250% 100%;
+    animation:pxSheen 6s ease-in-out infinite;
+    pointer-events:none;
+  }
+  @keyframes pxSheen{0%,100%{background-position:200% 0}50%{background-position:-100% 0}}
+  .px-timer-eye{
+    display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--coral);margin-bottom:18px;
+    padding:6px 14px;border-radius:999px;
+    background:rgba(255,107,90,.10);border:1px solid rgba(255,107,90,.30);
+  }
+  .px-timer-clock{
+    display:inline-flex;align-items:center;gap:10px;
+    font-variant-numeric:tabular-nums;
+    position:relative;z-index:2;
+  }
+  .pxt-cell{
+    background:rgba(11,18,32,.65);border:1px solid var(--glass-border);
+    border-radius:14px;padding:14px 14px;min-width:78px;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
+  }
+  .pxt-cell b{
+    display:block;font-size:clamp(1.8rem,3.6vw,2.4rem);font-weight:900;
+    color:var(--soft-white);letter-spacing:-.02em;line-height:1;
+  }
+  .pxt-cell small{
+    display:block;margin-top:6px;font-size:.6rem;font-weight:800;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);
+  }
+  .pxt-sep{
+    font-size:1.5rem;font-weight:900;color:var(--coral);line-height:1;
+    align-self:center;animation:pxBlink 1.2s steps(2) infinite;
+  }
+  @keyframes pxBlink{50%{opacity:.35}}
+  .px-timer-foot{
+    margin-top:18px;font-size:.92rem;color:var(--muted-strong);
+    line-height:1.4;white-space:nowrap;
+    position:relative;z-index:2;
+  }
+  .px-timer-foot strong{color:var(--soft-white);font-weight:700}
+  .px-timer.expired{border-color:var(--glass-border);background:var(--glass)}
+  .px-timer.expired .px-timer-eye{color:var(--muted);background:var(--glass);border-color:var(--glass-border)}
+  .px-timer.expired::before{display:none}
+  @media(max-width:560px){
+    .px-timer{padding:24px 18px;margin:24px 0 30px}
+    .px-timer-eye{font-size:.66rem;padding:5px 11px;margin-bottom:14px}
+    .pxt-cell{padding:12px 8px;min-width:60px}
+    .pxt-cell small{font-size:.54rem;letter-spacing:.10em}
+    .pxt-sep{font-size:1.1rem}
+    .px-timer-clock{gap:5px}
+    .px-timer-foot{font-size:.78rem;margin-top:14px;white-space:normal}
+  }
 
   .price-note{margin-top:22px;text-align:center;font-size:.86rem;color:var(--muted);max-width:540px;margin-left:auto;margin-right:auto}
 
@@ -957,10 +1045,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     transition:transform .35s;
   }
   .logo-chip:hover img{transform:scale(1.04)}
-  /* W@W is just the @ symbol — fills its frame tight, needs less px */
-  .logo-chip img[src*="waw"]{height:78px}
-  /* W@W subtle teal glow for extra pop */
-  .logo-chip:has(img[src*="waw"]) img{filter:drop-shadow(0 0 12px rgba(0,208,198,.35))}
+  /* PRC × W@W is horizontal — needs more room than the others */
+  .logo-chip img[src*="waw"]{height:170px;max-width:420px}
 
   /* Placeholder chips (Silver/Community tier — "Tu logo aquí") */
   .logo-chip.placeholder{
@@ -1118,24 +1204,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .price-grid{grid-template-columns:1fr}
     .quotes{grid-template-columns:1fr}
     .foot-grid{grid-template-columns:1fr 1fr}
+    /* Compact navbar for mobile */
+    header{top:10px;left:10px;right:10px}
+    .nav{padding:8px 8px 8px 16px;gap:10px}
+    header.scrolled .nav{padding:7px 8px 7px 16px}
+    .brand img{height:28px}
+    .nav-right{gap:8px}
+    .lang-toggle button{font-size:.72rem;padding:6px 10px}
+    /* Slide-in mobile menu */
     .nav-links{
       position:fixed;inset:0 0 0 auto;width:min(82vw,340px);
       background:rgba(11,18,32,.97);backdrop-filter:blur(18px);
       flex-direction:column;align-items:flex-start;justify-content:center;
-      gap:28px;padding:40px;
+      gap:24px;padding:40px;
       transform:translateX(100%);transition:transform .35s var(--ease);
       border-left:1px solid var(--line);z-index:95;
+      overflow-y:auto;
     }
     .nav-links.open{transform:none}
-    .nav-links a{font-size:1.2rem}
-    .hamb{display:flex;z-index:96}
+    .nav-links a{font-size:1.2rem;width:100%}
+    /* Inline CTA inside mobile menu */
+    .nav-links .mobile-cta{
+      display:inline-flex;align-items:center;justify-content:center;
+      width:100%;margin-top:8px;padding:14px 22px;
+      background:linear-gradient(100deg,var(--turquoise),var(--caribbean-teal));
+      color:#04141a;font-size:1rem;font-weight:800;border-radius:999px;
+      box-shadow:0 10px 28px -10px rgba(0,208,198,.6);
+    }
+    .hamb{display:flex;z-index:96;padding:6px;margin-right:2px}
+    .hamb span{width:22px}
     .hamb.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
     .hamb.open span:nth-child(2){opacity:0}
     .hamb.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-    .nav .btn-primary{display:none}
+    .nav > .nav-right > .btn-primary{display:none}
     .slot{grid-template-columns:90px 1fr;gap:14px}
   }
   @media(max-width:560px){
+    /* Even tighter navbar on small phones */
+    .nav{padding:7px 7px 7px 14px;gap:8px}
+    header.scrolled .nav{padding:6px 7px 6px 14px}
+    .brand img{height:26px}
+    .nav-right{gap:6px}
+    .lang-toggle button{font-size:.68rem;padding:5px 9px;letter-spacing:.02em}
+    .hamb{padding:5px}
     .stats-grid{grid-template-columns:repeat(2,1fr);gap:30px 14px;padding:42px 0}
     .stat b{font-size:clamp(1.8rem,7vw,2.4rem)}
     .speakers-grid{grid-template-columns:1fr 1fr;gap:12px}
@@ -1214,7 +1325,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     /* Sponsors: logos smaller, gap tighter */
     .logo-row{gap:30px;row-gap:24px}
     .logo-chip img{height:80px}
-    .logo-chip img[src*="waw"]{height:62px}
+    .logo-chip img[src*="waw"]{height:120px;max-width:300px}
     /* MARQUEE MOBILE — show all chips, smooth GPU rendering */
     .marquee{-webkit-mask:none;mask:none;padding:18px 0}
     .marquee-track{
@@ -1225,7 +1336,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .marquee-set{gap:28px;padding-right:28px}
     .m-chip{height:60px;padding:4px 12px}
     .m-chip img{height:50px}
-    .m-chip img[src*="waw"]{height:38px}
+    .m-chip img[src*="waw"]{height:70px;max-width:200px}
 
     /* Final CTA */
     .final{padding:90px 0 110px}
@@ -1368,8 +1479,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="hackathon.html" data-i18n="nav.hack">Hackathon</a>
       <a href="#speakers" data-i18n="nav.speakers">Speakers</a>
       <a href="#agenda" data-i18n="nav.agenda">Agenda</a>
+      <a href="#sponsorships" data-i18n="nav.sponsors">Sponsors</a>
       <a href="#venue" data-i18n="nav.venue">Venue</a>
       <a href="#tickets" data-i18n="nav.tickets">Boletos</a>
+      <a class="mobile-cta" href="#" data-eb data-i18n="cta.book">Reserva tu lugar.</a>
     </div>
     <div class="nav-right">
       <div class="lang-toggle" role="group" aria-label="Language toggle">
@@ -1721,7 +1834,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <h3 data-i18n="for.c1.h">Si lideras.</h3>
         <p data-i18n="for.c1.p">C-Suite, directores, founders. Aquí se está dibujando el próximo capítulo de la IA en el Caribe. Los que llegan primero marcan el rumbo.</p>
-        <span class="fy-tag">VIP · Business</span>
+        <span class="fy-tag">Inner Circle · Business</span>
       </div>
 
       <!-- 2. Builder / Tech Pro -->
@@ -1750,7 +1863,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <h3 data-i18n="for.c3.h">Si estás levantando algo.</h3>
         <p data-i18n="for.c3.p">Founders, VCs, family offices. Llegas al cuarto cuando se está formando. Todos van a decir que llegaron temprano — sé el que llegó.</p>
-        <span class="fy-tag">VIP · Networking</span>
+        <span class="fy-tag">Inner Circle · Networking</span>
       </div>
 
       <!-- 4. Student / Hackathon -->
@@ -1866,12 +1979,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="scarcity-foot" data-i18n="px.sc.foot">Cupo limitado — los precios suben al agotarse el Early Bird.</div>
     </div>
 
+    <!-- ============ EARLY BIRD COUNTDOWN ============ -->
+    <div class="px-timer r" id="pxTimer" aria-live="polite">
+      <span class="px-timer-eye" data-i18n="px.timer.eye">Early Bird Discount Ends In</span>
+      <div class="px-timer-clock">
+        <div class="pxt-cell"><b id="pxDays">00</b><small data-i18n="px.timer.d">Days</small></div>
+        <div class="pxt-sep" aria-hidden="true">:</div>
+        <div class="pxt-cell"><b id="pxHrs">00</b><small data-i18n="px.timer.h">Hrs</small></div>
+        <div class="pxt-sep" aria-hidden="true">:</div>
+        <div class="pxt-cell"><b id="pxMin">00</b><small data-i18n="px.timer.m">Min</small></div>
+        <div class="pxt-sep" aria-hidden="true">:</div>
+        <div class="pxt-cell"><b id="pxSec">00</b><small data-i18n="px.timer.s">Sec</small></div>
+      </div>
+      <div class="px-timer-foot" data-i18n="px.timer.foot">Until <strong>July 15, 2026</strong> — then $299 GA · $799 Inner Circle.</div>
+    </div>
+
     <div class="price-grid">
       <div class="price featured r">
-        <span class="ribbon" data-i18n="px.ribbon">Más popular · Most popular</span>
-        <h3>Early Bird</h3>
-        <div class="amt">$299</div>
-        <div class="sub" data-i18n="px.eb.sub">Solo los primeros 150. Cupo limitado.</div>
+        <span class="ribbon" data-i18n="px.ribbon">Early Bird · Save $100</span>
+        <span class="eb-badge" data-i18n="px.eb.badge">Early Bird Discount</span>
+        <h3 data-i18n="px.eb.name">General Admission</h3>
+        <div class="amt-row">
+          <div class="amt">$199</div>
+          <div class="amt-strike">$299</div>
+        </div>
+        <div class="sub" data-i18n="px.eb.sub">Early Bird price until July 15. Full access to the Summit.</div>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.eb.f1">Acceso a los 2 días completos</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.eb.f2">Los 3 tracks + 5 keynotes</span></li>
@@ -1880,23 +2012,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.eb.f5">Subtítulos bilingües en vivo</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.eb.f6">Desayuno y almuerzo ambos días</span></li>
         </ul>
-        <a class="btn btn-primary" href="#" data-eb data-i18n="px.eb.cta">Reserva Early Bird · $299</a>
-        <p class="micro-trust" data-i18n="px.eb.micro">Cupo limitado a este precio.</p>
+        <a class="btn btn-primary" href="#" data-eb data-i18n="px.eb.cta">Get Early Bird · $199</a>
+        <p class="micro-trust" data-i18n="px.eb.micro">Early Bird ends July 15.</p>
       </div>
 
-      <div class="price vip r">
-        <h3>VIP</h3>
-        <div class="amt">$900</div>
-        <div class="sub" data-i18n="px.vip.sub">La sala donde se decide el futuro de la IA en la isla.</div>
+      <div class="price inner r">
+        <span class="eb-badge eb-badge-coral" data-i18n="px.vip.badge">Early Bird Discount</span>
+        <h3 data-i18n="px.vip.name">Inner Circle</h3>
+        <div class="amt-row">
+          <div class="amt">$699</div>
+          <div class="amt-strike">$799</div>
+        </div>
+        <div class="sub" data-i18n="px.vip.sub">Early Bird price until July 15. The room where Caribbean AI gets decided.</div>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.vip.f1">Todo lo del Early Bird</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.vip.f1">Todo lo del General Admission</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.vip.f2">Asientos preferenciales en keynotes</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.vip.f3">Lounge VIP exclusivo</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.vip.f3">Inner Circle lounge exclusivo</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.vip.f4">Networking curado con C-suite y speakers</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.vip.f5">Mesa redonda privada con keynote</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="px.vip.f6">Swag premium</span></li>
         </ul>
-        <a class="btn btn-coral" href="#" data-eb data-i18n="px.vip.cta">Reserva VIP · $900</a>
+        <a class="btn btn-coral" href="#" data-eb data-i18n="px.vip.cta">Get Inner Circle · $699</a>
+        <p class="micro-trust" data-i18n="px.vip.micro">Early Bird ends July 15.</p>
       </div>
     </div>
 
@@ -2092,7 +2229,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="final">
   <div class="final-bg" aria-hidden="true"><img src="assets/venue-fountains.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/></div>
   <div class="wrap">
-    <span class="urgency-strip r"><span class="blink" aria-hidden="true"></span><span data-i18n="final.urg">Cupo limitado · Early Bird $299</span></span>
+    <span class="urgency-strip r"><span class="blink" aria-hidden="true"></span><span data-i18n="final.urg">Cupo limitado · Early Bird $199 hasta julio 15</span></span>
     <h2 class="r" style="margin-top:18px"><span class="slogan-big">"The Future Starts with Better Questions."</span></h2>
     <p class="r" style="color:var(--muted-strong);max-width:50ch;margin:0 auto;font-size:1.1rem" data-i18n="final.sub">Nos vemos en San Juan. 9–10 octubre. El año que viene no es el primero. Este sí.</p>
 
@@ -2129,6 +2266,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="hackathon.html">Hackathon</a>
         <a href="#speakers" data-i18n="nav.speakers">Speakers</a>
         <a href="#agenda" data-i18n="nav.agenda">Agenda</a>
+        <a href="#sponsorships" data-i18n="nav.sponsors">Sponsors</a>
       </div>
       <div>
         <h4 data-i18n="ft.attend">Atiende</h4>
@@ -2167,7 +2305,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   /* ---- i18n dictionary ---- */
   var i18n = {
     es: {
-      "nav.tracks":"Tracks","nav.hack":"Hackathon","nav.speakers":"Speakers","nav.agenda":"Agenda","nav.venue":"Venue","nav.tickets":"Boletos",
+      "nav.tracks":"Tracks","nav.hack":"Hackathon","nav.speakers":"Speakers","nav.agenda":"Agenda","nav.sponsors":"Sponsors","nav.venue":"Venue","nav.tickets":"Boletos",
       "cta.book":"Reserva tu lugar.","cta.book.early":"Quiero ser parte","cta.tracks":"Ver los tracks",
       "hero.badge":"El primero · del Caribe · en Puerto Rico",
       "hero.tagline.l1":"La conferencia de IA","hero.tagline.l2":"más grande del Caribe.",
@@ -2234,20 +2372,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "why.meta.subs":"Subtítulos bilingües EN/ES en tiempo real — sin audífonos.",
       "why.meta.park":"Valet $18/día · Evento 18+ · Wi-Fi rápido + charging stations.",
       "why.map":"Abrir en Google Maps →",
-      "px.eye":"Boletos · Limitados","px.h2":"Asegura tu lugar antes que se acabe.",
-      "px.lead":"Early Bird está limitado a los primeros 150 registros. Después: precio completo. No esperes a que se agote.",
+      "px.eye":"Boletos · Early Bird","px.h2":"Asegura tu lugar antes que se acabe.",
+      "px.lead":"Precios Early Bird hasta el 15 de julio. Después de esa fecha, los precios suben. No esperes.",
       "px.sc.eyebrow":"Early Bird · Cupo Limitado",
       "px.sc.status.open":"Disponible","px.sc.status.up":"Llenándose","px.sc.status.fast":"Se está agotando","px.sc.status.gone":"Casi agotado",
-      "px.sc.foot":"Cupo limitado — los precios suben al agotarse el Early Bird.",
-      "px.ribbon":"Más popular",
-      "px.eb.sub":"Solo los primeros 150. Cupo limitado.",
+      "px.sc.foot":"Cupo limitado — los precios suben al cerrar el Early Bird.",
+      "px.timer.eye":"El Descuento Early Bird Termina En","px.timer.d":"Días","px.timer.h":"Hrs","px.timer.m":"Min","px.timer.s":"Seg",
+      "px.timer.foot":"Hasta el <strong>15 de julio, 2026</strong> — luego $299 GA · $799 Inner Circle.",
+      "px.ribbon":"Early Bird · Ahorra $100",
+      "px.eb.badge":"Descuento Early Bird","px.eb.name":"General Admission",
+      "px.eb.sub":"Precio Early Bird hasta el 15 de julio. Acceso completo al Summit.",
       "px.eb.f1":"Acceso a los 2 días completos","px.eb.f2":"Los 3 tracks + 5 keynotes","px.eb.f3":"20+ sesiones en paralelo","px.eb.f4":"Networking + expo de sponsors","px.eb.f5":"Subtítulos bilingües en vivo","px.eb.f6":"Desayuno y almuerzo ambos días",
-      "px.eb.cta":"Reserva Early Bird · $299","px.eb.micro":"Cupo limitado a este precio.",
+      "px.eb.cta":"Reserva Early Bird · $199","px.eb.micro":"Early Bird termina el 15 de julio.",
       "px.trust.1":"Pago seguro vía Eventbrite","px.trust.2":"Confirmación instantánea","px.trust.3":"Boleto transferible",
-      "px.vip.sub":"La sala donde se decide el futuro de la IA en la isla.",
-      "px.vip.f1":"Todo lo del Early Bird","px.vip.f2":"Asientos preferenciales en keynotes","px.vip.f3":"Lounge VIP exclusivo","px.vip.f4":"Networking curado con C-suite y speakers","px.vip.f5":"Mesa redonda privada con keynote","px.vip.f6":"Swag premium",
-      "px.vip.cta":"Reserva VIP · $900",
-      "px.note":"Cupo limitado. Boletos no reembolsables, sí transferibles.",
+      "px.vip.badge":"Descuento Early Bird","px.vip.name":"Inner Circle",
+      "px.vip.sub":"Precio Early Bird hasta el 15 de julio. La sala donde se decide el futuro de la IA del Caribe.",
+      "px.vip.f1":"Todo lo del General Admission","px.vip.f2":"Asientos preferenciales en keynotes","px.vip.f3":"Inner Circle lounge exclusivo","px.vip.f4":"Networking curado con C-suite y speakers","px.vip.f5":"Mesa redonda privada con keynote","px.vip.f6":"Swag premium",
+      "px.vip.cta":"Reserva Inner Circle · $699","px.vip.micro":"Early Bird termina el 15 de julio.",
+      "px.note":"Precios Early Bird hasta julio 15. Boletos no reembolsables, sí transferibles.",
       "sp.eye":"Quiénes nos respaldan","sp.h2":"Marcas que están apostando por el AI del Caribe.",
       "sp.partners":"Partners","sp.sponsors":"Sponsors",
       "sp.tiers":"Niveles de patrocinio desde $3,000 hasta $50,000. Pon tu marca frente al ecosistema AI del Caribe.",
@@ -2289,7 +2431,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "faq.q6.q":"¿Cómo participo en el hackathon?","faq.q6.a":"Tu boleto da acceso. Equipos de 2–4 personas, formación in-situ el primer día. Tema: IA para Puerto Rico. $10K en premios.",
       "faq.q7.q":"¿Hay descuentos para grupos?","faq.q7.a":"Sí, para grupos de 5+. Escribe a caribbeanaisummit@gmail.com con la cantidad y nombres.",
       "faq.q8.q":"¿Cómo me hago sponsor o speaker?","faq.q8.a":"Para sponsorships (niveles $3K–$50K) o cualquier consulta, escríbenos a caribbeanaisummit@gmail.com. Speakers: aplica también con el botón \"¿Quieres ser speaker?\" en la sección de Speakers.",
-      "final.urg":"Cupo limitado · Early Bird $299",
+      "final.urg":"Cupo limitado · Early Bird $199 hasta julio 15",
       "final.sub":"Nos vemos en San Juan. 9–10 octubre. El año que viene no es el primero. Este sí.",
       "final.cta":"Voy a estar ahí.",
       "ft.about":"La primera conferencia de IA a gran escala del Caribe. San Juan, Puerto Rico.",
@@ -2301,7 +2443,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "exit.cta":"Reserva mi boleto · $299"
     },
     en: {
-      "nav.tracks":"Tracks","nav.hack":"Hackathon","nav.speakers":"Speakers","nav.agenda":"Agenda","nav.venue":"Venue","nav.tickets":"Tickets",
+      "nav.tracks":"Tracks","nav.hack":"Hackathon","nav.speakers":"Speakers","nav.agenda":"Agenda","nav.sponsors":"Sponsors","nav.venue":"Venue","nav.tickets":"Tickets",
       "cta.book":"Save my seat.","cta.book.early":"I want in","cta.tracks":"See the tracks",
       "hero.badge":"The first · in the Caribbean · in Puerto Rico",
       "hero.tagline.l1":"The largest AI conference","hero.tagline.l2":"of the Caribbean.",
@@ -2368,20 +2510,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "why.meta.subs":"Real-time bilingual EN/ES subtitles — no headsets needed.",
       "why.meta.park":"Valet $18/day · 18+ event · Fast Wi-Fi + charging stations.",
       "why.map":"Open in Google Maps →",
-      "px.eye":"Tickets · Limited","px.h2":"Lock in your spot before it's gone.",
-      "px.lead":"Early Bird is limited to the first 150 registrations. After that: full price. Don't wait.",
+      "px.eye":"Tickets · Early Bird","px.h2":"Lock in Early Bird pricing before it's gone.",
+      "px.lead":"Early Bird pricing through July 15. After that, prices go up — don't wait.",
       "px.sc.eyebrow":"Early Bird · Limited Release",
       "px.sc.status.open":"Open","px.sc.status.up":"Filling Up","px.sc.status.fast":"Filling Fast","px.sc.status.gone":"Almost Gone",
-      "px.sc.foot":"Limited capacity — prices go up once Early Bird sells out.",
-      "px.ribbon":"Most popular",
-      "px.eb.sub":"First 150 only. Limited capacity.",
+      "px.sc.foot":"Limited capacity — prices go up when Early Bird ends.",
+      "px.timer.eye":"Early Bird Discount Ends In","px.timer.d":"Days","px.timer.h":"Hrs","px.timer.m":"Min","px.timer.s":"Sec",
+      "px.timer.foot":"Until <strong>July 15, 2026</strong> — then $299 GA · $799 Inner Circle.",
+      "px.ribbon":"Early Bird · Save $100",
+      "px.eb.badge":"Early Bird Discount","px.eb.name":"General Admission",
+      "px.eb.sub":"Early Bird price until July 15. Full access to the Summit.",
       "px.eb.f1":"Full 2-day access","px.eb.f2":"All 3 tracks + 5 keynotes","px.eb.f3":"20+ parallel sessions","px.eb.f4":"Networking + sponsor expo","px.eb.f5":"Live bilingual subtitles","px.eb.f6":"Breakfast and lunch both days",
-      "px.eb.cta":"Grab Early Bird · $299","px.eb.micro":"Limited capacity at this price.",
+      "px.eb.cta":"Get Early Bird · $199","px.eb.micro":"Early Bird ends July 15.",
       "px.trust.1":"Secure checkout via Eventbrite","px.trust.2":"Instant confirmation","px.trust.3":"Ticket is transferable",
-      "px.vip.sub":"The room where the island's AI future is decided.",
-      "px.vip.f1":"Everything in Early Bird","px.vip.f2":"Preferred keynote seating","px.vip.f3":"Exclusive VIP lounge","px.vip.f4":"Curated networking with C-suite and speakers","px.vip.f5":"Private roundtable with keynote","px.vip.f6":"Premium swag",
-      "px.vip.cta":"Reserve VIP · $900",
-      "px.note":"Limited capacity. Tickets are non-refundable, but transferable.",
+      "px.vip.badge":"Early Bird Discount","px.vip.name":"Inner Circle",
+      "px.vip.sub":"Early Bird price until July 15. The room where Caribbean AI gets decided.",
+      "px.vip.f1":"Everything in General Admission","px.vip.f2":"Preferred keynote seating","px.vip.f3":"Exclusive Inner Circle lounge","px.vip.f4":"Curated networking with C-suite and speakers","px.vip.f5":"Private roundtable with keynote","px.vip.f6":"Premium swag",
+      "px.vip.cta":"Get Inner Circle · $699","px.vip.micro":"Early Bird ends July 15.",
+      "px.note":"Early Bird pricing through July 15. Tickets are non-refundable, but transferable.",
       "sp.eye":"Who backs us","sp.h2":"Brands betting on Caribbean AI.",
       "sp.partners":"Partners","sp.sponsors":"Sponsors",
       "sp.tiers":"Sponsorship tiers from $3,000 to $50,000. Put your brand in front of the Caribbean's AI ecosystem.",
@@ -2423,7 +2569,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "faq.q6.q":"How do I join the hackathon?","faq.q6.a":"Your ticket gives access. Teams of 2–4, formed on-site Day 1. Theme: AI for Puerto Rico. $10K in prizes.",
       "faq.q7.q":"Group discounts?","faq.q7.a":"Yes, for groups of 5+. Email caribbeanaisummit@gmail.com with the headcount and names.",
       "faq.q8.q":"How do I sponsor or speak?","faq.q8.a":"For sponsorships (tiers $3K–$50K) or any inquiry, email us at caribbeanaisummit@gmail.com. Speakers: also apply via the \"Want to speak?\" button in the Speakers section.",
-      "final.urg":"Limited capacity · Early Bird $299",
+      "final.urg":"Limited capacity · Early Bird $199 until July 15",
       "final.sub":"See you in San Juan. Oct 9–10. Next year isn't the first. This one is.",
       "final.cta":"I'll be there.",
       "ft.about":"The Caribbean's first large-scale AI conference. San Juan, Puerto Rico.",
@@ -2441,7 +2587,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var dict = i18n[lang];
     document.querySelectorAll("[data-i18n]").forEach(function(el){
       var k = el.getAttribute("data-i18n");
-      if(dict[k] !== undefined) el.textContent = dict[k];
+      if(dict[k] !== undefined){
+        if(dict[k].indexOf("<") !== -1) el.innerHTML = dict[k];
+        else el.textContent = dict[k];
+      }
     });
     var es = document.getElementById("lang-es"), en = document.getElementById("lang-en");
     es.classList.toggle("active", lang==="es");
@@ -2569,6 +2718,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
     }, {threshold: .3});
     observer.observe(bar);
+  })();
+
+  /* ---- Early Bird countdown timer (until July 15, 2026 · 11:59 PM AST) ---- */
+  (function pxCountdown(){
+    var target = new Date('2026-07-15T23:59:59-04:00').getTime();
+    var timer = document.getElementById('pxTimer');
+    if(!timer) return;
+    var els = {
+      d: document.getElementById('pxDays'),
+      h: document.getElementById('pxHrs'),
+      m: document.getElementById('pxMin'),
+      s: document.getElementById('pxSec')
+    };
+    function pad(n){ return n < 10 ? '0' + n : '' + n; }
+    function tick(){
+      var diff = target - Date.now();
+      if(diff <= 0){
+        els.d.textContent = '00'; els.h.textContent = '00'; els.m.textContent = '00'; els.s.textContent = '00';
+        timer.classList.add('expired');
+        return false;
+      }
+      els.d.textContent = pad(Math.floor(diff / 86400000));
+      els.h.textContent = pad(Math.floor(diff % 86400000 / 3600000));
+      els.m.textContent = pad(Math.floor(diff % 3600000 / 60000));
+      els.s.textContent = pad(Math.floor(diff % 60000 / 1000));
+      return true;
+    }
+    if(tick()) setInterval(tick, 1000);
   })();
 
   /* ---- Tilt 3D on track cards (desktop only, respects reduced-motion) ---- */
