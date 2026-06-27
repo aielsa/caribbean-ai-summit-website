@@ -239,6 +239,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .nav-links{display:flex;align-items:center;gap:24px}
   .nav-links a{font-size:.92rem;font-weight:600;color:var(--muted-strong);transition:color .2s;position:relative}
   .nav-links a:hover{color:var(--soft-white)}
+  /* Mobile menu panel — hidden on desktop, slide-in on mobile */
+  .nav-links-mobile{display:none}
+  .mobile-menu-backdrop{
+    display:none;position:fixed;inset:0;z-index:94;
+    background:rgba(11,18,32,.55);backdrop-filter:blur(6px);
+    opacity:0;transition:opacity .3s var(--ease);
+    pointer-events:none;
+  }
+  .mobile-menu-backdrop.open{opacity:1;pointer-events:auto}
   .nav-right{display:flex;align-items:center;gap:14px}
   .lang-toggle{display:flex;border:1px solid var(--glass-border);border-radius:999px;overflow:hidden;background:var(--glass);backdrop-filter:blur(8px)}
   .lang-toggle button{background:none;border:none;color:var(--muted);font-weight:700;font-size:.78rem;padding:7px 13px;cursor:pointer;transition:all .2s;font-family:inherit}
@@ -1211,25 +1220,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .brand img{height:28px}
     .nav-right{gap:8px}
     .lang-toggle button{font-size:.72rem;padding:6px 10px}
-    /* Slide-in mobile menu */
-    .nav-links{
-      position:fixed;inset:0 0 0 auto;width:min(82vw,340px);
-      background:rgba(11,18,32,.97);backdrop-filter:blur(18px);
-      flex-direction:column;align-items:flex-start;justify-content:center;
-      gap:24px;padding:40px;
+    /* Hide desktop inline nav links */
+    .nav-links-desktop{display:none}
+    /* Show mobile menu backdrop element */
+    .mobile-menu-backdrop{display:block}
+    /* Slide-in mobile menu — lives at <body> level, escapes nav's backdrop-filter containing block */
+    .nav-links-mobile{
+      display:flex;
+      position:fixed;top:0;right:0;bottom:0;width:min(82vw,340px);
+      background:rgba(11,18,32,.98);backdrop-filter:blur(18px);
+      flex-direction:column;align-items:stretch;justify-content:flex-start;
+      gap:6px;padding:96px 28px 32px;
       transform:translateX(100%);transition:transform .35s var(--ease);
       border-left:1px solid var(--line);z-index:95;
-      overflow-y:auto;
+      overflow-y:auto;-webkit-overflow-scrolling:touch;
     }
-    .nav-links.open{transform:none}
-    .nav-links a{font-size:1.2rem;width:100%}
+    .nav-links-mobile.open{transform:none}
+    .nav-links-mobile a{
+      font-size:1.15rem;font-weight:700;color:var(--soft-white);width:100%;
+      padding:14px 4px;border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav-links-mobile a:last-of-type{border-bottom:none}
     /* Inline CTA inside mobile menu */
-    .nav-links .mobile-cta{
+    .nav-links-mobile .nav-cta{
       display:inline-flex;align-items:center;justify-content:center;
-      width:100%;margin-top:8px;padding:14px 22px;
+      width:100%;margin-top:14px;padding:16px 22px;
       background:linear-gradient(100deg,var(--turquoise),var(--caribbean-teal));
       color:#04141a;font-size:1rem;font-weight:800;border-radius:999px;
       box-shadow:0 10px 28px -10px rgba(0,208,198,.6);
+      position:static;border-bottom:none;
     }
     .hamb{display:flex;z-index:96;padding:6px;margin-right:2px}
     .hamb span{width:22px}
@@ -1474,7 +1493,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header id="header">
   <nav class="nav" role="navigation" aria-label="Main">
     <a class="brand" href="#top" aria-label="Caribbean AI Summit"><img src="assets/logo-white.svg" alt="Caribbean AI Summit" onerror="this.onerror=null;this.src='assets/logo-white.png'"/></a>
-    <div class="nav-links" id="navLinks">
+    <div class="nav-links nav-links-desktop" id="navLinksDesktop">
       <a href="#tracks" data-i18n="nav.tracks">Tracks</a>
       <a href="hackathon.html" data-i18n="nav.hack">Hackathon</a>
       <a href="#speakers" data-i18n="nav.speakers">Speakers</a>
@@ -1482,7 +1501,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#sponsorships" data-i18n="nav.sponsors">Sponsors</a>
       <a href="#venue" data-i18n="nav.venue">Venue</a>
       <a href="#tickets" data-i18n="nav.tickets">Boletos</a>
-      <a class="mobile-cta" href="#" data-eb data-i18n="cta.book">Reserva tu lugar.</a>
     </div>
     <div class="nav-right">
       <div class="lang-toggle" role="group" aria-label="Language toggle">
@@ -1494,6 +1512,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </nav>
 </header>
+
+<!-- Mobile menu lives OUTSIDE the header so backdrop-filter on .nav doesn't trap its position:fixed -->
+<div class="mobile-menu-backdrop" id="mobileMenuBackdrop" aria-hidden="true"></div>
+<div class="nav-links nav-links-mobile" id="navLinks" role="menu" aria-label="Mobile menu" aria-hidden="true">
+  <a href="#tracks" data-i18n="nav.tracks">Tracks</a>
+  <a href="hackathon.html" data-i18n="nav.hack">Hackathon</a>
+  <a href="#speakers" data-i18n="nav.speakers">Speakers</a>
+  <a href="#agenda" data-i18n="nav.agenda">Agenda</a>
+  <a href="#sponsorships" data-i18n="nav.sponsors">Sponsors</a>
+  <a href="#venue" data-i18n="nav.venue">Venue</a>
+  <a href="#tickets" data-i18n="nav.tickets">Boletos</a>
+  <a class="nav-cta" href="#" data-eb data-i18n="cta.book">Reserva tu lugar.</a>
+</div>
 
 <!-- ============ HERO ============ -->
 <section class="hero">
@@ -2612,14 +2643,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }, {passive:true});
 
   /* ---- Mobile menu ---- */
-  var hamb = document.getElementById("hamb"), navLinks = document.getElementById("navLinks");
-  hamb.addEventListener("click", function(){
-    var open = navLinks.classList.toggle("open");
+  var hamb = document.getElementById("hamb"),
+      navLinks = document.getElementById("navLinks"),
+      mmBackdrop = document.getElementById("mobileMenuBackdrop");
+  function setMenu(open){
+    navLinks.classList.toggle("open", open);
+    if(mmBackdrop) mmBackdrop.classList.toggle("open", open);
     hamb.classList.toggle("open", open);
     hamb.setAttribute("aria-expanded", open);
-  });
+    navLinks.setAttribute("aria-hidden", !open);
+    document.body.style.overflow = open ? "hidden" : "";
+  }
+  hamb.addEventListener("click", function(){ setMenu(!navLinks.classList.contains("open")); });
+  if(mmBackdrop) mmBackdrop.addEventListener("click", function(){ setMenu(false); });
   navLinks.querySelectorAll("a").forEach(function(a){
-    a.addEventListener("click", function(){ navLinks.classList.remove("open"); hamb.classList.remove("open"); hamb.setAttribute("aria-expanded","false"); });
+    a.addEventListener("click", function(){ setMenu(false); });
+  });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape" && navLinks.classList.contains("open")) setMenu(false);
   });
 
   /* ---- Countdown (target: 2026-10-09T09:00:00-04:00 AST) ---- */
