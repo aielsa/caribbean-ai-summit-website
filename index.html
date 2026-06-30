@@ -411,16 +411,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* Each set has its OWN gap, plus padding-right that = gap → ensures perfect -50% loop */
   .marquee-set{display:flex;align-items:center;gap:36px;padding-right:36px;flex-shrink:0}
   /* Marquee — free-floating logos, no chip */
+  /* Fixed widths per chip — prevents layout shift during image load,
+     which would break the marquee's seamless -50% loop (logos disappearing). */
   .m-chip{
     display:inline-flex;align-items:center;justify-content:center;
     padding:6px 16px;
     background:none;border:none;
-    height:80px;flex-shrink:0;opacity:.78;
+    width:200px;height:90px;flex-shrink:0;opacity:.78;
     transition:opacity .25s,transform .25s;
   }
+  .m-chip:has(img[src*="waw"]){width:260px}
   .m-chip:hover{opacity:1;transform:translateY(-2px)}
-  .m-chip img{height:74px;width:auto;max-width:220px;object-fit:contain}
-  .m-chip img[src*="waw"]{height:100px;max-width:280px}
+  .m-chip img{height:74px;width:100%;max-width:100%;object-fit:contain}
+  .m-chip img[src*="waw"]{height:74px}
   @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
   /* ============ SECTIONS ============ */
@@ -874,7 +877,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin-top:10px;font-size:.78rem;color:var(--muted);text-align:center;
   }
 
-  .price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:30px auto 0;max-width:880px}
+  .price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin:30px auto 0;max-width:760px}
   .price{
     background:var(--glass);border:1px solid var(--glass-border);
     border-radius:22px;padding:32px;position:relative;display:flex;flex-direction:column;
@@ -903,20 +906,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background:linear-gradient(165deg,rgba(10,47,79,.6),rgba(11,18,32,.6));
     border-color:rgba(255,107,90,.30);
   }
-  .price .ribbon{
-    position:absolute;top:-14px;left:50%;transform:translateX(-50%);
-    background:linear-gradient(90deg,var(--turquoise),var(--coral));
-    color:#04141a;font-size:.68rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
-    padding:7px 16px;border-radius:999px;
-    box-shadow:0 10px 24px -8px rgba(0,208,198,.6);
-  }
   /* Early Bird badge — chip above the tier name */
   .eb-badge{
-    display:inline-flex;align-items:center;gap:6px;
-    font-size:.62rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+    display:inline-flex;align-items:center;gap:7px;
+    font-size:.66rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
     color:var(--turquoise);
-    padding:5px 11px;background:rgba(0,208,198,.10);border:1px solid rgba(0,208,198,.30);
-    border-radius:999px;margin-bottom:10px;align-self:flex-start;
+    padding:6px 13px;background:rgba(0,208,198,.10);border:1px solid rgba(0,208,198,.30);
+    border-radius:999px;margin-bottom:12px;align-self:flex-start;
   }
   .eb-badge::before{
     content:"";width:6px;height:6px;border-radius:50%;background:var(--turquoise);
@@ -924,6 +920,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .eb-badge-coral{color:var(--coral);background:rgba(255,107,90,.10);border-color:rgba(255,107,90,.30)}
   .eb-badge-coral::before{background:var(--coral);box-shadow:0 0 8px var(--coral)}
+  /* Featured card — Early Bird highlighted badge (gradient + glow) */
+  .eb-badge-featured{
+    color:#04141a;font-weight:900;
+    background:linear-gradient(100deg,var(--turquoise),var(--caribbean-teal) 60%,var(--coral));
+    border:none;padding:7px 16px;
+    box-shadow:0 10px 24px -8px rgba(0,208,198,.55),0 0 0 1px rgba(255,255,255,.10) inset;
+  }
+  .eb-badge-featured::before{background:#04141a;box-shadow:0 0 6px rgba(0,0,0,.5)}
   .price h3{font-size:1.35rem;font-weight:800}
   /* Amount row — current price + strike-through old price */
   .amt-row{display:flex;align-items:baseline;gap:14px;margin:12px 0 2px;flex-wrap:wrap}
@@ -1321,7 +1325,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .price{padding:28px 22px}
     .price h3{font-size:1.2rem}
     .price .amt{font-size:2.6rem}
-    .price .ribbon{font-size:.62rem;letter-spacing:.10em;padding:6px 13px}
+    .eb-badge{font-size:.6rem;letter-spacing:.12em;padding:5px 11px}
 
     /* Scarcity head wraps vertically on small */
     .scarcity{padding:16px 18px}
@@ -1346,16 +1350,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .logo-chip img{height:80px}
     .logo-chip img[src*="waw"]{height:120px;max-width:300px}
     /* MARQUEE MOBILE — show all chips, smooth GPU rendering */
-    .marquee{-webkit-mask:none;mask:none;padding:18px 0}
+    .marquee{padding:18px 0;overflow:hidden}
     .marquee-track{
       animation-duration:40s;
       will-change:transform;
       backface-visibility:hidden;
     }
-    .marquee-set{gap:28px;padding-right:28px}
-    .m-chip{height:60px;padding:4px 12px}
+    .marquee-set{gap:24px;padding-right:24px}
+    .m-chip{width:140px;height:62px;padding:4px 12px}
+    .m-chip:has(img[src*="waw"]){width:180px}
     .m-chip img{height:50px}
-    .m-chip img[src*="waw"]{height:70px;max-width:200px}
+    .m-chip img[src*="waw"]{height:50px}
 
     /* Final CTA */
     .final{padding:90px 0 110px}
@@ -2027,8 +2032,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="price-grid">
       <div class="price featured r">
-        <span class="ribbon" data-i18n="px.ribbon">Early Bird · Save $100</span>
-        <span class="eb-badge" data-i18n="px.eb.badge">Early Bird Discount</span>
+        <span class="eb-badge eb-badge-featured" data-i18n="px.eb.badge">Early Bird · Save $100</span>
         <h3 data-i18n="px.eb.name">General Admission</h3>
         <div class="amt-row">
           <div class="amt">$199</div>
@@ -2410,8 +2414,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "px.sc.foot":"Cupo limitado — los precios suben al cerrar el Early Bird.",
       "px.timer.eye":"El Descuento Early Bird Termina En","px.timer.d":"Días","px.timer.h":"Hrs","px.timer.m":"Min","px.timer.s":"Seg",
       "px.timer.foot":"Hasta el <strong>15 de julio, 2026</strong> — luego $299 GA · $799 Inner Circle.",
-      "px.ribbon":"Early Bird · Ahorra $100",
-      "px.eb.badge":"Descuento Early Bird","px.eb.name":"General Admission",
+      "px.eb.badge":"Early Bird · Ahorra $100","px.eb.name":"General Admission",
       "px.eb.sub":"Precio Early Bird hasta el 15 de julio. Acceso completo al Summit.",
       "px.eb.f1":"Acceso a los 2 días completos","px.eb.f2":"Los 3 tracks + 5 keynotes","px.eb.f3":"20+ sesiones en paralelo","px.eb.f4":"Networking + expo de sponsors","px.eb.f5":"Subtítulos bilingües en vivo","px.eb.f6":"Desayuno y almuerzo ambos días",
       "px.eb.cta":"Reserva Early Bird · $199","px.eb.micro":"Early Bird termina el 15 de julio.",
@@ -2548,8 +2551,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "px.sc.foot":"Limited capacity — prices go up when Early Bird ends.",
       "px.timer.eye":"Early Bird Discount Ends In","px.timer.d":"Days","px.timer.h":"Hrs","px.timer.m":"Min","px.timer.s":"Sec",
       "px.timer.foot":"Until <strong>July 15, 2026</strong> — then $299 GA · $799 Inner Circle.",
-      "px.ribbon":"Early Bird · Save $100",
-      "px.eb.badge":"Early Bird Discount","px.eb.name":"General Admission",
+      "px.eb.badge":"Early Bird · Save $100","px.eb.name":"General Admission",
       "px.eb.sub":"Early Bird price until July 15. Full access to the Summit.",
       "px.eb.f1":"Full 2-day access","px.eb.f2":"All 3 tracks + 5 keynotes","px.eb.f3":"20+ parallel sessions","px.eb.f4":"Networking + sponsor expo","px.eb.f5":"Live bilingual subtitles","px.eb.f6":"Breakfast and lunch both days",
       "px.eb.cta":"Get Early Bird · $199","px.eb.micro":"Early Bird ends July 15.",
